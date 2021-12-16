@@ -1,0 +1,12 @@
+2013-08-14 14:51:02.7486 WIN-4RBAACNQBGT\Администратор:notauth:: 21:26:51.0019 (43) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => AccountController.Login
+User tu_1_adv@adv.adv has been logged in with ip 
+
+2013-08-14 15:22:49.3237 WIN-4RBAACNQBGT\Администратор:notauth:: 21:58:37.0594 (134) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => AccountController.Login
+User tu_1_perf@perf.perf has been logged in with ip 
+
+2013-08-14 15:22:51.5538 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_perf@perf.perf 21:58:39.0824 (134) INFO
+HomeController.Wallet => WalletHelper.GetUsersWallet => WalletHelper.CreateNewWallet
+Wallet id = 3 has been added
+

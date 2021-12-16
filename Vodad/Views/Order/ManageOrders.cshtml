@@ -1,0 +1,103 @@
+﻿@model Vodad.Models.OrderListModel
+
+@{
+    ViewBag.Title = "Manage Orders";
+}
+
+@section scripts {
+    <script type="text/javascript">
+        $("#order-action-dropdownlist").click(function () {
+            var _value = $("#order-action-dropdownlist :selected").text();
+            $("#order-action-button").attr("value", _value);
+            if ($("#order-action-button").attr("value") != "Choose action") {
+                $("#order-action-button").removeAttr("disabled");
+            } else {
+                $("#order-action-button").attr("disabled", "disabled");
+            }
+            if ($("#order-action-button").attr("value") == "Open") {
+                $(".alert-message").show();
+            } else {
+                $(".alert-message").hide();
+            }
+        });
+
+    </script>
+}
+
+@{
+    var actions = new List<SelectListItem>
+                      {
+                          new SelectListItem
+                              {
+                                  Value = "0",
+                                  Text = "Choose action",
+                                  Selected = true
+                              }, new SelectListItem
+                                     {
+                                         Value = "1",
+                                         Text = "Open"
+                                     }, new SelectListItem
+                                            {
+                                                Value = "2",
+                                                Text = "Close"
+                                            }, new SelectListItem
+                                                   {
+                                                       Value = "3",
+                                                       Text = "Delete"
+                                                   }
+                      };
+}
+
+@using (Html.BeginForm("ManageOrders", "Order", FormMethod.Post))
+{
+
+        <input type="button" value="Add new order" onclick="location.href='@Url.Action("AddNewOrder", "Order", new { cid = ViewBag.CampaignId })'" />
+
+    
+    if (ViewBag.OrdersList.Count > 0)
+    {
+
+            @Html.DropDownList("action", actions, new { @class = "action-dropdownlist", @id = "order-action-dropdownlist" })
+
+        
+        <input type="submit" name="submit" value="Choose action" class="action-button" id="order-action-button" disabled />
+
+
+    <table >
+	    <thead>
+            <tr >
+                <th>Status</th>
+                <th></th>
+                <th>@Html.CheckBox("action", false, new { @class = "all-actions-checkbox" })</th>
+                <th>Subject</th>
+                <th>Region</th>
+                <th>Created</th>
+                <th>Expires</th>
+                <th>Comment</th>
+		    </tr>
+	    </thead>
+	    <tbody>
+			    @foreach (var o in ViewBag.OrdersList)
+       {
+			        <tr>
+                        <td>@o.OrderStatus</td>
+                        <td>
+                            <a href="@Url.Action("EditOrder", "Order", new { cid = @o.OrderCampaignId, oid = @o.OrderId })" ><img src='../Images/edit.png' alt='Edit order' title='Edit order' width="20px"></a>
+                            <a href="@Url.Action("RequestOrderToPerformer", "Order", new { oid = @o.OrderId })" ><img src='../Images/magnifier.png' alt='Search for performer' title='Search for performer' width="20px"></a>
+                        </td>
+                        <td>@Html.CheckBox("checkme", false, new { @class = "action-checkbox", @value = @o.OrderId})</td>
+                        <td>@o.OrderThemes</td>
+                        <td>@o.OrderRegion</td>
+                        <td>@o.OrderCreationDate</td>
+                        <td>@o.OrderExpireDate</td>
+                        <td>@o.OrderComment</td>
+			        </tr>
+       }
+	    </tbody>
+    </table>
+    }
+    else
+    {
+        @Html.Raw("There are no orders yet.")
+    }
+}

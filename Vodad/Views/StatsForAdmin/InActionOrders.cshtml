@@ -1,0 +1,20 @@
+﻿<h2>Orders in action</h2>
+
+<table id="orders-in-action">
+    <thead>
+        <tr>
+            <th>Max budget</th>
+            <th>Author name</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var c in ViewBag.InActionOrders)
+        {
+            <tr>
+                <td>@c.MaxBudget</td>
+                <td>@c.AuthorName</td>
+            </tr>
+        }
+    </tbody>
+</table>

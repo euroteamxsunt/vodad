@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Withdrawed money";
+}
+
+<h2>Withdrawed money</h2>
+
+<b>
+    @ViewBag.WithdrawedMoneySum
+    $ &nbsp; withdrawed </b>
+<br />
+<br />
+
+<input type="text" value="@DateTime.Today" class="start-date" />
+<input type="text" value="@DateTime.Today" class="end-date" />
+<input type="button" id="update-button" value="Update" class="button" />
+
+<table>
+    <thead>
+        <tr>
+            <th>Operation date</th>
+            <th>User name</th>
+            <th>Role</th>
+            <th>Sum</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in ViewBag.WithdrawedMoney)
+        {
+            <tr>
+                <td>@c.OperationDate</td>
+                <td>@c.User</td>
+                <td>@c.Role</td>
+                <td>@c.Amount</td>
+            </tr>
+        }
+    </tbody>
+</table>

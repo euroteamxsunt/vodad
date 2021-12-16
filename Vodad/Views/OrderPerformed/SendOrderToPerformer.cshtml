@@ -1,0 +1,54 @@
+﻿@model Vodad.Models.OrderPerformedToPerformerModel
+
+@{
+    ViewBag.Title = "Send order to performer";
+}
+
+<h2>Send order to performer</h2>
+
+@using (Html.BeginForm(new { ViewBag.ReturnUrl })) {
+    @Html.ValidationSummary(true, "")
+
+    <fieldset>
+        <legend>Add order performed form</legend>
+        <ol>
+            <li>
+                @Html.HiddenFor(m => m.PerformerPlatformId, new { @Value = ViewBag.BannerMeasureId })
+            </li>
+            <li>
+                @Html.LabelFor(m => m.ExpireDate)<br />
+                @Html.TextBoxFor(m => m.ExpireDate, new { @class = "expire-date" })
+            </li>
+            
+            @{
+                var l = 0;
+            }
+
+            @if (ViewBag.ImagesList.Any())
+                {
+                    foreach (var i in ViewBag.ImagesList)
+                    {
+                    <tr>
+                        <td><a href="@Url.Action("Image", new { iid = i.Id })">
+                            <img width="50px" src="@Url.Action("Image", new { iid = i.Id })" alt="image" /></a></td>
+                        <td>@i.ImageSize byte</td>
+                        <td>@i.ImageWidth&#120;@i.ImageHeight&#112;&#120;</td>
+                    </tr>
+                    }
+                }
+
+                @if (ViewBag.VideosList.Any())
+                {
+                    foreach (var i in ViewBag.VideosList)
+                    {
+                    <tr>
+                        <td><a href="@i.VideoLink">@i.VideoLink</a></td>
+                        <td>@i.VideoSize byte</td>
+                        <td>@i.VideoLength</td>
+                    </tr>
+                    }
+                }
+        </ol>
+        <input type="submit" value="Send request" />
+    </fieldset>
+}

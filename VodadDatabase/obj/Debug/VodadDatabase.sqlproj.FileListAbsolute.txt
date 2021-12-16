@@ -1,0 +1,5 @@
+D:\Distr\Vodad\trunk\Vodad\VodadDatabase\bin\Debug\VodadDatabase.dacpac
+D:\Distr\Vodad\trunk\Vodad\VodadDatabase\bin\Debug\VodadDatabase.dll
+D:\Distr\Vodad\trunk\Vodad\VodadDatabase\bin\Debug\VodadDatabase.pdb
+D:\Distr\Vodad\trunk\Vodad\VodadDatabase\obj\Debug\VodadDatabase.dll
+D:\Distr\Vodad\trunk\Vodad\VodadDatabase\obj\Debug\VodadDatabase.pdb

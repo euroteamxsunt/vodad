@@ -1,0 +1,8 @@
+2013-08-22 13:36:38.4760 WIN-4RBAACNQBGT\Администратор:notauth:: 00:00:50.0023 (12) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => AccountController.Login
+User tu_1_klamar@gmail.com has been logged in with ip 
+
+2013-08-22 13:37:04.0775 WIN-4RBAACNQBGT\Администратор:notauth:: 00:01:15.0625 (5) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => AccountController.Login
+User tu_1_klamar@gmail.com has been logged in with ip 
+

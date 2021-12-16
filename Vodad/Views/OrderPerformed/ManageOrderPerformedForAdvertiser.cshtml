@@ -1,0 +1,148 @@
+﻿@model List<Vodad.Models.OrdersPerformedListForPerformerModel>
+
+@{
+    ViewBag.Title = "Manage orders performed for advertiser";
+}
+
+<h2>Manage order performed for advertiser</h2>
+
+@{
+    var actions = new List<SelectListItem>
+                      {
+                          new SelectListItem
+                              {
+                                  Value = "0",
+                                  Text = "Choose_action",
+                                  Selected = true
+                              }, new SelectListItem
+                                     {
+                                         Value = "1",
+                                         Text = "Accept"
+                                     }, new SelectListItem
+                                            {
+                                                Value = "2",
+                                                Text = "Decline"
+                                            }
+                      };
+
+    var authorActions = new List<SelectListItem>
+                            {
+                                new SelectListItem
+                                    {
+                                        Value = "0",
+                                        Text = "Choose_action",
+                                        Selected = true
+                                    }, new SelectListItem
+                                           {
+                                               Value = "2",
+                                               Text = "Cancel"
+                                           }
+                            };
+}
+
+@using (Html.BeginForm("ManageOrderPerformed", "OrderPerformed", FormMethod.Post))
+{
+
+    if (Model.Count > 0)
+    {
+        if (ViewBag.Status != null && ViewBag.Status.Equals("request"))
+        {
+            if (ViewBag.Author != User.Identity.Name)
+            {
+
+            @Html.DropDownList("action", actions, new { @class = "action-dropdownlist", @id = "orderperformed-action-dropdownlist" })
+
+        <input type="submit" name="submit" value="Choose action" disabled />
+
+            }
+            else if (ViewBag.Author == User.Identity.Name)
+            {
+
+            @Html.DropDownList("action", authorActions, new { @class = "action-dropdownlist", @id = "orderperformed-action-dropdownlist" })
+
+
+        <input type="submit" name="submit" value="Choose action" disabled />
+
+            }
+        }
+    <table>
+        <thead>
+            <tr>
+                <th>Performer</th>
+                <th>Status</th>
+                <th>Money paid</th>
+                <th></th>
+                <th>
+                    @if (ViewBag.Status != null && ViewBag.Status.Equals("request"))
+                    {
+                        @Html.CheckBox("action", false, new { @class = "all-actions-checkbox" })
+                    }
+                </th>
+
+                <th>Author</th>
+                <th>Comment</th>
+                <th>Date</th>
+                <th>Content</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var op in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(@op.PerformerName, "Profile", "User", new { id = op.PerformerId }, htmlAttributes: null)</td>
+                    <td>@op.Status</td>
+                    <td>
+                        @op.MoneyPaid.Value.ToString("F4")$
+
+                    </td>
+                    <td>
+                        @if (@op.ActionStatus.Equals("canBeDeleted"))
+                        {
+                            <a href="@Url.Action("ChangeOrderPerformedStatus", "OrderPerformed", new { opid = @op.OrderPerformedId, status = "complete", userId = ViewBag.UserId })" >
+                                <img src="~/Images/delete.png" alt='Close order' title='Close order' width="20px"></a>
+                        }
+                        @if (@op.ActionStatus.Equals("isNotLiked"))
+                        {
+                            <a href="@Url.Action("LowerKarmaForPerformer", "OrderPerformed", new { opid = @op.OrderPerformedId, status = @op.Status })" >
+                                <img src="~/Images/minus.png" alt='Lower karma' title='Lower karma' width="20px"></a>
+                        }
+
+                        @if (@op.Status.Equals(@VodadModel.Utilities.Constants.VerificationStatuses.Inaction) || @op.Status.Equals(@VodadModel.Utilities.Constants.VerificationStatuses.Complete))
+                        {
+                            <a href="@Url.Action("OrderPerformedReport", "Report", new { id = @op.OrderPerformedId })" >
+                                <img src="~/Images/edit.png" alt='Report' title='Report' width="20px"></a>
+                        }
+                    </td>
+                    <td>
+
+                        @if (@op.Status.Equals("request"))
+                        {
+                            @Html.CheckBox("checkme", false, new { @class = "action-checkbox", @value = @op.OrderPerformedId })
+                        }
+
+                    </td>
+                    <td>@Html.ActionLink(@op.AuthorName, "Profile", "User", new { id = op.AuthorId }, htmlAttributes: null)</td>
+                    <td>@op.OrderComment</td>
+                    <td>@op.Date</td>
+                    <td>
+                        @if (op.ContentType.Equals(VodadModel.Utilities.Constants.ContentType.Image))
+                        {
+                        <a href="@Url.Action("Image", new { iid = @op.ContentId})">
+                            <img width="100" src="@Url.Action("Image", "Order", new { iid = @op.ContentId }) + " alt="image" /></a>
+                        }
+                        else if (op.ContentType.Equals(VodadModel.Utilities.Constants.ContentType.Video))
+                        {
+                            Html.Raw("Тут будет ссылка на видео");
+                        }
+                    <td>@op.VideoLink</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    }
+    else
+    {
+    @Html.Raw("There are no order performed yet.")
+    }
+}

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="06e128245247453a8bc159cf5dd0477f" Name="Диаграмма1">
+        <EntityTypeShape EntityType="VodadModel.C__RefactorLog" Width="1.5" PointX="5.6115187283658976" PointY="16.1166153178162" />
+        <EntityTypeShape EntityType="VodadModel.AlertMessage" Width="1.5" PointX="1.1996971299870392" PointY="10.540147026320987" />
+        <EntityTypeShape EntityType="VodadModel.Ban" Width="1.5" PointX="10.457950002727074" PointY="3.8997678625861965" />
+        <EntityTypeShape EntityType="VodadModel.BlackList" Width="1.5" PointX="3.7058739753933039" PointY="3.5749855356174454" />
+        <EntityTypeShape EntityType="VodadModel.Certificates" Width="1.5" PointX="9.6406589102189333" PointY="23.398139591979859" />
+        <EntityTypeShape EntityType="VodadModel.Cheaters" Width="1.5" PointX="3.1522920407132675" PointY="10.090603520204594" />
+        <EntityTypeShape EntityType="VodadModel.Geolocation" Width="1.5" PointX="1.015699754010746" PointY="14.418563521662058" />
+        <EntityTypeShape EntityType="VodadModel.GeolocationPlatformPercentage" Width="1.5" PointX="11.171040968583451" PointY="5.7524892565573049" />
+        <EntityTypeShape EntityType="VodadModel.Image" Width="1.5" PointX="2.5248097938135312" PointY="29.019600881738402" />
+        <EntityTypeShape EntityType="VodadModel.Merchants" Width="1.5" PointX="8.58650455464912" PointY="18.006935157816361" />
+        <EntityTypeShape EntityType="VodadModel.Messages" Width="1.5" PointX="9.4330936956373481" PointY="5.1503080898664466" />
+        <EntityTypeShape EntityType="VodadModel.MoneyTransfers" Width="1.5" PointX="1.9558425461667788" PointY="29.837828471249821" />
+        <EntityTypeShape EntityType="VodadModel.News" Width="1.5" PointX="1.2743847096685248" PointY="5.9677889672889322" />
+        <EntityTypeShape EntityType="VodadModel.Order" Width="1.5" PointX="6.6393588085842126" PointY="15.666358567618932" />
+        <EntityTypeShape EntityType="VodadModel.OrderContent" Width="1.5" PointX="3.125" PointY="16" />
+        <EntityTypeShape EntityType="VodadModel.OrderPerformed" Width="1.5" PointX="2.2332098699329466" PointY="30.007176249291366" />
+        <EntityTypeShape EntityType="VodadModel.OrderThemes" Width="1.5" PointX="9.5307099099879675" PointY="21.063372815523003" />
+        <EntityTypeShape EntityType="VodadModel.PerformerPlatform" Width="1.5" PointX="7.2503759298708177" PointY="29.661937965854044" />
+        <EntityTypeShape EntityType="VodadModel.PerformerStatistics" Width="1.5" PointX="5.75" PointY="19.5" />
+        <EntityTypeShape EntityType="VodadModel.Regions" Width="1.5" PointX="10.344812705342104" PointY="28.28887213593762" />
+        <EntityTypeShape EntityType="VodadModel.Roles" Width="1.5" PointX="6.1224302547622607" PointY="16.67346867205271" />
+        <EntityTypeShape EntityType="VodadModel.Themes" Width="1.5" PointX="3.4990411044559631" PointY="19.848677450720537" />
+        <EntityTypeShape EntityType="VodadModel.Tickets" Width="1.5" PointX="10.927547385416714" PointY="31.019505068203205" />
+        <EntityTypeShape EntityType="VodadModel.TicketThemes" Width="1.5" PointX="0.86800706054456866" PointY="22.848049397975231" />
+        <EntityTypeShape EntityType="VodadModel.Timezone" Width="1.5" PointX="5.1615707507178046" PointY="22.896960611872821" />
+        <EntityTypeShape EntityType="VodadModel.Transactions" Width="1.5" PointX="10.760403865371089" PointY="20.326967651176716" />
+        <EntityTypeShape EntityType="VodadModel.User" Width="1.5" PointX="0.85887867066025669" PointY="12.389571240353199" />
+        <EntityTypeShape EntityType="VodadModel.UserMerchants" Width="1.5" PointX="1.5442810531446156" PointY="9.8137418524426145" />
+        <EntityTypeShape EntityType="VodadModel.Video" Width="1.5" PointX="4.0878881980142969" PointY="5.3613638753822839" />
+        <EntityTypeShape EntityType="VodadModel.Wallet" Width="1.5" PointX="2.6781704252018459" PointY="21.920077706649934" />
+        <EntityTypeShape EntityType="VodadModel.WhiteList" Width="1.5" PointX="6.8230541398856106" PointY="26.215972033429878" />
+        <AssociationConnector Association="VodadModel.FK_AlertMessage_User" />
+        <AssociationConnector Association="VodadModel.FK_Ban_Roles" />
+        <AssociationConnector Association="VodadModel.FK_Ban_User" />
+        <AssociationConnector Association="VodadModel.FK_Ban_User1" />
+        <AssociationConnector Association="VodadModel.FK_Ban_User2" />
+        <AssociationConnector Association="VodadModel.FK_BlackList_User" />
+        <AssociationConnector Association="VodadModel.FK_BlackList_User1" />
+        <AssociationConnector Association="VodadModel.FK_Certificates_User" />
+        <AssociationConnector Association="VodadModel.FK_Cheaters_User" />
+        <AssociationConnector Association="VodadModel.FK_GeolocationPlatformPercentage_Geolocation" />
+        <AssociationConnector Association="VodadModel.FK_GeolocationPlatformPercentagePerformerPlatform" />
+        <AssociationConnector Association="VodadModel.FK_Image_User" />
+        <AssociationConnector Association="VodadModel.FK_OrderContent_Image" />
+        <AssociationConnector Association="VodadModel.FK_Ticket_Image" />
+        <AssociationConnector Association="VodadModel.FK_MoneyTransfers_Merchants" />
+        <AssociationConnector Association="VodadModel.FK_UserMerchants_Merchants" />
+        <AssociationConnector Association="VodadModel.FK_Messages_User" />
+        <AssociationConnector Association="VodadModel.FK_Messages_User1" />
+        <AssociationConnector Association="VodadModel.FK_MoneyTransfers_User" />
+        <AssociationConnector Association="VodadModel.FK_News_User" />
+        <AssociationConnector Association="VodadModel.FK_Order_Regions" />
+        <AssociationConnector Association="VodadModel.FK_Order_User" />
+        <AssociationConnector Association="VodadModel.FK_OrderContent_Order" />
+        <AssociationConnector Association="VodadModel.FK_OrderThemes_Order" />
+        <AssociationConnector Association="VodadModel.FK_OrderContent_Video" />
+        <AssociationConnector Association="VodadModel.FK_OrderPerformed_OrderImages" />
+        <AssociationConnector Association="VodadModel.FK_OrderPerformed_PerformerPlatform" />
+        <AssociationConnector Association="VodadModel.FK_OrderPerformed_User" />
+        <AssociationConnector Association="VodadModel.FK_OrderThemes_Theme" />
+        <AssociationConnector Association="VodadModel.FK_PerformerPlatform_Themes" />
+        <AssociationConnector Association="VodadModel.FK_PerformerPlatform_User" />
+        <AssociationConnector Association="VodadModel.FK_PerformerStatistics_GeolocationPlatformPercentage" />
+        <AssociationConnector Association="VodadModel.FK_User_Roles" />
+        <AssociationConnector Association="VodadModel.FK_Ticket_Ticket" />
+        <AssociationConnector Association="VodadModel.FK_Ticket_TicketThemes" />
+        <AssociationConnector Association="VodadModel.FK_Ticket_User" />
+        <AssociationConnector Association="VodadModel.FK_Ticket_User1" />
+        <AssociationConnector Association="VodadModel.FK_Ticket_User2" />
+        <AssociationConnector Association="VodadModel.FK_User_Timezone" />
+        <AssociationConnector Association="VodadModel.FK_Transactions_User" />
+        <AssociationConnector Association="VodadModel.FK_Transactions_User1" />
+        <AssociationConnector Association="VodadModel.FK_User_User" />
+        <AssociationConnector Association="VodadModel.FK_UserMerchants_User" />
+        <AssociationConnector Association="VodadModel.FK_Video_User" />
+        <AssociationConnector Association="VodadModel.FK_Wallet_User" />
+        <AssociationConnector Association="VodadModel.FK_WhiteList_User" />
+        <AssociationConnector Association="VodadModel.FK_WhiteList_User1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,44 @@
+﻿@model Vodad.Models.LoginModel
+
+@{
+    ViewBag.Title = "Log in";
+}
+
+
+    @if (ViewBag.AlertMessage != null && ViewBag.AlertMessage.Equals("Your account is not activated!"))
+    {
+        <h3><a href='~/Account/ResendActivationCode'>Resend activation code.</a></h3>
+    }
+
+        <h1>@ViewBag.Title.</h1>
+        <h2>Use this form to enter the system.</h2>
+
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { id = "login-form" }))
+    {
+        @Html.ValidationSummary(true, "Log in was unsuccessful. Please correct the errors and try again.")
+
+        <fieldset>
+            <legend>Log in Form</legend>
+            <ol>
+                <li>
+                    @Html.LabelFor(m => m.Email)<br />
+                    @Html.TextBoxFor(m => m.Email)
+                    @Html.HiddenFor(m => m.UserIp, new { @Value = "", id = "login-user-ip" })
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Password)<br />
+                    @Html.PasswordFor(m => m.Password)
+                </li>
+                <li>
+                    @Html.CheckBoxFor(m => m.RememberMe)
+                    @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+                </li>
+            </ol>
+            <br />
+            <input type="submit" value="Log in" class="button" />
+        </fieldset>
+        <br />
+        <p>
+            @Html.ActionLink("Register", "Register") if you don't have an account.
+        </p>
+    }

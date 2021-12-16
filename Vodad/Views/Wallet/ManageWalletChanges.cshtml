@@ -1,0 +1,61 @@
+﻿@model List<Vodad.Models.ManageWalletChangesModel>
+
+@{
+    ViewBag.Title = "Manage wallet changes";
+}
+
+<h2>Manage wallet changes</h2>
+
+@if (Model != null)
+{
+
+    <table id="walletchanges-table">
+        <thead>
+            <tr class="manage-walletchanges-webgrid-header">
+                <th id="walletchanges-lastchangedate">LastChangeDate</th>
+                <th id="walletchanges-totalsum">Total sum</th>
+                <th id="walletchanges-orderperformedsum" title="Order performed(inaction+complete) sum from last change account">OP Sum</th>
+                <th id="walletchanges-lastchargesum">Last charge sum</th>
+                <th id="walletchanges-lastchargedate">Last charge date</th>
+                <th id="walletchanges-actions">Actions</th>
+                <th id="walletchanges-previousaccount">Previous account</th>
+                <th id="walletchanges-currentaccount">Current account</th>
+                <th id="walletchanges-nextaccount">Next account</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var wc in Model)
+            {
+                <tr>
+                    @if (@wc.CanBeChanged)
+                    {
+                        <td style="color: #107600">@wc.CurrentAccountChangeDateTime</td>
+                    }
+                    else
+                    {
+                        <td style="color: #f00">@wc.CurrentAccountChangeDateTime</td>
+                    }
+                    <td>@wc.TotalWalletSum.ToString("F4")</td>
+                    <td>@wc.OrderPerformedInactionAndCompleteSumAfterLastAccountChanges.ToString("F4")</td>
+                    <td>@wc.LastCurrentAccountChargeSum.ToString("F4")</td>
+                    <td>@wc.LastCurrentAccountChargeDateTime</td>
+                    <td class="td-actions">
+                        <a href="@Url.Action("AcceptWalletChanges", "Wallet", new { userId = @wc.UserId, umid = @wc.UserMerchantId })" >
+                            <img src="@Url.Content("~/Images/plus.png")" border="0" width="20px" alt="Accept changes" title="Accept changes" /></a>
+                        <a href="@Url.Action("AddToCheaters", "Cheaters", new { uid = @wc.UserId })" >
+                            <img src="@Url.Content("~/Images/black-list.png")" border="0" width="20px" alt="Add user to cheaters list" title="Add user to cheaters list" /></a>
+                        <a href="@Url.Action("ChatWithUser", "Message", new { companionId = @wc.UserId })" >
+                            <img src="@Url.Content("~/Images/send-message-button.png")" border="0" width="20px" alt="Send message" title="Send message" /></a>
+                    </td>
+                    <td>@wc.PreviousAccount</td>
+                    <td>@wc.CurrentAccount</td>
+                    <td>@wc.NextAccount</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    @Html.Raw("There are no wallet changes yet.")
+}

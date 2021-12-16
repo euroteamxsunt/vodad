@@ -1,0 +1,114 @@
+﻿@model List<Vodad.Models.PerformerSearchResultsModel>
+
+@{
+    ViewBag.Title = "Performer search result";
+}
+
+<h2>Performers search results</h2>
+
+@if (User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Advertiser))
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Performer name</th>
+                <th>Platform</th>
+                <th>Subject</th>
+                <th title="Unique visitors per month">Unique vpm</th>
+                <th title="Viewers per hour">Viewers p/h</th>
+                <th>Followers</th>
+                <th>Max viewers</th>
+                <th>Unique views</th>
+                <th>Views</th>
+                <th>Reputation</th>
+                <th>Average complition speed</th>
+                <th>Total orders</th>
+                <th>Link</th>
+                <th>Geolocation</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var s in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(@s.PerformerName, "Profile", "User", new { id = @s.PerformerId }, htmlAttributes: null)</td>
+                    <td>@s.PerformerPlatformName</td>
+                    <td>@s.PerformerThemeName</td>
+                    <td>@s.UniqueViewersForMonth</td>
+                    <td>@s.AverageViewersPerHour</td>
+                    <td>@s.TotalFollowers</td>
+                    <td>@s.MaxViewersCount</td>
+                    <td>@s.TotalUniqueViews</td>
+                    <td>@s.TotalViews</td>
+                    <td>@s.Likes</td>
+                    <td>@s.AverageComplitionSpeed</td>
+                    <td>@s.TotalOrders</td>
+                    <td><a href="@s.PerformerPlatformLink" target="_blank">@s.PerformerPlatformLink</a></td>
+                    <td>
+                        <ul>
+                            @foreach (var g in @s.GeolocationAndPercentage)
+                            {
+                                <li>@g</li>
+                            }
+                        </ul>
+                    </td>
+                    <td><a href="@Url.Action("RequestOrderToPerformer", "Order", new { oid = ViewBag.OrderId, ppid = @s.PerformerPlatformId })" >
+                        <img src='../Images/verified-platform.png' alt='Select performer platform' title='Select performer platform' style="max-width: 32px">
+                    </a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@if (!User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Advertiser))
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Streamer name</th>
+                <th>Platform</th>
+                <th>Subject</th>
+                <th title="Unique visitors per month">Unique vpm</th>
+                <th title="Viewers per hour">Viewers p/h</th>
+                <th>Followers</th>
+                <th>Max viewers</th>
+                <th>Unique views</th>
+                <th>Views</th>
+                <th>Likes</th>
+                <th>Average complition speed</th>
+                <th>Total orders</th>
+                <th>Link</th>
+                <th>Geolocation</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var s in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(@s.PerformerName, "Profile", "User", new { id = @s.PerformerId }, htmlAttributes: null)</td>
+                    <td>@s.PerformerPlatformName</td>
+                    <td>@s.PerformerThemeName</td>
+                    <td>@s.UniqueViewersForMonth</td>
+                    <td>@s.AverageViewersPerHour</td>
+                    <td>@s.TotalFollowers</td>
+                    <td>@s.MaxViewersCount</td>
+                    <td>@s.TotalUniqueViews</td>
+                    <td>@s.TotalViews</td>
+                    <td>@s.Likes</td>
+                    <td>@s.AverageComplitionSpeed</td>
+                    <td>@s.TotalOrders</td>
+                    <td><a href="@s.PerformerPlatformLink" target="_blank">@s.PerformerPlatformLink</a></td>
+                    <td>
+                        <ul>
+                            @foreach (var g in @s.GeolocationAndPercentage)
+                            {
+                                <li>@g</li>
+                            }
+                        </ul>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

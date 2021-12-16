@@ -1,0 +1,4 @@
+2013-08-07 17:00:08.7002 WIN-4RBAACNQBGT\Администратор:notauth:: 00:00:15.0745 (8) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => AccountController.Login
+User tu_1_klamar@gmail.com has been logged in with ip 
+

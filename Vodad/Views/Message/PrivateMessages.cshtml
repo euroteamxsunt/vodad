@@ -1,0 +1,66 @@
+﻿@using VodadModel
+@model VodadModel.Messages
+
+@{
+    ViewBag.Title = "PrivateMessages";
+}
+
+<h2>Private messages</h2>
+
+@{
+    var actions = new List<SelectListItem>
+                      {
+                          new SelectListItem
+                              {
+                                  Value = "0",
+                                  Text = "Choose_action",
+                                  Selected = true
+                              }, new SelectListItem
+                                     {
+                                         Value = "1",
+                                         Text = "Execute_Delete"
+                                     }, new SelectListItem
+                                            {
+                                                Value = "2",
+                                                Text = "Add_to_white_list"
+                                            }, new SelectListItem
+                                                   {
+                                                       Value = "3",
+                                                       Text = "Add_to_black_list"
+                                                   }
+                      };
+}
+
+@using (Html.BeginForm("PrivateMessages", "Message", FormMethod.Post))
+{
+    if (ViewBag.Messengers.Count > 0)
+    {
+    
+
+                @Html.DropDownList("action", actions, new { @class = "action-dropdownlist", @id = "dialogs-list-action-dropdownlist" })
+        
+            <input type="submit" name="submit" value="Choose action" disabled />
+
+        <table>
+	        <thead>
+                <tr>
+			        <th>User</th>
+			        <th>Total</th>
+			        <th>New</th>
+			        <th>@Html.CheckBox("action", false, new { @class = "all-actions-checkbox" })</th>
+			        <th>Companion</th>
+		        </tr>
+	        </thead>
+	        <tbody>
+		    @foreach (var messenger in ViewBag.Messengers)
+           {
+			            Html.RenderPartial("PrivateMessengersSummary", (Vodad.Models.MessengersModel)messenger);
+           }
+	        </tbody>
+        </table>
+    }
+    else
+    {
+        @Html.Raw("There are no dialogs yet.")
+    }
+}

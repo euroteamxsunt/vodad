@@ -1,0 +1,32 @@
+﻿<h2>Created orders</h2>
+
+<b>@ViewBag.CreatedOrdersCount
+    &nbsp; orders created</b><br />
+<br />
+
+<input type="text" value="@DateTime.Today" class="start-date" />
+<input type="text" value="@DateTime.Today" class="end-date" />
+<input type="button" id="update-button" value="Update" class="button" />
+
+<table id="created-orders-table">
+    <thead>
+        <tr>
+            <th>Creation date</th>
+            <th>Max budget</th>
+            <th>User</th>
+            <th>Order status</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var c in ViewBag.CreatedOrders)
+        {
+            <tr>
+                <td>@c.CreationDate</td>
+                <td>@c.MaxBudget</td>
+                <td>@c.AuthorName</td>
+                <td>@c.OrderStatus</td>
+            </tr>
+        }
+    </tbody>
+</table>

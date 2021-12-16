@@ -1,0 +1,110 @@
+﻿@model Vodad.Models.ChangeProfileModel
+
+@{
+    ViewBag.Title = "Profile";
+}
+
+<hgroup>
+    <h1>@ViewBag.Title</h1>
+</hgroup>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Change Profile Form</legend>
+
+        <ol>
+            <li>
+                <h3>Enter Your profile information here:</h3>
+
+                @Html.TextAreaFor(m => m.Comments)
+
+            </li>
+        </ol>
+        <input type="submit" value="Save profile changes" /><br />
+    </fieldset>   
+}
+<br />
+
+<h1>Settings</h1>
+
+<input type="button" value="Change password" onclick="location.href='@Url.Action("ChangePassword", "Account")    '" />
+
+<br />
+
+<input type="button" value="Attach account by IP" onclick="location.href='@Url.Action("AttachAccountByIP", "Account")    '" />
+
+
+
+@if (ViewBag.Merchants != null)
+{
+    <br />
+    foreach (var m in ViewBag.Merchants)
+    {
+        if (@m.UserMerchantId != 0)
+        {
+    <input type="button" value="Change account" onclick="location.href='@Url.Action("ChangeMerchantAccount", "Wallet", new { umid = @m.UserMerchantId })    '" />
+        }
+        else
+        {
+    <input type="button" value="Add account" onclick="location.href='@Url.Action("AddMerchantAccount", "Wallet", new { merchant = m.MerchantName })    '" />
+        }
+
+    <strong>@m.MerchantName account: </strong> 
+        
+        if (@m.MerchantAccount != null)
+        {
+    <div id="profile-merchant-account-name">
+        @m.MerchantAccount @Html.Raw('(' + @m.AccountStatus + ')')
+    </div>
+        }
+        else
+        {
+    <i>none</i>
+        }
+
+        if (@m.AccountStatus != null && (@m.AccountStatus.Equals("changing") || @m.AccountStatus.Equals("waiting")) && (@m.NextAccount != "" || @m.NextAccount == null))
+        {
+            Html.Raw("|");
+    @Html.ActionLink("Cancel changing", "CancelUserMerchantAccountChanges", "Wallet", new { userId = @ViewBag.UserId, umid = @m.UserMerchantId }, new { title = "Add account" })
+        }
+                
+    <br />
+    }
+}
+
+<br />
+
+
+<h1>Referral system</h1>
+
+<strong>Referrals income:</strong> @ViewBag.ReferralsIncome.ToString("F4")@Html.Raw("$")
+
+<br />
+
+<strong>Your referal link:</strong> <a href="https://showngain.com/Account/Register?r=@ViewBag.UserId">https://showngain.com/Account/Register?r=@ViewBag.UserId</a>
+
+<br />
+
+@if (!User.IsInRole("Banned") && !User.IsInRole("Helper"))
+{
+    <table>
+        <thead>
+            <th>Username</th>
+            <th>Role</th>
+            <th>Last activity date</th>
+        </thead>
+        <tbody>
+            @foreach (var u in ViewBag.ReferralsList)
+            {
+                <tr>
+                    <td>@Html.ActionLink((string)@u.ReferralName, "Profile", "User", new { id = @u.ReferralId }, htmlAttributes: null)</td>
+                    <td>@u.ReferralRole</td>
+                    <td>@u.ReferralLastActivityDateTime</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,27 @@
+﻿@model Vodad.Models.ResendActivationCodeModel
+
+@{
+    ViewBag.Title = "ResendActivationCode";
+}
+
+<div class="plain-page">
+    <h2>Resend activation code</h2>
+
+    <h4>Please enter Your E-mail below.</h4>
+
+    @using (Html.BeginForm(new { ViewBag.ReturnUrl }))
+    {
+        @Html.ValidationSummary(true, "")
+
+        <fieldset>
+            <legend>Resend activation code</legend>
+            <ol>
+                <li>
+                    @Html.LabelFor(m => m.Email)<br />
+                    @Html.TextBoxFor(m => m.Email)
+                </li>
+            </ol>
+            <input type="submit" value="Resend code" class="button" />
+        </fieldset>
+    }
+</div>

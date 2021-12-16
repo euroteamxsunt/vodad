@@ -1,0 +1,33 @@
+﻿@model List<Vodad.Models.ReadMessageModel>
+
+
+    @if (ViewBag.Messages.Count > 0)
+    {
+    <table >
+	    <thead>
+            <tr>
+			    <th>Author</th>
+                <th>Message text</th>
+                <th></th>
+		    </tr>
+	    </thead>
+	    <tbody>
+		@foreach (var m in ViewBag.Messages)
+        {
+			        <tr>
+                        <td>
+                            <a href="@Url.Action("Profile", "User", new { id = @m.UserId })">@m.FromUserEmail</a>
+                            <br />
+                            <div>@m.DateTime</div>
+                        </td>
+                        <td>@m.MessageText</td>
+                        <td>@m.DateTimeForSorting</td>
+			        </tr>
+        }
+	    </tbody>
+    </table>
+    }
+    else
+    {
+        @Html.Raw("There are no messages yet.")
+    }

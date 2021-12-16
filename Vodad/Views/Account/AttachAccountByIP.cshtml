@@ -1,0 +1,44 @@
+﻿@model Vodad.Models.AttachAccountByIPModel
+
+@{
+    ViewBag.Title = "Attach account";
+}
+
+@section scripts {
+    <script type="text/javascript">
+        $.getJSON("http://jsonip.appspot.com?callback=?",
+            function (data) {
+                $("#attach-user-ip").text(data.ip);
+                $("#attach-user-ip-form").val(data.ip);
+            });
+    </script>
+}
+
+<h2>Attach account</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Ban User Form</legend>
+        <ol>
+            <li>
+                Your IP is: <label></label><br />
+                
+                @if (ViewBag.AttachedIp != null && ViewBag.AttachedIp != "")
+                {
+                    @Html.Raw("You have attached Your account to " + ViewBag.AttachedIp + " ")
+                    <a href="@Url.Action("DeattachAccountByIP", "Account")">Deattach</a>
+                }
+                else
+                {
+                    @Html.Raw("Your account isn't attached yet")
+                }
+
+                @Html.HiddenFor(m => m.UserIp, new { @Value = "", id = "attach-user-ip-form" })
+                @Html.HiddenFor(m => m.UserId, new { @Value = ViewBag.UserId})
+            </li>
+        </ol>
+        <input type="submit" value="Attach" />
+    </fieldset>
+}

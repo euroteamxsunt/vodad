@@ -1,0 +1,29 @@
+﻿@using System.Globalization
+@{
+    ViewBag.Title = "Charge money by PayPal";
+}
+
+<h2>Please check the form and confirm</h2>
+
+<strong>Charging sum:</strong> @ViewBag.Sum$<br />
+<strong>Your Email: </strong>@ViewBag.UserEmail<br />
+<br />
+Your PayPal™ account is <strong>@ViewBag.UserMerchantAccount</strong>. You can charge your wallet only with it. In case of using another account, money will not be transferred to the wallet!
+<br />
+@Html.CheckBox("warning") I've read alert message and accepted
+<br /><br />
+
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+    <!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post">-->
+
+    <input type="hidden" name="cmd" value="_xclick" />
+    <input type="hidden" name="business" value="vodadpay@vodad.com" />
+
+    <input type="hidden" name="item_name" value="@ViewBag.UserEmail" />
+    <input type="hidden" name="amount" value="@ViewBag.Sum.ToString("F2", CultureInfo.CreateSpecificCulture("en-US"))" />
+    <input type="hidden" name="currency_code" value="USD" />
+    <input type="hidden" name="return" value="http://91.207.211.53:8080" />
+
+    <input type="submit" value="Confirm" class="button" id="confirm-button" />
+
+</form>

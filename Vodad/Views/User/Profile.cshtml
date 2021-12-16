@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "User " + @ViewBag.UserName;
+}
+
+@ViewBag.UserName
+
+@if (ViewBag.RoleName.Equals(VodadModel.Utilities.Constants.UserRoles.Performer))
+{
+    <div>
+        <img src='~/Images/reputation.png' alt="User's reputation" title="User's reputation">
+        <div>
+            <div title="Reputation: @ViewBag.Karma %">
+            </div>
+        </div>
+    </div>
+}
+
+Last activity: @ViewBag.LastOnlineDate
+
+@if (!ViewBag.LastOnlineDate.Equals("Today") && !ViewBag.LastOnlineDate.Equals("Online"))
+{
+    @Html.Raw("days ago")
+}
+
+<br />
+
+<strong>Role:</strong> @ViewBag.RoleName
+
+@if (Request.IsAuthenticated)
+{
+    if (ViewBag.RoleName.Equals(VodadModel.Utilities.Constants.UserRoles.Advertiser))
+    {
+    @Html.ActionLink("View user's open orders", "AdvertiserSearchResultByName", "Search", new { uid = @ViewBag.UserId }, new { title = "View open orders" })
+    }
+    else if (ViewBag.RoleName.Equals(VodadModel.Utilities.Constants.UserRoles.Performer))
+    {
+    @Html.ActionLink("View user's channels", "PeformerSearchResultByName", "Search", new { uid = @ViewBag.UserId }, new { title = "View users channels" })
+    }
+}
+
+<br />
+
+<strong>Age:</strong> @ViewBag.Age day(s)<br />
+<strong>Paid order performed:</strong> @ViewBag.PaidOrderPerformed<br />
+<strong>Additional information:</strong><br />
+<pre> @ViewBag.Comments</pre>
+
+<br />
+<br />
+
+@if (Request.IsAuthenticated && ViewBag.OwnerId != ViewBag.UserId)
+{
+    <a href="@Url.Action("ChatWithUser", "Message", new { companionId = ViewBag.UserId })" >
+        <img src='~/Images/send-message-button.png' alt='Send message' title='Send message' id="send-message-icon"></a>
+
+    <a href="@Url.Action("AddUserToWhiteList", "BlackAndWhiteLists", new { userId = ViewBag.UserId, ownerId = ViewBag.OwnerId })" >
+        <img src='~/Images/white-list.png' alt='Add to white list' title='Add to white list'></a>
+
+    <a href="@Url.Action("AddUserToBlackList", "BlackAndWhiteLists", new { userId = ViewBag.UserId, ownerId = ViewBag.OwnerId })" >
+        <img src='~/Images/black-list.png' alt='Add to black list' title='Add to black list'></a>
+        
+    if (User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Administrator) && (ViewBag.RoleName.Equals(VodadModel.Utilities.Constants.UserRoles.Performer) || ViewBag.RoleName.Equals(VodadModel.Utilities.Constants.UserRoles.Advertiser)))
+    {
+    <a href="@Url.Action("BanUser", "Account", new { userId = ViewBag.UserId })" >
+        <img src='~/Images/delete.png' alt='Ban user' title='Ban user'></a>
+    }
+
+    if (User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Administrator) && ViewBag.RoleName.Equals(VodadModel.Utilities.Constants.UserRoles.Banned))
+    {
+    <a href="@Url.Action("UnbanUser", "Account", new { userId = ViewBag.UserId })" >
+        <img src='~/Images/verified-platform.png' alt='Unban user' title='Unban user'></a>
+    }
+
+    if (User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Administrator))
+    {
+    <a href="@Url.Action("ChangeUsersRole", "Account", new { userId = ViewBag.UserId })" >
+        <input type="button" value="Change role" /></a>
+    }
+}

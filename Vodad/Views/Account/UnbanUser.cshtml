@@ -1,0 +1,23 @@
+﻿@model Vodad.Models.UnbanUserModel
+
+@{
+    ViewBag.Title = "Unban user " + @ViewBag.UnbanUserName;
+}
+
+<h2>Unban user @ViewBag.UnbanUserEmail</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Unban User Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.Reason)<br />
+                @Html.TextAreaFor(m => m.Reason)
+                @Html.HiddenFor(m => m.UnbanUserId, new { @Value = ViewBag.UnbanUserId })
+            </li>
+        </ol>
+        <input type="submit" value="Unban user" />
+    </fieldset>
+}

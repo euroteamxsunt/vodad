@@ -1,0 +1,58 @@
+﻿@model List<Vodad.Models.AdvertiserSearchResultsModel>
+
+@{
+    ViewBag.Title = "Advertiser search results";
+}
+
+<h2>Advertiser search results</h2>
+
+@if (!User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Performer))
+{
+    <table>
+	    <thead>
+            <tr>
+			    <th>Advertiser name</th>
+                <th>Region</th>
+                <th>Size</th>
+                <th>Banner</th>
+		    </tr>
+	    </thead>
+	    <tbody>
+		    @foreach (var a in Model)
+            {
+			    <tr>
+                    <td>@Html.ActionLink(@a.AdvertiserName, "Profile", "User", new { id = @a.AdvertiserId }, htmlAttributes: null)</td>
+                    <td>@a.Region</td>
+                    <td>@a.Size</td>
+                    <td><a href="@Url.Action("Image", new { iid = @a.ContentId})"><img src="@Url.Action("Image", "Order", new { iid = @a.ContentId }) + " alt="image" width="50px" /></a></td>
+			    </tr>
+            }
+        </tbody>
+    </table>
+}
+@if (User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Performer))
+{
+    <table>
+	    <thead>
+            <tr>
+			    <th>Advertiser name</th>
+                <th>Region</th>
+                <th>Size</th>
+                <th>Banner</th>
+                <th></th>
+		    </tr>
+	    </thead>
+	    <tbody>
+		    @foreach (var a in Model)
+            {
+			    <tr>
+                    <td>@Html.ActionLink(@a.AdvertiserName, "Profile", "User", new { id = @a.AdvertiserId }, htmlAttributes: null)</td>
+                    <td>@a.Region</td>
+                    <td>@a.Size</td>
+                    <td><a href="@Url.Action("Image", new { iid = @a.ContentId })"><img src="@Url.Action("Image", "Order", new { iid = @a.ContentId }) + " alt="image" width="50" /></a></td>
+                    <td>@Html.ActionLink("Request", "RequestOrderToAdvertiser", "Order", new { bmid = ViewBag.BannerMeasureId, iid = @a.ContentId}, htmlAttributes: null)</td>
+			    </tr>
+            }
+        </tbody>
+    </table>
+}

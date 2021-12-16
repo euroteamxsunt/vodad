@@ -1,0 +1,27 @@
+﻿@model Vodad.Models.EditNewsModel
+
+@{
+    ViewBag.Title = "Edit " + @Model.NewsTitle;
+}
+
+<h2>Edit @Model.NewsTitle</h2>
+
+@using (Html.BeginForm(new { ViewBag.ReturnUrl })) {
+    @Html.ValidationSummary(true, "")
+
+    <fieldset>
+        <legend>Add news form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.NewsTitle)<br />
+                @Html.TextBoxFor(m => m.NewsTitle, new { @Value = Model.NewsTitle })
+                @Html.HiddenFor(m => m.NewsId, new { @Value = Model.NewsId })
+            </li>
+            <li>
+                @Html.LabelFor(m => m.NewsText)<br />
+                @Html.TextAreaFor(m => m.NewsText, 25, 90, new { @Value = Model.NewsText } )
+            </li>
+        </ol>
+        <input type="submit" value="Save changes" />
+    </fieldset>
+}

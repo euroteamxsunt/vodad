@@ -1,0 +1,108 @@
+﻿@model Vodad.Models.PerformerPlatformListModel
+
+@{
+    ViewBag.Title = "Manage Platforms";
+}
+
+<h2>Manage Platforms</h2>
+
+<div>
+    <!--<input type="button" value="Add new platform" onclick="location.href='@Url.Action("AddPlatform", "PerformerPlatform")    '" />-->
+    <input type="button" value="Add new platform" onclick="location.href = 'https://accounts.google.com/o/oauth2/auth?client_id=516698891787-2080512g0ml237fdi1d8c8rsfd8ske1h.apps.googleusercontent.com&redirect_uri=http://siniykot.in.ua/PerformerPlatform/VerifyPlatform/&scope=https://www.googleapis.com/auth/youtube&response_type=code&access_type=offline'" />
+</div>
+
+
+
+@if (ViewBag.PerformerPlatformsList.Count > 0)
+{
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Login</th>
+                <th>Subject</th>
+                <th>Verification</th>
+                <th>Video price</th>
+                <th>Logo price</th>
+                <th></th>
+                <th title="Unique visitors per month">Unique vpm</th>
+                <th title="Viewers per hour">Viewers p/h</th>
+                <th>Followers</th>
+                <th>Max viewers</th>
+                <th>Unique views</th>
+                <th>Views</th>
+                <th>Average complition speed</th>
+                <th>Total orders</th>
+                <th>Link</th>
+                <th>Geolocation</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pp in ViewBag.PerformerPlatformsList)
+            {
+                <tr>
+                    <td>@pp.ChannelName</td>
+                    <td>@pp.PerformerPlatformLogin</td>
+                    <td>@pp.PerformerPlatformTheme</td>
+                    <td>
+
+                        @if (@pp.PerformerPlatformVerified == "Verified")
+                        {
+                            <img src="@Url.Content("~/Images/verified-platform.png")" border="0" width="20px" alt="Verified" title="Verified" />
+                        }
+
+                        @if (@pp.PerformerPlatformVerified == "Unverified")
+                        {
+                            <img src="@Url.Content("~/Images/delete.png")" border="0" width="20px" alt="Unverified" title="Unverified" />
+                        }
+
+                        @if (@pp.PerformerPlatformVerified == "Failed")
+                        {
+                            <img src="@Url.Content("~/Images/failed.png")" border="0" width="20px" alt="Unverified" title="Can't verify platform, please check Your login, password or platform." />
+                        }
+
+                        @if (@pp.PerformerPlatformVerified == "Notpassed")
+                        {
+                            <img src="@Url.Content("~/Images/notallowed.png")" border="0" width="20px" alt="Not passed" title="The platform does not meet the necessary requirements." />
+                            @Html.ActionLink("Retry", "RetryVerifying", "PerformerPlatform", new { ppid = @pp.PerformerPlatformId }, htmlAttributes: null)
+                        }
+
+                    </td>
+                    <td>@pp.VideoPrice.ToString("F2")$</td>
+                    <td>@pp.LogoPrice.ToString("F2")$</td>
+                    <td>
+                        <a href="@Url.Action("EditPerformerPlatform", "PerformerPlatform", new { ppid = @pp.PerformerPlatformId })" >
+                            <img src="@Url.Content("~/Images/edit.png")" border="0" width="20px" alt="Edit platform" title="Edit platform" /></a>
+
+                        <a href="@Url.Action("ChangePerformerPlatformStatus", "PerformerPlatform", new { ppid = @pp.PerformerPlatformId, @status = "deleted" })" onclick="return confirm('Are you sure you want to delete platform \'@pp.PerformerPlatformLogin\'?')">
+                            <img src="@Url.Content("~/Images/delete.png")" border="0" width="20px" alt="Delete platform" title="Delete platform" /></a>
+                        
+                        <a href="@Url.Action("RequestOrderToAdvertiser", "Order", new { ppid = @pp.PerformerPlatformId })" ><img src="@Url.Content("~/Images/magnifier.png")" border="0" width="20px" alt="Search for advertiser" title="Search for advertiser" /></a>
+                    </td>
+                    <td>@pp.UniqueViewersForMonth</td>
+                    <td>@pp.AverageViewersPerHour</td>
+                    <td>@pp.TotalFollowers</td>
+                    <td>@pp.MaxViewersCount</td>
+                    <td>@pp.TotalUniqueViews</td>
+                    <td>@pp.TotalViews</td>
+                    <td>@pp.AverageComplitionSpeed</td>
+                    <td>@pp.TotalOrders</td>
+                    <td><a href="@pp.PerformerPlatformLink" target="_blank">@pp.PerformerPlatformLink</a></td>
+                    <td>
+                        <ul>
+                            @foreach (var g in @pp.GeolocationAndPercentage)
+                            {
+                                <li>@g</li>
+                            }
+                        </ul>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    @Html.Raw("There are no platforms yet.")
+}

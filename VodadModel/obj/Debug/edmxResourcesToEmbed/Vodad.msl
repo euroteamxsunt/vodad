@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VodadModelStoreContainer" CdmEntityContainer="VodadEntities">
+    <EntitySetMapping Name="C__RefactorLog">
+      <EntityTypeMapping TypeName="VodadModel.C__RefactorLog">
+        <MappingFragment StoreEntitySet="__RefactorLog">
+          <ScalarProperty Name="OperationKey" ColumnName="OperationKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlertMessage">
+      <EntityTypeMapping TypeName="VodadModel.AlertMessage">
+        <MappingFragment StoreEntitySet="AlertMessage">
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ban">
+      <EntityTypeMapping TypeName="VodadModel.Ban">
+        <MappingFragment StoreEntitySet="Ban">
+          <ScalarProperty Name="AdminUnbanId" ColumnName="AdminUnbanId" />
+          <ScalarProperty Name="AdminBanId" ColumnName="AdminBanId" />
+          <ScalarProperty Name="CanBeUnbanned" ColumnName="CanBeUnbanned" />
+          <ScalarProperty Name="UnbanReason" ColumnName="UnbanReason" />
+          <ScalarProperty Name="BanReason" ColumnName="BanReason" />
+          <ScalarProperty Name="UnbanDateTime" ColumnName="UnbanDateTime" />
+          <ScalarProperty Name="BanDateTime" ColumnName="BanDateTime" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlackList">
+      <EntityTypeMapping TypeName="VodadModel.BlackList">
+        <MappingFragment StoreEntitySet="BlackList">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Certificates">
+      <EntityTypeMapping TypeName="VodadModel.Certificates">
+        <MappingFragment StoreEntitySet="Certificates">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cheaters">
+      <EntityTypeMapping TypeName="VodadModel.Cheaters">
+        <MappingFragment StoreEntitySet="Cheaters">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Geolocation">
+      <EntityTypeMapping TypeName="VodadModel.Geolocation">
+        <MappingFragment StoreEntitySet="Geolocation">
+          <ScalarProperty Name="CCTLD" ColumnName="CCTLD" />
+          <ScalarProperty Name="CallingCode" ColumnName="CallingCode" />
+          <ScalarProperty Name="UNMemberState" ColumnName="UNMemberState" />
+          <ScalarProperty Name="NumCode" ColumnName="NumCode" />
+          <ScalarProperty Name="ISO3" ColumnName="ISO3" />
+          <ScalarProperty Name="LongCountryName" ColumnName="LongCountryName" />
+          <ScalarProperty Name="ISO2" ColumnName="ISO2" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeolocationPlatformPercentage">
+      <EntityTypeMapping TypeName="VodadModel.GeolocationPlatformPercentage">
+        <MappingFragment StoreEntitySet="GeolocationPlatformPercentage">
+          <ScalarProperty Name="PerformerPlatformId" ColumnName="PerformerPlatformId" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+          <ScalarProperty Name="GeolocationId" ColumnName="GeolocationId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Image">
+      <EntityTypeMapping TypeName="VodadModel.Image">
+        <MappingFragment StoreEntitySet="Image">
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="ImageHeight" ColumnName="ImageHeight" />
+          <ScalarProperty Name="ImageWidth" ColumnName="ImageWidth" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ImageSize" ColumnName="ImageSize" />
+          <ScalarProperty Name="ImageData" ColumnName="ImageData" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Merchants">
+      <EntityTypeMapping TypeName="VodadModel.Merchants">
+        <MappingFragment StoreEntitySet="Merchants">
+          <ScalarProperty Name="MerchantName" ColumnName="MerchantName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Messages">
+      <EntityTypeMapping TypeName="VodadModel.Messages">
+        <MappingFragment StoreEntitySet="Messages">
+          <ScalarProperty Name="IsDeletedForReciever" ColumnName="IsDeletedForReciever" />
+          <ScalarProperty Name="IsDeletedForAuthor" ColumnName="IsDeletedForAuthor" />
+          <ScalarProperty Name="MessageTitle" ColumnName="MessageTitle" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="MessageText" ColumnName="MessageText" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ToUserId" ColumnName="ToUserId" />
+          <ScalarProperty Name="FromUserId" ColumnName="FromUserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MoneyTransfers">
+      <EntityTypeMapping TypeName="VodadModel.MoneyTransfers">
+        <MappingFragment StoreEntitySet="MoneyTransfers">
+          <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="AccountMerchantSystem" ColumnName="AccountMerchantSystem" />
+          <ScalarProperty Name="MerchantId" ColumnName="MerchantId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="VodadModel.News">
+        <MappingFragment StoreEntitySet="News">
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="Text2" ColumnName="Text2" />
+          <ScalarProperty Name="Text1" ColumnName="Text1" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order">
+      <EntityTypeMapping TypeName="VodadModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderContent">
+      <EntityTypeMapping TypeName="VodadModel.OrderContent">
+        <MappingFragment StoreEntitySet="OrderContent">
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IdContent" ColumnName="IdContent" />
+          <ScalarProperty Name="IdOrder" ColumnName="IdOrder" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderPerformed">
+      <EntityTypeMapping TypeName="VodadModel.OrderPerformed">
+        <MappingFragment StoreEntitySet="OrderPerformed">
+          <ScalarProperty Name="LastStatusChangeDateTime" ColumnName="LastStatusChangeDateTime" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="VideoLink" ColumnName="VideoLink" />
+          <ScalarProperty Name="PerformerPlatformId" ColumnName="PerformerPlatformId" />
+          <ScalarProperty Name="IsLiked" ColumnName="IsLiked" />
+          <ScalarProperty Name="AuthorId" ColumnName="AuthorId" />
+          <ScalarProperty Name="OrderContentId" ColumnName="OrderContentId" />
+          <ScalarProperty Name="MoneyPaid" ColumnName="MoneyPaid" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderThemes">
+      <EntityTypeMapping TypeName="VodadModel.OrderThemes">
+        <MappingFragment StoreEntitySet="OrderThemes">
+          <ScalarProperty Name="ThemeId" ColumnName="ThemeId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PerformerPlatform">
+      <EntityTypeMapping TypeName="VodadModel.PerformerPlatform">
+        <MappingFragment StoreEntitySet="PerformerPlatform">
+          <ScalarProperty Name="LogoPrice" ColumnName="LogoPrice" />
+          <ScalarProperty Name="VideoPrice" ColumnName="VideoPrice" />
+          <ScalarProperty Name="ChannelName" ColumnName="ChannelName" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="LastOnlineDateTime" ColumnName="LastOnlineDateTime" />
+          <ScalarProperty Name="Verified" ColumnName="Verified" />
+          <ScalarProperty Name="ThemeId" ColumnName="ThemeId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="PerformerId" ColumnName="PerformerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PerformerStatistics">
+      <EntityTypeMapping TypeName="VodadModel.PerformerStatistics">
+        <MappingFragment StoreEntitySet="PerformerStatistics">
+          <ScalarProperty Name="UniqueViewersForMonth" ColumnName="UniqueViewersForMonth" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="AverageComplitionSpeed" ColumnName="AverageComplitionSpeed" />
+          <ScalarProperty Name="TotalOrders" ColumnName="TotalOrders" />
+          <ScalarProperty Name="CompletedOrders" ColumnName="CompletedOrders" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="TotalViews" ColumnName="TotalViews" />
+          <ScalarProperty Name="TotalFollowers" ColumnName="TotalFollowers" />
+          <ScalarProperty Name="TotalUniqueViews" ColumnName="TotalUniqueViews" />
+          <ScalarProperty Name="MaxViewersCount" ColumnName="MaxViewersCount" />
+          <ScalarProperty Name="AverageViewerCountPerHour" ColumnName="AverageViewerCountPerHour" />
+          <ScalarProperty Name="PerformerPlatformId" ColumnName="PerformerPlatformId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Regions">
+      <EntityTypeMapping TypeName="VodadModel.Regions">
+        <MappingFragment StoreEntitySet="Regions">
+          <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="VodadModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Themes">
+      <EntityTypeMapping TypeName="VodadModel.Themes">
+        <MappingFragment StoreEntitySet="Themes">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tickets">
+      <EntityTypeMapping TypeName="VodadModel.Tickets">
+        <MappingFragment StoreEntitySet="Tickets">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CloseAdminId" ColumnName="CloseAdminId" />
+          <ScalarProperty Name="AnswerAdminId" ColumnName="AnswerAdminId" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="AdminCloseComment" ColumnName="AdminCloseComment" />
+          <ScalarProperty Name="AdminAnswer" ColumnName="AdminAnswer" />
+          <ScalarProperty Name="ParentTicketId" ColumnName="ParentTicketId" />
+          <ScalarProperty Name="CloseDate" ColumnName="CloseDate" />
+          <ScalarProperty Name="AnswerDate" ColumnName="AnswerDate" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ImageId" ColumnName="ImageId" />
+          <ScalarProperty Name="Text3" ColumnName="Text3" />
+          <ScalarProperty Name="Text2" ColumnName="Text2" />
+          <ScalarProperty Name="Text1" ColumnName="Text1" />
+          <ScalarProperty Name="ThemeId" ColumnName="ThemeId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TicketThemes">
+      <EntityTypeMapping TypeName="VodadModel.TicketThemes">
+        <MappingFragment StoreEntitySet="TicketThemes">
+          <ScalarProperty Name="ThemeName" ColumnName="ThemeName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Timezone">
+      <EntityTypeMapping TypeName="VodadModel.Timezone">
+        <MappingFragment StoreEntitySet="Timezone">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transactions">
+      <EntityTypeMapping TypeName="VodadModel.Transactions">
+        <MappingFragment StoreEntitySet="Transactions">
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="ToUserId" ColumnName="ToUserId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="FromUserId" ColumnName="FromUserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="VodadModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="VerificationKey" ColumnName="VerificationKey" />
+          <ScalarProperty Name="RegisteredRoleId" ColumnName="RegisteredRoleId" />
+          <ScalarProperty Name="AccountAttachedIP" ColumnName="AccountAttachedIP" />
+          <ScalarProperty Name="LastEmailSendDateTime" ColumnName="LastEmailSendDateTime" />
+          <ScalarProperty Name="LastOnlineDateTime" ColumnName="LastOnlineDateTime" />
+          <ScalarProperty Name="Karma" ColumnName="Karma" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="NewEmailRequested" ColumnName="NewEmailRequested" />
+          <ScalarProperty Name="NewEmailKey" ColumnName="NewEmailKey" />
+          <ScalarProperty Name="NewEmail" ColumnName="NewEmail" />
+          <ScalarProperty Name="NewPasswordKey" ColumnName="NewPasswordKey" />
+          <ScalarProperty Name="LastLockedOutReason" ColumnName="LastLockedOutReason" />
+          <ScalarProperty Name="LastLockedOutDate" ColumnName="LastLockedOutDate" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="IsActivated" ColumnName="IsActivated" />
+          <ScalarProperty Name="LastLoginIp" ColumnName="LastLoginIp" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ReferrerId" ColumnName="ReferrerId" />
+          <ScalarProperty Name="TimeZoneId" ColumnName="TimeZoneId" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserMerchants">
+      <EntityTypeMapping TypeName="VodadModel.UserMerchants">
+        <MappingFragment StoreEntitySet="UserMerchants">
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="NextAccount" ColumnName="NextAccount" />
+          <ScalarProperty Name="PreviousAccount" ColumnName="PreviousAccount" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="MerchantId" ColumnName="MerchantId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Video">
+      <EntityTypeMapping TypeName="VodadModel.Video">
+        <MappingFragment StoreEntitySet="Video">
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="VideoLength" ColumnName="VideoLength" />
+          <ScalarProperty Name="VideoSize" ColumnName="VideoSize" />
+          <ScalarProperty Name="VideoLink" ColumnName="VideoLink" />
+          <ScalarProperty Name="VideoName" ColumnName="VideoName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Wallet">
+      <EntityTypeMapping TypeName="VodadModel.Wallet">
+        <MappingFragment StoreEntitySet="Wallet">
+          <ScalarProperty Name="ReferralsIncome" ColumnName="ReferralsIncome" />
+          <ScalarProperty Name="Transfer" ColumnName="Transfer" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WhiteList">
+      <EntityTypeMapping TypeName="VodadModel.WhiteList">
+        <MappingFragment StoreEntitySet="WhiteList">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

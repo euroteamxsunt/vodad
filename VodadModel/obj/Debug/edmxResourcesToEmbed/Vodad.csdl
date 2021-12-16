@@ -1,0 +1,1301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VodadModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="VodadEntities" p1:LazyLoadingEnabled="true">
+    <FunctionImport Name="pr_CreateFkTreeDeleteTrigger">
+      <Parameter Name="schema_name" Mode="In" Type="String" />
+      <Parameter Name="is_verbose" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="pr_FkTreeDelete">
+      <Parameter Name="parent_table_id" Mode="In" Type="String" />
+      <Parameter Name="where_clause" Mode="In" Type="String" />
+      <Parameter Name="from_clause" Mode="In" Type="String" />
+      <Parameter Name="cascate_level" Mode="In" Type="Int32" />
+      <Parameter Name="is_verbose" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="pr_PopulateStaticData" />
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(VodadModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(VodadModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="C__RefactorLog" EntityType="VodadModel.C__RefactorLog" />
+    <EntitySet Name="AlertMessage" EntityType="VodadModel.AlertMessage" />
+    <EntitySet Name="Ban" EntityType="VodadModel.Ban" />
+    <EntitySet Name="BlackList" EntityType="VodadModel.BlackList" />
+    <EntitySet Name="Certificates" EntityType="VodadModel.Certificates" />
+    <EntitySet Name="Cheaters" EntityType="VodadModel.Cheaters" />
+    <EntitySet Name="Geolocation" EntityType="VodadModel.Geolocation" />
+    <EntitySet Name="GeolocationPlatformPercentage" EntityType="VodadModel.GeolocationPlatformPercentage" />
+    <EntitySet Name="Image" EntityType="VodadModel.Image" />
+    <EntitySet Name="Merchants" EntityType="VodadModel.Merchants" />
+    <EntitySet Name="Messages" EntityType="VodadModel.Messages" />
+    <EntitySet Name="MoneyTransfers" EntityType="VodadModel.MoneyTransfers" />
+    <EntitySet Name="News" EntityType="VodadModel.News" />
+    <EntitySet Name="Order" EntityType="VodadModel.Order" />
+    <EntitySet Name="OrderContent" EntityType="VodadModel.OrderContent" />
+    <EntitySet Name="OrderPerformed" EntityType="VodadModel.OrderPerformed" />
+    <EntitySet Name="OrderThemes" EntityType="VodadModel.OrderThemes" />
+    <EntitySet Name="PerformerPlatform" EntityType="VodadModel.PerformerPlatform" />
+    <EntitySet Name="PerformerStatistics" EntityType="VodadModel.PerformerStatistics" />
+    <EntitySet Name="Regions" EntityType="VodadModel.Regions" />
+    <EntitySet Name="Roles" EntityType="VodadModel.Roles" />
+    <EntitySet Name="Themes" EntityType="VodadModel.Themes" />
+    <EntitySet Name="Tickets" EntityType="VodadModel.Tickets" />
+    <EntitySet Name="TicketThemes" EntityType="VodadModel.TicketThemes" />
+    <EntitySet Name="Timezone" EntityType="VodadModel.Timezone" />
+    <EntitySet Name="Transactions" EntityType="VodadModel.Transactions" />
+    <EntitySet Name="User" EntityType="VodadModel.User" />
+    <EntitySet Name="UserMerchants" EntityType="VodadModel.UserMerchants" />
+    <EntitySet Name="Video" EntityType="VodadModel.Video" />
+    <EntitySet Name="Wallet" EntityType="VodadModel.Wallet" />
+    <EntitySet Name="WhiteList" EntityType="VodadModel.WhiteList" />
+    <AssociationSet Name="FK_AlertMessage_User" Association="VodadModel.FK_AlertMessage_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="AlertMessage" EntitySet="AlertMessage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ban_Roles" Association="VodadModel.FK_Ban_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Ban" EntitySet="Ban" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ban_User" Association="VodadModel.FK_Ban_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Ban" EntitySet="Ban" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ban_User1" Association="VodadModel.FK_Ban_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="Ban" EntitySet="Ban" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ban_User2" Association="VodadModel.FK_Ban_User2">
+      <End Role="User" EntitySet="User" />
+      <End Role="Ban" EntitySet="Ban" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BlackList_User" Association="VodadModel.FK_BlackList_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="BlackList" EntitySet="BlackList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BlackList_User1" Association="VodadModel.FK_BlackList_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="BlackList" EntitySet="BlackList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Certificates_User" Association="VodadModel.FK_Certificates_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Certificates" EntitySet="Certificates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cheaters_User" Association="VodadModel.FK_Cheaters_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Cheaters" EntitySet="Cheaters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeolocationPlatformPercentage_Geolocation" Association="VodadModel.FK_GeolocationPlatformPercentage_Geolocation">
+      <End Role="Geolocation" EntitySet="Geolocation" />
+      <End Role="GeolocationPlatformPercentage" EntitySet="GeolocationPlatformPercentage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GeolocationPlatformPercentagePerformerPlatform" Association="VodadModel.FK_GeolocationPlatformPercentagePerformerPlatform">
+      <End Role="PerformerPlatform" EntitySet="PerformerPlatform" />
+      <End Role="GeolocationPlatformPercentage" EntitySet="GeolocationPlatformPercentage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Image_User" Association="VodadModel.FK_Image_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Image" EntitySet="Image" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderContent_Image" Association="VodadModel.FK_OrderContent_Image">
+      <End Role="Image" EntitySet="Image" />
+      <End Role="OrderContent" EntitySet="OrderContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ticket_Image" Association="VodadModel.FK_Ticket_Image">
+      <End Role="Image" EntitySet="Image" />
+      <End Role="Tickets" EntitySet="Tickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MoneyTransfers_Merchants" Association="VodadModel.FK_MoneyTransfers_Merchants">
+      <End Role="Merchants" EntitySet="Merchants" />
+      <End Role="MoneyTransfers" EntitySet="MoneyTransfers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserMerchants_Merchants" Association="VodadModel.FK_UserMerchants_Merchants">
+      <End Role="Merchants" EntitySet="Merchants" />
+      <End Role="UserMerchants" EntitySet="UserMerchants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Messages_User" Association="VodadModel.FK_Messages_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Messages" EntitySet="Messages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Messages_User1" Association="VodadModel.FK_Messages_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="Messages" EntitySet="Messages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MoneyTransfers_User" Association="VodadModel.FK_MoneyTransfers_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="MoneyTransfers" EntitySet="MoneyTransfers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_News_User" Association="VodadModel.FK_News_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="News" EntitySet="News" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Regions" Association="VodadModel.FK_Order_Regions">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_User" Association="VodadModel.FK_Order_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderContent_Order" Association="VodadModel.FK_OrderContent_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="OrderContent" EntitySet="OrderContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderThemes_Order" Association="VodadModel.FK_OrderThemes_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="OrderThemes" EntitySet="OrderThemes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderContent_Video" Association="VodadModel.FK_OrderContent_Video">
+      <End Role="Video" EntitySet="Video" />
+      <End Role="OrderContent" EntitySet="OrderContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderPerformed_OrderImages" Association="VodadModel.FK_OrderPerformed_OrderImages">
+      <End Role="OrderContent" EntitySet="OrderContent" />
+      <End Role="OrderPerformed" EntitySet="OrderPerformed" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderPerformed_PerformerPlatform" Association="VodadModel.FK_OrderPerformed_PerformerPlatform">
+      <End Role="PerformerPlatform" EntitySet="PerformerPlatform" />
+      <End Role="OrderPerformed" EntitySet="OrderPerformed" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderPerformed_User" Association="VodadModel.FK_OrderPerformed_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="OrderPerformed" EntitySet="OrderPerformed" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderThemes_Theme" Association="VodadModel.FK_OrderThemes_Theme">
+      <End Role="Themes" EntitySet="Themes" />
+      <End Role="OrderThemes" EntitySet="OrderThemes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PerformerPlatform_Themes" Association="VodadModel.FK_PerformerPlatform_Themes">
+      <End Role="Themes" EntitySet="Themes" />
+      <End Role="PerformerPlatform" EntitySet="PerformerPlatform" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PerformerPlatform_User" Association="VodadModel.FK_PerformerPlatform_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="PerformerPlatform" EntitySet="PerformerPlatform" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PerformerStatistics_GeolocationPlatformPercentage" Association="VodadModel.FK_PerformerStatistics_GeolocationPlatformPercentage">
+      <End Role="PerformerPlatform" EntitySet="PerformerPlatform" />
+      <End Role="PerformerStatistics" EntitySet="PerformerStatistics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Roles" Association="VodadModel.FK_User_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ticket_Ticket" Association="VodadModel.FK_Ticket_Ticket">
+      <End Role="Tickets" EntitySet="Tickets" />
+      <End Role="Tickets1" EntitySet="Tickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ticket_TicketThemes" Association="VodadModel.FK_Ticket_TicketThemes">
+      <End Role="TicketThemes" EntitySet="TicketThemes" />
+      <End Role="Tickets" EntitySet="Tickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ticket_User" Association="VodadModel.FK_Ticket_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Tickets" EntitySet="Tickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ticket_User1" Association="VodadModel.FK_Ticket_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="Tickets" EntitySet="Tickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ticket_User2" Association="VodadModel.FK_Ticket_User2">
+      <End Role="User" EntitySet="User" />
+      <End Role="Tickets" EntitySet="Tickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Timezone" Association="VodadModel.FK_User_Timezone">
+      <End Role="Timezone" EntitySet="Timezone" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transactions_User" Association="VodadModel.FK_Transactions_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Transactions" EntitySet="Transactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transactions_User1" Association="VodadModel.FK_Transactions_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="Transactions" EntitySet="Transactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_User" Association="VodadModel.FK_User_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="User1" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserMerchants_User" Association="VodadModel.FK_UserMerchants_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserMerchants" EntitySet="UserMerchants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Video_User" Association="VodadModel.FK_Video_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Video" EntitySet="Video" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Wallet_User" Association="VodadModel.FK_Wallet_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Wallet" EntitySet="Wallet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WhiteList_User" Association="VodadModel.FK_WhiteList_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="WhiteList" EntitySet="WhiteList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WhiteList_User1" Association="VodadModel.FK_WhiteList_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="WhiteList" EntitySet="WhiteList" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="C__RefactorLog">
+    <Key>
+      <PropertyRef Name="OperationKey" />
+    </Key>
+    <Property Type="Guid" Name="OperationKey" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AlertMessage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="CreatorId" />
+    <Property Type="String" Name="Text" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreationDate" Precision="3" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_AlertMessage_User" FromRole="AlertMessage" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Ban">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="UserId" />
+    <Property Type="Int64" Name="RoleId" />
+    <Property Type="DateTime" Name="BanDateTime" Precision="3" />
+    <Property Type="DateTime" Name="UnbanDateTime" Precision="3" />
+    <Property Type="String" Name="BanReason" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UnbanReason" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="CanBeUnbanned" />
+    <Property Type="Int64" Name="AdminBanId" />
+    <Property Type="Int64" Name="AdminUnbanId" />
+    <NavigationProperty Name="Roles" Relationship="VodadModel.FK_Ban_Roles" FromRole="Ban" ToRole="Roles" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_Ban_User" FromRole="Ban" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="VodadModel.FK_Ban_User1" FromRole="Ban" ToRole="User" />
+    <NavigationProperty Name="User2" Relationship="VodadModel.FK_Ban_User2" FromRole="Ban" ToRole="User" />
+  </EntityType>
+  <EntityType Name="BlackList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="OwnerId" />
+    <Property Type="Int64" Name="UserId" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_BlackList_User" FromRole="BlackList" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="VodadModel.FK_BlackList_User1" FromRole="BlackList" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Certificates">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="UserId" />
+    <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_Certificates_User" FromRole="Certificates" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Cheaters">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="UserId" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_Cheaters_User" FromRole="Cheaters" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Geolocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CountryName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ISO2" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LongCountryName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ISO3" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NumCode" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UNMemberState" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CallingCode" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CCTLD" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="GeolocationPlatformPercentage" Relationship="VodadModel.FK_GeolocationPlatformPercentage_Geolocation" FromRole="Geolocation" ToRole="GeolocationPlatformPercentage" />
+  </EntityType>
+  <EntityType Name="GeolocationPlatformPercentage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="GeolocationId" />
+    <Property Type="Int64" Name="Percentage" />
+    <Property Type="Int64" Name="PerformerPlatformId" Nullable="false" />
+    <NavigationProperty Name="Geolocation" Relationship="VodadModel.FK_GeolocationPlatformPercentage_Geolocation" FromRole="GeolocationPlatformPercentage" ToRole="Geolocation" />
+    <NavigationProperty Name="PerformerPlatform" Relationship="VodadModel.FK_GeolocationPlatformPercentagePerformerPlatform" FromRole="GeolocationPlatformPercentage" ToRole="PerformerPlatform" />
+  </EntityType>
+  <EntityType Name="Image">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="ImageName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="ImageData" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Type="Int64" Name="ImageSize" Nullable="false" />
+    <Property Type="DateTime" Name="CreationDate" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="ImageWidth" />
+    <Property Type="Int32" Name="ImageHeight" />
+    <Property Type="String" Name="Extension" MaxLength="40" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_Image_User" FromRole="Image" ToRole="User" />
+    <NavigationProperty Name="OrderContent" Relationship="VodadModel.FK_OrderContent_Image" FromRole="Image" ToRole="OrderContent" />
+    <NavigationProperty Name="Tickets" Relationship="VodadModel.FK_Ticket_Image" FromRole="Image" ToRole="Tickets" />
+  </EntityType>
+  <EntityType Name="Merchants">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="MerchantName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MoneyTransfers" Relationship="VodadModel.FK_MoneyTransfers_Merchants" FromRole="Merchants" ToRole="MoneyTransfers" />
+    <NavigationProperty Name="UserMerchants" Relationship="VodadModel.FK_UserMerchants_Merchants" FromRole="Merchants" ToRole="UserMerchants" />
+  </EntityType>
+  <EntityType Name="Messages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="FromUserId" />
+    <Property Type="Int64" Name="ToUserId" />
+    <Property Type="DateTime" Name="CreationDate" Precision="3" />
+    <Property Type="String" Name="MessageText" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsRead" />
+    <Property Type="String" Name="MessageTitle" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsDeletedForAuthor" />
+    <Property Type="Boolean" Name="IsDeletedForReciever" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_Messages_User" FromRole="Messages" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="VodadModel.FK_Messages_User1" FromRole="Messages" ToRole="User" />
+  </EntityType>
+  <EntityType Name="MoneyTransfers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="UserId" />
+    <Property Type="DateTime" Name="DateTime" Precision="3" />
+    <Property Type="String" Name="Action" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Amount" Precision="25" Scale="13" />
+    <Property Type="Int64" Name="MerchantId" />
+    <Property Type="String" Name="AccountMerchantSystem" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TransactionId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StatusDescription" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Merchants" Relationship="VodadModel.FK_MoneyTransfers_Merchants" FromRole="MoneyTransfers" ToRole="Merchants" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_MoneyTransfers_User" FromRole="MoneyTransfers" ToRole="User" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="CreatorId" />
+    <Property Type="String" Name="Title" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Text" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Text1" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Text2" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreationDate" Precision="3" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_News_User" FromRole="News" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="UserId" />
+    <Property Type="String" Name="Comment" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreationDate" Precision="3" />
+    <Property Type="DateTime" Name="ExpireDate" Precision="3" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="RegionId" />
+    <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Regions" Relationship="VodadModel.FK_Order_Regions" FromRole="Order" ToRole="Regions" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_Order_User" FromRole="Order" ToRole="User" />
+    <NavigationProperty Name="OrderContent" Relationship="VodadModel.FK_OrderContent_Order" FromRole="Order" ToRole="OrderContent" />
+    <NavigationProperty Name="OrderThemes" Relationship="VodadModel.FK_OrderThemes_Order" FromRole="Order" ToRole="OrderThemes" />
+  </EntityType>
+  <EntityType Name="OrderContent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="IdOrder" Nullable="false" />
+    <Property Type="Int64" Name="IdContent" Nullable="false" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContentType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Order" Relationship="VodadModel.FK_OrderContent_Order" FromRole="OrderContent" ToRole="Order" />
+    <NavigationProperty Name="OrderPerformed" Relationship="VodadModel.FK_OrderPerformed_OrderImages" FromRole="OrderContent" ToRole="OrderPerformed" />
+  </EntityType>
+  <EntityType Name="OrderPerformed">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="MoneyPaid" Precision="25" Scale="13" />
+    <Property Type="Int64" Name="OrderContentId" />
+    <Property Type="Int64" Name="AuthorId" Nullable="false" />
+    <Property Type="Boolean" Name="IsLiked" />
+    <Property Type="Int64" Name="PerformerPlatformId" />
+    <NavigationProperty Name="OrderContent" Relationship="VodadModel.FK_OrderPerformed_OrderImages" FromRole="OrderPerformed" ToRole="OrderContent" />
+    <NavigationProperty Name="PerformerPlatform" Relationship="VodadModel.FK_OrderPerformed_PerformerPlatform" FromRole="OrderPerformed" ToRole="PerformerPlatform" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_OrderPerformed_User" FromRole="OrderPerformed" ToRole="User" />
+    <Property Type="String" Name="VideoLink" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="StartDate" Precision="3" />
+    <Property Type="DateTime" Name="LastStatusChangeDateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="OrderThemes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="OrderId" />
+    <Property Type="Int64" Name="ThemeId" />
+    <NavigationProperty Name="Order" Relationship="VodadModel.FK_OrderThemes_Order" FromRole="OrderThemes" ToRole="Order" />
+    <NavigationProperty Name="Themes" Relationship="VodadModel.FK_OrderThemes_Theme" FromRole="OrderThemes" ToRole="Themes" />
+  </EntityType>
+  <EntityType Name="PerformerPlatform">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="PerformerId" />
+    <Property Type="String" Name="Login" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Password" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="ThemeId" />
+    <Property Type="String" Name="Verified" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LastOnlineDateTime" Precision="3" />
+    <Property Type="String" Name="Link" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Date" Precision="3" />
+    <NavigationProperty Name="GeolocationPlatformPercentage" Relationship="VodadModel.FK_GeolocationPlatformPercentagePerformerPlatform" FromRole="PerformerPlatform" ToRole="GeolocationPlatformPercentage" />
+    <NavigationProperty Name="OrderPerformed" Relationship="VodadModel.FK_OrderPerformed_PerformerPlatform" FromRole="PerformerPlatform" ToRole="OrderPerformed" />
+    <NavigationProperty Name="Themes" Relationship="VodadModel.FK_PerformerPlatform_Themes" FromRole="PerformerPlatform" ToRole="Themes" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_PerformerPlatform_User" FromRole="PerformerPlatform" ToRole="User" />
+    <NavigationProperty Name="PerformerStatistics" Relationship="VodadModel.FK_PerformerStatistics_GeolocationPlatformPercentage" FromRole="PerformerPlatform" ToRole="PerformerStatistics" />
+    <Property Type="String" Name="ChannelName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="VideoPrice" Precision="25" Scale="13" />
+    <Property Type="Decimal" Name="LogoPrice" Precision="25" Scale="13" />
+  </EntityType>
+  <EntityType Name="PerformerStatistics">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="PerformerPlatformId" />
+    <Property Type="Int64" Name="AverageViewerCountPerHour" />
+    <Property Type="Int64" Name="MaxViewersCount" />
+    <Property Type="Int64" Name="TotalUniqueViews" />
+    <Property Type="Int64" Name="TotalFollowers" />
+    <Property Type="Decimal" Name="TotalViews" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="Likes" />
+    <Property Type="Int64" Name="CompletedOrders" />
+    <Property Type="Int64" Name="TotalOrders" />
+    <Property Type="Decimal" Name="AverageComplitionSpeed" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="DateModified" Nullable="false" Precision="3" />
+    <Property Type="String" Name="Status" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="UniqueViewersForMonth" />
+    <NavigationProperty Name="PerformerPlatform" Relationship="VodadModel.FK_PerformerStatistics_GeolocationPlatformPercentage" FromRole="PerformerStatistics" ToRole="PerformerPlatform" />
+  </EntityType>
+  <EntityType Name="Regions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="RegionName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Order" Relationship="VodadModel.FK_Order_Regions" FromRole="Regions" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="RoleName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Ban" Relationship="VodadModel.FK_Ban_Roles" FromRole="Roles" ToRole="Ban" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_User_Roles" FromRole="Roles" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Themes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OrderThemes" Relationship="VodadModel.FK_OrderThemes_Theme" FromRole="Themes" ToRole="OrderThemes" />
+    <NavigationProperty Name="PerformerPlatform" Relationship="VodadModel.FK_PerformerPlatform_Themes" FromRole="Themes" ToRole="PerformerPlatform" />
+  </EntityType>
+  <EntityType Name="Tickets">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Title" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="ThemeId" />
+    <Property Type="String" Name="Text1" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Text2" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Text3" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="ImageId" />
+    <Property Type="DateTime" Name="CreationDate" Precision="3" />
+    <Property Type="DateTime" Name="AnswerDate" Precision="3" />
+    <Property Type="DateTime" Name="CloseDate" Precision="3" />
+    <Property Type="Int64" Name="ParentTicketId" />
+    <Property Type="String" Name="AdminAnswer" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AdminCloseComment" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="CreatorId" />
+    <Property Type="Int64" Name="AnswerAdminId" />
+    <Property Type="Int64" Name="CloseAdminId" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Image" Relationship="VodadModel.FK_Ticket_Image" FromRole="Tickets" ToRole="Image" />
+    <NavigationProperty Name="Tickets1" Relationship="VodadModel.FK_Ticket_Ticket" FromRole="Tickets" ToRole="Tickets1" />
+    <NavigationProperty Name="Tickets2" Relationship="VodadModel.FK_Ticket_Ticket" FromRole="Tickets1" ToRole="Tickets" />
+    <NavigationProperty Name="TicketThemes" Relationship="VodadModel.FK_Ticket_TicketThemes" FromRole="Tickets" ToRole="TicketThemes" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_Ticket_User" FromRole="Tickets" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="VodadModel.FK_Ticket_User1" FromRole="Tickets" ToRole="User" />
+    <NavigationProperty Name="User2" Relationship="VodadModel.FK_Ticket_User2" FromRole="Tickets" ToRole="User" />
+  </EntityType>
+  <EntityType Name="TicketThemes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ThemeName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tickets" Relationship="VodadModel.FK_Ticket_TicketThemes" FromRole="TicketThemes" ToRole="Tickets" />
+  </EntityType>
+  <EntityType Name="Timezone">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_User_Timezone" FromRole="Timezone" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Transactions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="FromUserId" Nullable="false" />
+    <Property Type="Decimal" Name="Amount" Nullable="false" Precision="24" Scale="13" />
+    <Property Type="Int64" Name="ToUserId" Nullable="false" />
+    <Property Type="DateTime" Name="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_Transactions_User" FromRole="Transactions" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="VodadModel.FK_Transactions_User1" FromRole="Transactions" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Login" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Password" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="RoleId" />
+    <Property Type="DateTime" Name="RegistrationDate" Precision="3" />
+    <Property Type="Int64" Name="TimeZoneId" />
+    <Property Type="Int64" Name="ReferrerId" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PasswordSalt" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Comments" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LastModifiedDate" Precision="3" />
+    <Property Type="DateTime" Name="LastLoginDate" Nullable="false" Precision="3" />
+    <Property Type="String" Name="LastLoginIp" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsActivated" Nullable="false" />
+    <Property Type="Boolean" Name="IsLockedOut" Nullable="false" />
+    <Property Type="DateTime" Name="LastLockedOutDate" Nullable="false" Precision="3" />
+    <Property Type="String" Name="LastLockedOutReason" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NewPasswordKey" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NewEmail" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NewEmailKey" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="NewEmailRequested" Precision="3" />
+    <Property Type="Int64" Name="Rating" />
+    <Property Type="Int64" Name="Karma" />
+    <Property Type="DateTime" Name="LastOnlineDateTime" Precision="3" />
+    <Property Type="DateTime" Name="LastEmailSendDateTime" Precision="3" />
+    <Property Type="String" Name="AccountAttachedIP" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="RegisteredRoleId" />
+    <Property Type="String" Name="VerificationKey" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AlertMessage" Relationship="VodadModel.FK_AlertMessage_User" FromRole="User" ToRole="AlertMessage" />
+    <NavigationProperty Name="Ban" Relationship="VodadModel.FK_Ban_User" FromRole="User" ToRole="Ban" />
+    <NavigationProperty Name="Ban1" Relationship="VodadModel.FK_Ban_User1" FromRole="User" ToRole="Ban" />
+    <NavigationProperty Name="Ban2" Relationship="VodadModel.FK_Ban_User2" FromRole="User" ToRole="Ban" />
+    <NavigationProperty Name="BlackList" Relationship="VodadModel.FK_BlackList_User" FromRole="User" ToRole="BlackList" />
+    <NavigationProperty Name="BlackList1" Relationship="VodadModel.FK_BlackList_User1" FromRole="User" ToRole="BlackList" />
+    <NavigationProperty Name="Certificates" Relationship="VodadModel.FK_Certificates_User" FromRole="User" ToRole="Certificates" />
+    <NavigationProperty Name="Cheaters" Relationship="VodadModel.FK_Cheaters_User" FromRole="User" ToRole="Cheaters" />
+    <NavigationProperty Name="Image" Relationship="VodadModel.FK_Image_User" FromRole="User" ToRole="Image" />
+    <NavigationProperty Name="Messages" Relationship="VodadModel.FK_Messages_User" FromRole="User" ToRole="Messages" />
+    <NavigationProperty Name="Messages1" Relationship="VodadModel.FK_Messages_User1" FromRole="User" ToRole="Messages" />
+    <NavigationProperty Name="MoneyTransfers" Relationship="VodadModel.FK_MoneyTransfers_User" FromRole="User" ToRole="MoneyTransfers" />
+    <NavigationProperty Name="News" Relationship="VodadModel.FK_News_User" FromRole="User" ToRole="News" />
+    <NavigationProperty Name="Order" Relationship="VodadModel.FK_Order_User" FromRole="User" ToRole="Order" />
+    <NavigationProperty Name="OrderPerformed" Relationship="VodadModel.FK_OrderPerformed_User" FromRole="User" ToRole="OrderPerformed" />
+    <NavigationProperty Name="PerformerPlatform" Relationship="VodadModel.FK_PerformerPlatform_User" FromRole="User" ToRole="PerformerPlatform" />
+    <NavigationProperty Name="Roles" Relationship="VodadModel.FK_User_Roles" FromRole="User" ToRole="Roles" />
+    <NavigationProperty Name="Tickets" Relationship="VodadModel.FK_Ticket_User" FromRole="User" ToRole="Tickets" />
+    <NavigationProperty Name="Tickets1" Relationship="VodadModel.FK_Ticket_User1" FromRole="User" ToRole="Tickets" />
+    <NavigationProperty Name="Tickets2" Relationship="VodadModel.FK_Ticket_User2" FromRole="User" ToRole="Tickets" />
+    <NavigationProperty Name="Timezone" Relationship="VodadModel.FK_User_Timezone" FromRole="User" ToRole="Timezone" />
+    <NavigationProperty Name="Transactions" Relationship="VodadModel.FK_Transactions_User" FromRole="User" ToRole="Transactions" />
+    <NavigationProperty Name="Transactions1" Relationship="VodadModel.FK_Transactions_User1" FromRole="User" ToRole="Transactions" />
+    <NavigationProperty Name="User1" Relationship="VodadModel.FK_User_User" FromRole="User" ToRole="User1" />
+    <NavigationProperty Name="User2" Relationship="VodadModel.FK_User_User" FromRole="User1" ToRole="User" />
+    <NavigationProperty Name="UserMerchants" Relationship="VodadModel.FK_UserMerchants_User" FromRole="User" ToRole="UserMerchants" />
+    <NavigationProperty Name="Video" Relationship="VodadModel.FK_Video_User" FromRole="User" ToRole="Video" />
+    <NavigationProperty Name="Wallet" Relationship="VodadModel.FK_Wallet_User" FromRole="User" ToRole="Wallet" />
+    <NavigationProperty Name="WhiteList" Relationship="VodadModel.FK_WhiteList_User" FromRole="User" ToRole="WhiteList" />
+    <NavigationProperty Name="WhiteList1" Relationship="VodadModel.FK_WhiteList_User1" FromRole="User" ToRole="WhiteList" />
+  </EntityType>
+  <EntityType Name="UserMerchants">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="UserId" />
+    <Property Type="Int64" Name="MerchantId" />
+    <Property Type="String" Name="Account" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PreviousAccount" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NextAccount" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LastChangeDateTime" Precision="3" />
+    <NavigationProperty Name="Merchants" Relationship="VodadModel.FK_UserMerchants_Merchants" FromRole="UserMerchants" ToRole="Merchants" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_UserMerchants_User" FromRole="UserMerchants" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Video">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="VideoName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="VideoLink" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="VideoSize" Nullable="false" />
+    <Property Type="Int64" Name="VideoLength" Nullable="false" />
+    <Property Type="DateTime" Name="CreationDate" Nullable="false" Precision="3" />
+    <Property Type="String" Name="Extension" MaxLength="40" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OrderContent" Relationship="VodadModel.FK_OrderContent_Video" FromRole="Video" ToRole="OrderContent" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_Video_User" FromRole="Video" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Wallet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="UserId" />
+    <Property Type="Decimal" Name="Account" Precision="25" Scale="13" />
+    <Property Type="Decimal" Name="Transfer" Precision="25" Scale="13" />
+    <Property Type="Decimal" Name="ReferralsIncome" Precision="25" Scale="13" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_Wallet_User" FromRole="Wallet" ToRole="User" />
+  </EntityType>
+  <EntityType Name="WhiteList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="OwnerId" />
+    <Property Type="Int64" Name="UserId" />
+    <NavigationProperty Name="User" Relationship="VodadModel.FK_WhiteList_User" FromRole="WhiteList" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="VodadModel.FK_WhiteList_User1" FromRole="WhiteList" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_AlertMessage_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.AlertMessage" Role="AlertMessage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AlertMessage">
+        <PropertyRef Name="CreatorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ban_Roles">
+    <End Type="VodadModel.Roles" Role="Roles" Multiplicity="0..1" />
+    <End Type="VodadModel.Ban" Role="Ban" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ban">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ban_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.Ban" Role="Ban" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ban">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ban_User1">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.Ban" Role="Ban" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ban">
+        <PropertyRef Name="AdminBanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ban_User2">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.Ban" Role="Ban" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ban">
+        <PropertyRef Name="AdminUnbanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BlackList_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.BlackList" Role="BlackList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BlackList">
+        <PropertyRef Name="OwnerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BlackList_User1">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.BlackList" Role="BlackList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BlackList">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Certificates_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.Certificates" Role="Certificates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Certificates">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cheaters_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.Cheaters" Role="Cheaters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cheaters">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeolocationPlatformPercentage_Geolocation">
+    <End Type="VodadModel.Geolocation" Role="Geolocation" Multiplicity="0..1" />
+    <End Type="VodadModel.GeolocationPlatformPercentage" Role="GeolocationPlatformPercentage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Geolocation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GeolocationPlatformPercentage">
+        <PropertyRef Name="GeolocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GeolocationPlatformPercentagePerformerPlatform">
+    <End Type="VodadModel.PerformerPlatform" Role="PerformerPlatform" Multiplicity="1" />
+    <End Type="VodadModel.GeolocationPlatformPercentage" Role="GeolocationPlatformPercentage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PerformerPlatform">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GeolocationPlatformPercentage">
+        <PropertyRef Name="PerformerPlatformId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Image_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="1" />
+    <End Type="VodadModel.Image" Role="Image" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Image">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderContent_Image">
+    <End Type="VodadModel.Image" Role="Image" Multiplicity="1" />
+    <End Type="VodadModel.OrderContent" Role="OrderContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Image">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderContent">
+        <PropertyRef Name="IdContent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ticket_Image">
+    <End Type="VodadModel.Image" Role="Image" Multiplicity="0..1" />
+    <End Type="VodadModel.Tickets" Role="Tickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Image">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tickets">
+        <PropertyRef Name="ImageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MoneyTransfers_Merchants">
+    <End Type="VodadModel.Merchants" Role="Merchants" Multiplicity="0..1" />
+    <End Type="VodadModel.MoneyTransfers" Role="MoneyTransfers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Merchants">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MoneyTransfers">
+        <PropertyRef Name="MerchantId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserMerchants_Merchants">
+    <End Type="VodadModel.Merchants" Role="Merchants" Multiplicity="0..1" />
+    <End Type="VodadModel.UserMerchants" Role="UserMerchants" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Merchants">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserMerchants">
+        <PropertyRef Name="MerchantId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Messages_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.Messages" Role="Messages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Messages">
+        <PropertyRef Name="FromUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Messages_User1">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.Messages" Role="Messages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Messages">
+        <PropertyRef Name="ToUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MoneyTransfers_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.MoneyTransfers" Role="MoneyTransfers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MoneyTransfers">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_News_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.News" Role="News" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="News">
+        <PropertyRef Name="CreatorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Regions">
+    <End Type="VodadModel.Regions" Role="Regions" Multiplicity="0..1" />
+    <End Type="VodadModel.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderContent_Order">
+    <End Type="VodadModel.Order" Role="Order" Multiplicity="1" />
+    <End Type="VodadModel.OrderContent" Role="OrderContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderContent">
+        <PropertyRef Name="IdOrder" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderThemes_Order">
+    <End Type="VodadModel.Order" Role="Order" Multiplicity="0..1" />
+    <End Type="VodadModel.OrderThemes" Role="OrderThemes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderThemes">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderContent_Video">
+    <End Type="VodadModel.Video" Role="Video" Multiplicity="1" />
+    <End Type="VodadModel.OrderContent" Role="OrderContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Video">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderContent">
+        <PropertyRef Name="IdContent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderPerformed_OrderImages">
+    <End Type="VodadModel.OrderContent" Role="OrderContent" Multiplicity="0..1" />
+    <End Type="VodadModel.OrderPerformed" Role="OrderPerformed" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderContent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderPerformed">
+        <PropertyRef Name="OrderContentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderPerformed_PerformerPlatform">
+    <End Type="VodadModel.PerformerPlatform" Role="PerformerPlatform" Multiplicity="0..1" />
+    <End Type="VodadModel.OrderPerformed" Role="OrderPerformed" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PerformerPlatform">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderPerformed">
+        <PropertyRef Name="PerformerPlatformId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderPerformed_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="1" />
+    <End Type="VodadModel.OrderPerformed" Role="OrderPerformed" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderPerformed">
+        <PropertyRef Name="AuthorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderThemes_Theme">
+    <End Type="VodadModel.Themes" Role="Themes" Multiplicity="0..1" />
+    <End Type="VodadModel.OrderThemes" Role="OrderThemes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Themes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderThemes">
+        <PropertyRef Name="ThemeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PerformerPlatform_Themes">
+    <End Type="VodadModel.Themes" Role="Themes" Multiplicity="0..1" />
+    <End Type="VodadModel.PerformerPlatform" Role="PerformerPlatform" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Themes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PerformerPlatform">
+        <PropertyRef Name="ThemeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PerformerPlatform_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.PerformerPlatform" Role="PerformerPlatform" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PerformerPlatform">
+        <PropertyRef Name="PerformerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PerformerStatistics_GeolocationPlatformPercentage">
+    <End Type="VodadModel.PerformerPlatform" Role="PerformerPlatform" Multiplicity="0..1" />
+    <End Type="VodadModel.PerformerStatistics" Role="PerformerStatistics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PerformerPlatform">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PerformerStatistics">
+        <PropertyRef Name="PerformerPlatformId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Roles">
+    <End Type="VodadModel.Roles" Role="Roles" Multiplicity="0..1" />
+    <End Type="VodadModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ticket_Ticket">
+    <End Type="VodadModel.Tickets" Role="Tickets" Multiplicity="0..1" />
+    <End Type="VodadModel.Tickets" Role="Tickets1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tickets">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tickets1">
+        <PropertyRef Name="ParentTicketId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ticket_TicketThemes">
+    <End Type="VodadModel.TicketThemes" Role="TicketThemes" Multiplicity="0..1" />
+    <End Type="VodadModel.Tickets" Role="Tickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TicketThemes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tickets">
+        <PropertyRef Name="ThemeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ticket_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.Tickets" Role="Tickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tickets">
+        <PropertyRef Name="CreatorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ticket_User1">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.Tickets" Role="Tickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tickets">
+        <PropertyRef Name="AnswerAdminId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ticket_User2">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.Tickets" Role="Tickets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tickets">
+        <PropertyRef Name="CloseAdminId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Timezone">
+    <End Type="VodadModel.Timezone" Role="Timezone" Multiplicity="0..1" />
+    <End Type="VodadModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Timezone">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="TimeZoneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transactions_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="1" />
+    <End Type="VodadModel.Transactions" Role="Transactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transactions">
+        <PropertyRef Name="FromUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transactions_User1">
+    <End Type="VodadModel.User" Role="User" Multiplicity="1" />
+    <End Type="VodadModel.Transactions" Role="Transactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Transactions">
+        <PropertyRef Name="ToUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.User" Role="User1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User1">
+        <PropertyRef Name="ReferrerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserMerchants_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.UserMerchants" Role="UserMerchants" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserMerchants">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Video_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="1" />
+    <End Type="VodadModel.Video" Role="Video" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Video">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Wallet_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.Wallet" Role="Wallet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Wallet">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WhiteList_User">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.WhiteList" Role="WhiteList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="WhiteList">
+        <PropertyRef Name="OwnerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WhiteList_User1">
+    <End Type="VodadModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="VodadModel.WhiteList" Role="WhiteList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="WhiteList">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

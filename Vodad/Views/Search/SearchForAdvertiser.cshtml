@@ -1,0 +1,47 @@
+﻿@model Vodad.Models.AdvertiserSearchModel
+
+@{
+    ViewBag.Title = "Search for advertiser";
+}
+
+<h2>Search for advertiser</h2>
+
+@using (Html.BeginForm("SearchForAdvertiser", "Search", FormMethod.Post))
+{
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Create new campaign</legend>
+
+                @Html.HiddenFor(m => m.PerformerPlatformId, new { @Value = ViewBag.PerformerPlatformId })
+                <br />
+
+                @Html.CheckBoxFor(m => m.SelectAllThemes, new { @checked = Model.SelectAllThemes }) <b>Any subjects</b>
+                <br />
+
+                <!-- Добавление списка возможных тематик -->
+                @{ var i = 0; }
+                @foreach (var t in Model.OrderThemesList)
+                {
+                    List<Vodad.Models.ThemesListForOrderModel> themesList = Model.OrderThemesList;
+                    var theme = themesList.Single(w => w.Id == t.Id);
+                        
+                    @Html.CheckBoxFor(m => m.OrderThemesList[i].IsChecked, new { @checked = t.IsChecked })
+                    @Html.HiddenFor(m => m.OrderThemesList[i].Id, new { @Value = theme.Id })
+                    @Html.HiddenFor(m => m.OrderThemesList[i].ThemeName, new { @Value = theme.ThemeName })
+                    <b>@theme.ThemeName</b>
+                    <br />
+                        
+                    i++;
+                }
+
+        <hr />
+        <ol>
+            <li>
+                @Html.CheckBoxFor(m => m.SaveSearchSettings, new { @checked = Model.SaveSearchSettings })
+                @Html.LabelFor(m => m.SaveSearchSettings)<br />
+            </li>
+        </ol>
+        <input type="submit" value="Search" />
+    </fieldset>
+}

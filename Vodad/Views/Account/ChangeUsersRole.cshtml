@@ -1,0 +1,27 @@
+﻿@model Vodad.Models.ChangeUsersRoleModel
+
+@{
+    ViewBag.Title = "Change " + @ViewBag.UserName + "'s role";
+}
+
+<h2>Change @ViewBag.UserName's role, email @ViewBag.UserEmail, role @ViewBag.UserRolename</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Change role Form</legend>
+        <ol>
+            <li>
+                <h3>Select your timezone:</h3>
+                @{
+                    var roles = new SelectList(ViewBag.RolesList, "Id", "RoleName");
+                }
+                @Html.DropDownListFor(m => m.RoleId, @roles)
+                @Html.HiddenFor(m => m.UserId, new {@Value = ViewBag.UserId})
+            </li>
+        </ol>
+        <input type="submit" value="Save role" />
+    </fieldset>   
+}

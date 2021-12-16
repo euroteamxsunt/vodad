@@ -1,0 +1,76 @@
+﻿@model Vodad.Models.TicketDetailsModel
+
+@{
+    ViewBag.Title = "Ticket details";
+}
+
+@{
+    var actions = new List<SelectListItem>
+                      {
+                          new SelectListItem
+                              {
+                                  Value = "0",
+                                  Text = "Choose action",
+                                  Selected = true
+                              }, new SelectListItem
+                                     {
+                                         Value = "1",
+                                         Text = "Send answer"
+                                     }, new SelectListItem
+                                            {
+                                                Value = "2",
+                                                Text = "Close ticket"
+                                            }
+                      };
+}
+
+<h2>@Model.TicketTitle ticket details</h2>
+
+<strong>Theme:</strong> @Model.TicketTheme
+
+<table>
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Title</th>
+            <th>Created</th>
+            <th>Text</th>
+            <th>Image</th>
+            <th>Answered</th>
+            <th>Answerer</th>
+            <th>Answer</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ticket in ViewBag.TicketHistory)
+        {
+            @Html.Partial("TicketHistoryPartial", (Vodad.Models.TicketHistoryModel)ticket)
+        }
+    </tbody>
+</table>
+
+@if (@Model.TicketCloseAdminId == null)
+{
+    using (Html.BeginForm("TicketDetails", "Ticket", FormMethod.Post))
+    {
+    @Html.TextAreaFor(m => m.TicketAnswer)
+    <br />
+        
+    @Html.HiddenFor(m => m.TicketId, new { @Value = Model.TicketId })
+    @Html.DropDownList("action", actions)
+        
+    <input type="submit" name="submit" value="Choose action" disabled />
+    }
+}
+
+@if (@Model.TicketCloseAdminId != null)
+{
+    <strong>@Html.ActionLink(@Model.TicketCloseAdminName, "Profile", "User", new { tid = @Model.TicketCloseAdminId }, htmlAttributes: null)</strong>
+    @Html.Raw(" - ")
+    @Model.TicketCloseDate
+
+    <br />
+    <br />
+
+    @Html.Raw("<strong>Close comment: </strong>") @Model.TicketAdminCloseComment
+}

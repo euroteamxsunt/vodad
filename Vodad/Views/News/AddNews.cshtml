@@ -1,0 +1,24 @@
+﻿@model Vodad.Models.AddNewsModel
+    ViewBag.Title = "Add News";
+}
+
+<h2>Add News</h2>
+
+@using (Html.BeginForm(new { ViewBag.ReturnUrl })) {
+    @Html.ValidationSummary(true, "")
+
+    <fieldset>
+        <legend>Add news form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.NewsTitle)<br />
+                @Html.TextBoxFor(m => m.NewsTitle)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.NewsText)<br />
+                @Html.TextAreaFor(m => m.NewsText, new { rows = 25, cols = 90 } )
+            </li>
+        </ol>
+        <input type="submit" value="Add news" />
+    </fieldset>
+}

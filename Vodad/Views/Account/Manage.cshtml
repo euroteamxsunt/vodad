@@ -1,0 +1,27 @@
+﻿@model Vodad.Models.LocalPasswordModel
+@{
+    ViewBag.Title = "Управление учетной записью";
+}
+
+>
+    <h1>@ViewBag.Title.</h1>
+
+
+<p>@ViewBag.StatusMessage</p>
+
+<p>Вы вошли как <strong>@User.Identity.Name</strong>.</p>
+
+@if (ViewBag.HasLocalPassword)
+{
+    @Html.Partial("_ChangePasswordPartial")
+}
+else
+{ 
+    @Html.Partial("_SetPasswordPartial")
+}
+
+    @Html.Action("RemoveExternalLogins")
+
+    <h3>Добавить внешнюю учетную запись</h3>
+    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+

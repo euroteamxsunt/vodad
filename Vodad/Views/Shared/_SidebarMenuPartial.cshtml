@@ -1,0 +1,88 @@
+﻿@if (@Request.IsAuthenticated && !User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Banned))
+{
+    <div id="sidebar">
+        <div id="sidebar-menu">
+
+            <!-- Advertiser sidebar menu -->
+            @if (User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Advertiser))
+            {
+                <div>
+                    <h3><span>Orders</span></h3>
+                </div>
+                <div>
+                    <div><a href="~/Order/ManageOrders">Manage orders</a></div>
+                </div>
+            }
+
+            <!-- Streamer sidebar menu -->
+            @if (User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Performer))
+            {
+                <div>
+                    <h3><span>Platforms</span></h3>
+                </div>
+                <div>
+                    <div ><a href="~/PerformerPlatform/ManagePlatforms">Platforms</a></div>
+                    <div><a href="~/BannerMeasure/BannerMeasureList">Banner measures</a></div>
+                </div>
+            }
+
+            <!-- Admin sidebar menu -->
+            @if (User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Administrator) || User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Helper))
+            {
+                <div>
+                    <h3><span>Administration</span></h3>
+                </div>
+                <div>
+                    <div><a href="~/Ticket/ManageTickets">Manage tickets</a></div>
+                    @if (User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Administrator))
+                    {
+
+                    }
+                </div>
+            }
+
+            <!-- Search sidebar menu -->
+            <div>
+                <h3><span>Search</span></h3>
+            </div>
+            <div>
+                <div><a href="~/Search/SearchForAdvertiser">Search for advertiser</a></div>
+                <div><a href="~/Search/SearchForPerformer">Search for performer</a></div>
+            </div>
+
+            <!-- Dialogs sidebar menu -->
+            <div>
+                <h3><span>Dialogs</span></h3>
+                <span>+</span>
+            </div>
+            <div>
+                <div><a href="~/Message/PrivateMessages">User dialogs</a></div>
+                <div><a href="~/BlackAndWhiteLists/GetUserWhiteList">White list</a></div>
+                <div><a href="~/BlackAndWhiteLists/GetUserBlackList">Black list</a></div>
+                <div><a href="~/Ticket/ManageTickets">Support tickets</a></div>
+            </div>
+
+        </div>
+        <div>
+            <img src="~/Images/sidebar-shadow.png" />
+        </div>
+    </div>
+
+}
+else if (User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Banned))
+{
+    <div>
+        <div>
+            <!-- Dialogs sidebar menu -->
+            <div>
+                <h3><span>Dialogs</span></h3>
+            </div>
+            <div>
+                <div><a href="~/Ticket/ManageTickets">Support tickets</a></div>
+            </div>
+        </div>
+        <div>
+            <img src="~/Images/sidebar-shadow.png" />
+        </div>
+    </div>
+}

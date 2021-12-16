@@ -1,0 +1,27 @@
+﻿@model Vodad.Models.ChangeMerchantAccountModel
+
+@{
+    ViewBag.Title = "Change merchant account";
+}
+
+<h2>Change merchant account for @ViewBag.Merchant</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Change Profile Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.Account)<br />
+                @Html.TextBoxFor(m => m.Account)
+                @Html.HiddenFor(m => m.MerchantId, new {@Value = ViewBag.MerchantId})
+                @Html.HiddenFor(m => m.UserId, new {@Value = ViewBag.UserId})
+                @Html.HiddenFor(m => m.Merchant, new {@Value = ViewBag.Merchant})
+                @Html.HiddenFor(m => m.UserMerchantId,  new {@Value = ViewBag.UserMerchantId})
+            </li>
+        </ol>
+        <input type="submit" value="Change account" class="button" />
+    </fieldset>   
+}

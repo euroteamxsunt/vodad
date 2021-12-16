@@ -1,0 +1,113 @@
+﻿@model List<Vodad.Models.ManageTicketsModel>
+
+@{
+    ViewBag.Title = "Manage tickets";
+}
+
+<h2>Manage tickets</h2>
+
+
+    <input type="button" value="All tickets" class="button"  onclick="location.href = '@Url.Action("ManageTickets", "Ticket")    '" />
+    <input type="button" value="Requested" class="button" onclick="location.href = '@Url.Action("ManageTickets", "Ticket", new { status = VodadModel.Utilities.Constants.TicketStatuses.Verifying })    '" />
+    <input type="button" value="Answered" class="button" onclick="location.href = '@Url.Action("ManageTickets", "Ticket", new { status = VodadModel.Utilities.Constants.TicketStatuses.Answered })    '" />
+    <input type="button" value="Closed" class="button" onclick="location.href = '@Url.Action("ManageTickets", "Ticket", new { status = VodadModel.Utilities.Constants.TicketStatuses.Closed })    '" />
+
+
+@if (Model.Count > 0)
+{
+
+    <table>
+	    <thead>
+            <tr>
+			    <th>Author</th>
+                <th>Subject</th>
+                <th>Short title</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Text</th>
+                <th>Created</th>
+                <th>Answered</th>
+                <th>Answered by</th>
+                <th>Answer</th>
+                <th>Closed</th>
+                <th>Closed by</th>
+                <th>Close comment</th>
+                <th>Parent id</th>
+                <th>Screenshot</th>
+		    </tr>
+	    </thead>
+	    <tbody>
+		@foreach (var t in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(@t.TicketCreatorName, "Profile", "User", new { id = @t.TicketCreatorId }, htmlAttributes: null)</td>
+                <td>@t.TicketTheme</td>
+                <td>
+                    
+                    @if (User.IsInRole("Helper") || User.IsInRole("Administrator"))
+                    {
+                        @Html.ActionLink(@t.TicketShortTitle, "TicketDetails", "Ticket", new { tid = @t.TicketId}, htmlAttributes: null)
+                    }
+
+                    @if (!User.IsInRole("Helper") && !User.IsInRole("Administrator"))
+                    {
+                        @Html.ActionLink(@t.TicketShortTitle, "ViewTicket", "Ticket", new { tid = @t.TicketId}, htmlAttributes: null)
+                    }
+
+                </td>
+                <td>@t.TicketStatus</td>
+                <td>@t.TicketCreationDate</td>
+
+                <td>@t.TicketTitle</td>
+                <td>@t.TicketText</td>
+                <td>@t.TicketAnswerDate</td>
+
+                <td>
+
+                    @if (@t.TicketAnswerAdminId != null)
+                    {
+                        @Html.ActionLink(@t.TicketAnswerAdminName, "Profile", "User", new { id = @t.TicketAnswerAdminId }, htmlAttributes: null)
+                    }
+
+                </td>
+
+                <td>@t.TicketAdminAnswer</td>
+                <td>@t.TicketCloseDate</td>
+
+                <td>
+                
+                    @if (@t.TicketCloseAdminId != null)
+                    {
+                        @Html.ActionLink(@t.TicketCloseAdminName, "Profile", "User", new { id = @t.TicketCloseAdminId }, htmlAttributes: null)
+                    }
+
+                </td>
+
+                <td>@t.TicketAdminCloseComment</td>
+                <td>
+                    
+                    @if (@t.TicketParentTicketId != null && (User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Helper) || User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Administrator)))
+                    {
+                        @Html.ActionLink(@t.TicketParentTicketShortTitle, "TicketDetails", "Ticket", new { tid = @t.TicketParentTicketId}, htmlAttributes: null)
+                    }
+
+                </td>
+                <td>
+                    @if (@t.TicketImageId != null)
+                    {
+                        <a href="@Url.Action("Image", new { iid = @t.TicketImageId })"><img width="50px" src="@Url.Action("Image", new { iid = @t.TicketImageId })" alt="image" /></a>
+                    }
+
+                </td>
+			</tr>
+        }
+	    </tbody>
+    </table>
+}
+else
+{
+    @Html.Raw("<br />There are no tickets yet.")
+    @Html.Raw("<br /><br />")
+}
+
+<input type="button" value="Send new ticket" class="button" onclick="location.href = '@Url.Action("AddNewTicket", "Ticket")    '" />

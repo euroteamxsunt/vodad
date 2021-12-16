@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Stats for admin";
+}
+
+<h2>Activated users</h2>
+
+<b>@ViewBag.ActivatedusersCount
+    &nbsp;activated users</b>
+<br/>
+
+<table id="activated-users-table">
+    <thead>
+        <tr>
+            <th>Register date</th>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Activated</th>
+     </tr>
+    </thead>
+        <tbody>
+        @foreach (var c in ViewBag.ActivatedUsersList)
+        {
+            <tr>
+                <td>@c.RegisterDate</td>
+                <td>@c.Name</td>
+                <td>@c.Role</td>
+                <td>@c.IsActivated</td>
+            </tr>
+        }
+            </tbody>
+</table>

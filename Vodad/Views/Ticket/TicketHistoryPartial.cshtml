@@ -1,0 +1,27 @@
+﻿@model Vodad.Models.TicketHistoryModel
+
+<tr>
+    <td class="td-href">@Html.ActionLink(@Model.TicketCreatorName, "Profile", "User", new { id = @Model.TicketCreatorId}, htmlAttributes: null )</td>
+    <td class="td-name tickets-short-title">@Model.TicketTitle</td>
+    <td class="tickets-short-title">@Model.TicketCreationDate</td>
+
+    <td>@Model.TicketText</td>
+
+    <td>
+        @if (@Model.TicketImageId != null)
+        {
+            <a href="@Url.Action("Image", new { iid = @Model.TicketImageId })"><img width="50px" src="@Url.Action("Image", new { iid = @Model.TicketImageId })" alt="image" /></a>
+        }
+    </td>
+
+    <td>@Model.TicketAnswerDate</td>
+    <td>
+        
+        @if (@Model.TicketAdminAnswerId != null)
+        {
+            @Html.ActionLink(@Model.TicketAdminAnswerName, "Profile", "User", new { id = @Model.TicketAdminAnswerId}, htmlAttributes: null )
+        }
+
+    </td>
+    <td>@Model.TicketAnswer</td>
+</tr>

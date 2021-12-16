@@ -1,0 +1,16 @@
+﻿@model Vodad.Models.CertificateActivationModel
+
+@using (Html.BeginForm("ActivateCertificate", "Wallet", FormMethod.Post, new { ViewBag.ReturnUrl }))
+{
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Certificate activation form</legend>
+
+        <strong>Enter certificate code here:</strong>
+        @Html.TextBoxFor(m => m.Code)
+        @Html.HiddenFor(m => m.UserId, new { @Value = ViewBag.UserId })
+
+        <input type="submit" class="button" value="Activate" />
+    </fieldset>
+}

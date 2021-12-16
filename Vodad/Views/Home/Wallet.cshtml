@@ -1,0 +1,43 @@
+﻿@model VodadModel.Wallet
+
+<img src="~/Images/wallet-logo.png" />
+
+@if (ViewBag.HasUnreadMessages != null && ViewBag.HasUnreadMessages.Equals("true") && !User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Banned))
+{
+    <br />
+    <br />
+    <a href="@Url.Action("PrivateMessages", "Message")" >
+        <img src="~/Images/send-message-button.png" alt='You have unread messages' title='You have unread messages' width="20px"></a>
+}
+
+<br />
+
+@if (ViewBag.HasUnansweredTicket != null && ViewBag.HasUnansweredTicket.Equals("true"))
+{
+    <a href="@Url.Action("ManageTickets", "Ticket")" >
+        <img src="~/Images/send-message-button.png" alt='Your ticket got answer' title='Your ticket got answer' width="20px"></a>
+}
+
+
+@if (!User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Banned) && !User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Helper))
+{
+    <div class="wallet-info">
+        Cash: @ViewBag.Wallet.Account.ToString("F2") $
+            <br />
+        Transfers: @ViewBag.Wallet.Transfer.ToString("F2") $
+            <br />
+
+        <a href="@Url.Action("WalletManager", "Wallet")">Wallet manager</a>
+
+        <br />
+        <br />
+
+        @if (User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Performer))
+        {
+            <img src='~/Images/reputation.png' alt="User's reputation" title="User's reputation" id="header-karma-icon">
+            <div id="header-karma-progressbar" title="Reputation: @ViewBag.Karma%" class="ui-progressbar ui-widget ui-widget-content ui-corner-all" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="ui-progressbar-value ui-widget-header ui-corner-left" style="width: @ViewBag.Karma%;"></div>
+            </div>
+        }
+    </div>
+}

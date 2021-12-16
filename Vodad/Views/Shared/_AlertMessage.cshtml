@@ -1,0 +1,12 @@
+﻿@if (ViewBag.AlertMessage != null)
+{
+    if (ViewBag.Success != null && ViewBag.Success == VodadModel.Utilities.Constants.AlertMessages.Success)
+    {
+    @ViewBag.AlertMessage
+    }
+
+    if (ViewBag.Success != null && ViewBag.Success == VodadModel.Utilities.Constants.AlertMessages.Failed)
+    {
+    @ViewBag.AlertMessage
+    }
+}

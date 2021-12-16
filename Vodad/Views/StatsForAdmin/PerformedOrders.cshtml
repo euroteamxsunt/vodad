@@ -1,0 +1,35 @@
+﻿<h2>Performed orders</h2>
+
+<b>@ViewBag.PerformedOrdersCount
+    &nbsp; orders performed</b>
+<br />
+<br />
+
+<input type="text" value="@DateTime.Today" class="start-date" />
+<input type="text" value="@DateTime.Today" class="end-date" />
+<input type="button" id="update-button" value="Update" class="button" />
+
+<table id="performed-orders-table">
+    <thead>
+        <tr>
+            <th>User name</th>
+            <th>Max budget</th>
+            <th>End date</th>
+            <th>PPM</th>
+            <th>Progress time</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var c in ViewBag.PerformedOrdersList)
+        {
+            <tr>
+                <td>@c.AuthorName</td>
+                <td>@c.MaxBudget</td>
+                <td>@c.EndDate</td>
+                <td>@c.PricePerMinute</td>
+                <td>@c.ProgressTime</td>
+            </tr>
+        }
+    </tbody>
+</table>

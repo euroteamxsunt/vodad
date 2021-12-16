@@ -1,0 +1,33 @@
+﻿<h2>Charged money</h2>
+
+<b>Total charged money:
+    @ViewBag.ChargedMoneySum $</b>
+<br />
+<br />
+
+<input type="text" value="@DateTime.Today" class="start-date" />
+<input type="text" value="@DateTime.Today" class="end-date" />
+<input type="button" id="update-button" value="Update" class="button" />
+
+
+<table id="charged-money-table">
+    <thead>
+        <tr>
+            <th>Operation date</th>
+            <th>User</th>
+            <th>Role</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in ViewBag.ChargedMoney)
+        {
+            <tr>
+                <td>@c.OperationDate</td>
+                <td>@c.User</td>
+                <td>@c.Role</td>
+                <td>@c.Amount</td>
+            </tr>
+        }
+    </tbody>
+</table>

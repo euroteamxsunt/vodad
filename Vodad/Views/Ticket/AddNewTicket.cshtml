@@ -1,0 +1,39 @@
+﻿@model Vodad.Models.AddNewTicketModel
+
+@{
+    ViewBag.Title = "AddNewTicket";
+}
+
+<h2>Send message to support</h2>
+
+@using (Html.BeginForm("AddNewTicket", "Ticket", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Create new campaign</legend>
+
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.Title)<br />
+                @Html.TextBoxFor(m => m.Title)
+            </li>
+            <li>
+                @{
+                    var themes = new SelectList(ViewBag.TicketThemesList, "Id", "ThemeName");
+                }
+                @Html.LabelFor(m => m.ThemeId)<br />
+                @Html.DropDownListFor(m => m.ThemeId, @themes, new { @class = "themes-dropdownlist" })
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Text)<br />
+                @Html.TextAreaFor(m => m.Text, new { @class = "new-message-text-area" })
+            </li>
+            <li>
+                @Html.LabelFor(m => m.ImageData)<br />
+                <input type="file" name="ImageData" accept="image/x-png, image/gif, image/jpeg" />
+            </li>
+        </ol>
+        <input type="submit" value="Send ticket" class="button" />
+    </fieldset>
+}

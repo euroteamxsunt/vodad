@@ -1,0 +1,1016 @@
+2013-08-12 10:22:03.4159 WIN-4RBAACNQBGT\Администратор:notauth:: 17:03:39.0630 (101) INFO
+AccountMembershipService.CreateUser => VodadMembershipProvider.CreateUser => UserRepository.CreateUser
+tu_1_adv@adv.adv has been registered
+
+2013-08-12 10:22:30.8005 WIN-4RBAACNQBGT\Администратор:notauth:: 17:04:07.0015 (111) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => AccountController.Login
+User tu_1_adv@adv.adv has been logged in with ip 
+
+2013-08-12 10:23:31.0169 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 17:05:07.0231 (111) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+Image id = 5 has been added
+
+2013-08-12 10:23:31.0599 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 17:05:07.0274 (111) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+Order id = 3 has been added
+
+2013-08-12 10:23:31.1159 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 17:05:07.0330 (111) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+OrderContent id = 4 has been added
+
+2013-08-12 10:24:27.1301 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 17:06:03.0344 (111) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+Image id = 6 has been added
+
+2013-08-12 10:24:27.1701 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 17:06:03.0384 (111) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+Order id = 4 has been added
+
+2013-08-12 10:24:27.3061 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 17:06:03.0520 (111) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+For order id = 4 has been added themes list
+
+2013-08-12 10:24:27.3431 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 17:06:03.0557 (111) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+OrderContent id = 5 has been added
+
+2013-08-12 10:24:38.6308 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 17:06:14.0845 (7) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+Image id = 7 has been added
+
+2013-08-12 10:24:38.6738 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 17:06:14.0888 (7) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+Order id = 5 has been added
+
+2013-08-12 10:24:38.7488 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 17:06:14.0963 (7) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+For order id = 5 has been added themes list
+
+2013-08-12 10:24:38.7838 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 17:06:14.0998 (7) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+OrderContent id = 6 has been added
+
+2013-08-12 10:28:17.1003 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:49.0161 (15) INFO
+OrderController.ManageOrders => OrderController.ChangeOrderStatus => OrderController.DeleteOrder
+Image id = 5  has been deleted
+
+2013-08-12 10:28:17.1233 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:49.0184 (15) INFO
+OrderController.ManageOrders => OrderController.ChangeOrderStatus => OrderController.DeleteOrder
+OrderContent id = 4  has been deleted
+
+2013-08-12 10:28:17.1233 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:49.0184 (15) INFO
+OrderController.ManageOrders => OrderController.ChangeOrderStatus => OrderController.DeleteOrder
+Order id = 3 has been deleted
+
+2013-08-12 10:28:17.3453 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:49.0406 (15) ERROR
+OrderController.ChangeOrderStatus => OrderController.DeleteOrder => Repository`1.Save
+Database save exception: 
+System.Data.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginTransaction()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at VodadModel.Repository.Repository`1.Save() in d:\Distr\Vodad\trunk\Vodad\VodadModel\Model\Repository.cs:line 89
+System.Data.SqlClient.SqlException (0x80131904): Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+ClientConnectionId:188ed3a6-b3df-4f99-be9d-ef2cc01cde31
+2013-08-12 10:28:21.6185 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:53.0679 (15) ERROR
+OrderController.ChangeOrderStatus => OrderController.DeleteOrder => Repository`1.Save
+Database save exception: 
+System.Data.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginTransaction()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at VodadModel.Repository.Repository`1.Save() in d:\Distr\Vodad\trunk\Vodad\VodadModel\Model\Repository.cs:line 89
+System.Data.SqlClient.SqlException (0x80131904): Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+ClientConnectionId:188ed3a6-b3df-4f99-be9d-ef2cc01cde31
+2013-08-12 10:28:25.2577 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:57.0318 (15) ERROR
+OrderController.ChangeOrderStatus => OrderController.DeleteOrder => Repository`1.Save
+Database save exception: 
+System.Data.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginTransaction()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at VodadModel.Repository.Repository`1.Save() in d:\Distr\Vodad\trunk\Vodad\VodadModel\Model\Repository.cs:line 89
+System.Data.SqlClient.SqlException (0x80131904): Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+ClientConnectionId:188ed3a6-b3df-4f99-be9d-ef2cc01cde31
+2013-08-12 10:28:28.4199 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:00.0480 (15) ERROR
+OrderController.ChangeOrderStatus => OrderController.DeleteOrder => Repository`1.Save
+Database save exception: 
+System.Data.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginTransaction()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at VodadModel.Repository.Repository`1.Save() in d:\Distr\Vodad\trunk\Vodad\VodadModel\Model\Repository.cs:line 89
+System.Data.SqlClient.SqlException (0x80131904): Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+ClientConnectionId:188ed3a6-b3df-4f99-be9d-ef2cc01cde31
+2013-08-12 10:28:31.4501 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:03.0511 (15) INFO
+<no type>.lambda_method => OrderController.ManageOrders => OrderController.ChangeOrderStatus
+Order id = 3 status has been changed
+
+2013-08-12 10:28:31.5641 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:03.0625 (15) INFO
+OrderController.ManageOrders => OrderController.ChangeOrderStatus => OrderController.DeleteOrder
+Image id = 6  has been deleted
+
+2013-08-12 10:28:31.5641 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:03.0625 (15) INFO
+OrderController.ManageOrders => OrderController.ChangeOrderStatus => OrderController.DeleteOrder
+OrderContent id = 5  has been deleted
+
+2013-08-12 10:28:31.5641 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:03.0625 (15) INFO
+OrderController.ManageOrders => OrderController.ChangeOrderStatus => OrderController.DeleteOrder
+Order id = 4 has been deleted
+
+2013-08-12 10:28:31.6401 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:03.0701 (15) ERROR
+OrderController.ChangeOrderStatus => OrderController.DeleteOrder => Repository`1.Save
+Database save exception: 
+System.Data.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginTransaction()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at VodadModel.Repository.Repository`1.Save() in d:\Distr\Vodad\trunk\Vodad\VodadModel\Model\Repository.cs:line 89
+System.Data.SqlClient.SqlException (0x80131904): Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+ClientConnectionId:188ed3a6-b3df-4f99-be9d-ef2cc01cde31
+2013-08-12 10:28:34.4283 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:06.0489 (15) ERROR
+OrderController.ChangeOrderStatus => OrderController.DeleteOrder => Repository`1.Save
+Database save exception: 
+System.Data.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginTransaction()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at VodadModel.Repository.Repository`1.Save() in d:\Distr\Vodad\trunk\Vodad\VodadModel\Model\Repository.cs:line 89
+System.Data.SqlClient.SqlException (0x80131904): Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+ClientConnectionId:188ed3a6-b3df-4f99-be9d-ef2cc01cde31
+2013-08-12 10:28:38.3735 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:10.0434 (15) ERROR
+OrderController.ChangeOrderStatus => OrderController.DeleteOrder => Repository`1.Save
+Database save exception: 
+System.Data.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginTransaction()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at VodadModel.Repository.Repository`1.Save() in d:\Distr\Vodad\trunk\Vodad\VodadModel\Model\Repository.cs:line 89
+System.Data.SqlClient.SqlException (0x80131904): Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+ClientConnectionId:188ed3a6-b3df-4f99-be9d-ef2cc01cde31
+2013-08-12 10:28:44.4488 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:16.0509 (15) ERROR
+OrderController.ChangeOrderStatus => OrderController.DeleteOrder => Repository`1.Save
+Database save exception: 
+System.Data.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginTransaction()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at VodadModel.Repository.Repository`1.Save() in d:\Distr\Vodad\trunk\Vodad\VodadModel\Model\Repository.cs:line 89
+System.Data.SqlClient.SqlException (0x80131904): Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+ClientConnectionId:188ed3a6-b3df-4f99-be9d-ef2cc01cde31
+2013-08-12 10:28:49.3451 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:21.0406 (15) INFO
+<no type>.lambda_method => OrderController.ManageOrders => OrderController.ChangeOrderStatus
+Order id = 4 status has been changed
+
+2013-08-12 10:28:49.4511 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:21.0512 (15) INFO
+OrderController.ManageOrders => OrderController.ChangeOrderStatus => OrderController.DeleteOrder
+Image id = 7  has been deleted
+
+2013-08-12 10:28:49.4511 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:21.0512 (15) INFO
+OrderController.ManageOrders => OrderController.ChangeOrderStatus => OrderController.DeleteOrder
+OrderContent id = 6  has been deleted
+
+2013-08-12 10:28:49.4611 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:21.0522 (15) INFO
+OrderController.ManageOrders => OrderController.ChangeOrderStatus => OrderController.DeleteOrder
+Order id = 5 has been deleted
+
+2013-08-12 10:28:49.5311 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:21.0592 (15) ERROR
+OrderController.ChangeOrderStatus => OrderController.DeleteOrder => Repository`1.Save
+Database save exception: 
+System.Data.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginTransaction()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at VodadModel.Repository.Repository`1.Save() in d:\Distr\Vodad\trunk\Vodad\VodadModel\Model\Repository.cs:line 89
+System.Data.SqlClient.SqlException (0x80131904): Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+ClientConnectionId:188ed3a6-b3df-4f99-be9d-ef2cc01cde31
+2013-08-12 10:28:52.3343 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:24.0395 (15) ERROR
+OrderController.ChangeOrderStatus => OrderController.DeleteOrder => Repository`1.Save
+Database save exception: 
+System.Data.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginTransaction()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at VodadModel.Repository.Repository`1.Save() in d:\Distr\Vodad\trunk\Vodad\VodadModel\Model\Repository.cs:line 89
+System.Data.SqlClient.SqlException (0x80131904): Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+ClientConnectionId:188ed3a6-b3df-4f99-be9d-ef2cc01cde31
+2013-08-12 10:28:55.6495 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:27.0710 (15) ERROR
+OrderController.ChangeOrderStatus => OrderController.DeleteOrder => Repository`1.Save
+Database save exception: 
+System.Data.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginTransaction()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at VodadModel.Repository.Repository`1.Save() in d:\Distr\Vodad\trunk\Vodad\VodadModel\Model\Repository.cs:line 89
+System.Data.SqlClient.SqlException (0x80131904): Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+ClientConnectionId:188ed3a6-b3df-4f99-be9d-ef2cc01cde31
+2013-08-12 10:28:59.8737 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:31.0934 (15) ERROR
+OrderController.ChangeOrderStatus => OrderController.DeleteOrder => Repository`1.Save
+Database save exception: 
+System.Data.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginTransaction()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at VodadModel.Repository.Repository`1.Save() in d:\Distr\Vodad\trunk\Vodad\VodadModel\Model\Repository.cs:line 89
+System.Data.SqlClient.SqlException (0x80131904): Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+ClientConnectionId:188ed3a6-b3df-4f99-be9d-ef2cc01cde31
+2013-08-12 10:29:02.8429 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:34.0903 (15) INFO
+<no type>.lambda_method => OrderController.ManageOrders => OrderController.ChangeOrderStatus
+Order id = 5 status has been changed
+
+2013-08-12 10:29:43.4742 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:03:15.0535 (11) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+Image id = 8 has been added
+
+2013-08-12 10:29:43.5162 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:03:15.0577 (11) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+Order id = 6 has been added
+
+2013-08-12 10:29:43.5582 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:03:15.0619 (11) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+OrderContent id = 7 has been added
+
+2013-08-12 10:33:00.4595 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:00:45.0863 (11) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+Image id = 9 has been added
+
+2013-08-12 10:33:00.5295 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:00:45.0933 (11) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+Order id = 7 has been added
+
+2013-08-12 10:33:00.6505 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:00:46.0054 (11) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+OrderContent id = 8 has been added
+
+2013-08-12 10:33:16.8134 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:02.0217 (5) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+Image id = 10 has been added
+
+2013-08-12 10:33:16.8564 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:02.0260 (5) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+Order id = 8 has been added
+
+2013-08-12 10:33:16.9744 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:02.0378 (5) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+OrderContent id = 9 has been added
+
+2013-08-12 10:33:49.4513 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:34.0855 (13) INFO
+OrderController.ManageOrders => OrderController.ChangeOrderStatus => OrderController.DeleteOrder
+Image id = 8  has been deleted
+
+2013-08-12 10:33:49.4673 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:34.0871 (13) INFO
+OrderController.ManageOrders => OrderController.ChangeOrderStatus => OrderController.DeleteOrder
+OrderContent id = 7  has been deleted
+
+2013-08-12 10:33:49.4673 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:34.0871 (13) INFO
+OrderController.ManageOrders => OrderController.ChangeOrderStatus => OrderController.DeleteOrder
+Order id = 6 has been deleted
+
+2013-08-12 10:33:49.5763 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:34.0980 (13) ERROR
+OrderController.ChangeOrderStatus => OrderController.DeleteOrder => Repository`1.Save
+Database save exception: 
+System.Data.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginTransaction()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at VodadModel.Repository.Repository`1.Save() in d:\Distr\Vodad\trunk\Vodad\VodadModel\Model\Repository.cs:line 89
+System.Data.SqlClient.SqlException (0x80131904): Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+ClientConnectionId:69fcaa64-3740-4487-a93b-632d45a6351d
+2013-08-12 10:33:52.3825 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:37.0786 (13) ERROR
+OrderController.ChangeOrderStatus => OrderController.DeleteOrder => Repository`1.Save
+Database save exception: 
+System.Data.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginTransaction()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at VodadModel.Repository.Repository`1.Save() in d:\Distr\Vodad\trunk\Vodad\VodadModel\Model\Repository.cs:line 89
+System.Data.SqlClient.SqlException (0x80131904): Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+ClientConnectionId:69fcaa64-3740-4487-a93b-632d45a6351d
+2013-08-12 10:33:55.0666 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:40.0470 (13) ERROR
+OrderController.ChangeOrderStatus => OrderController.DeleteOrder => Repository`1.Save
+Database save exception: 
+System.Data.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginTransaction()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at VodadModel.Repository.Repository`1.Save() in d:\Distr\Vodad\trunk\Vodad\VodadModel\Model\Repository.cs:line 89
+System.Data.SqlClient.SqlException (0x80131904): Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+ClientConnectionId:69fcaa64-3740-4487-a93b-632d45a6351d
+2013-08-12 10:34:03.7981 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:49.0202 (13) ERROR
+OrderController.ChangeOrderStatus => OrderController.DeleteOrder => Repository`1.Save
+Database save exception: 
+System.Data.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginTransaction()
+   at System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Objects.ObjectContext.SaveChanges()
+   at VodadModel.Repository.Repository`1.Save() in d:\Distr\Vodad\trunk\Vodad\VodadModel\Model\Repository.cs:line 89
+System.Data.SqlClient.SqlException (0x80131904): Новая транзакция не допускается, так как в данном сеансе запущены другие потоки.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TdsExecuteTransactionManagerRequest(Byte[] buffer, TransactionManagerRequestType request, String transactionName, TransactionManagerIsolationLevel isoLevel, Int32 timeout, SqlInternalTransaction transaction, TdsParserStateObject stateObj, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransactionYukon(TransactionRequest transactionRequest, String transactionName, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnectionTds.ExecuteTransaction(TransactionRequest transactionRequest, String name, IsolationLevel iso, SqlInternalTransaction internalTransaction, Boolean isDelegateControlRequest)
+   at System.Data.SqlClient.SqlInternalConnection.BeginSqlTransaction(IsolationLevel iso, String transactionName)
+   at System.Data.SqlClient.SqlInternalConnection.BeginTransaction(IsolationLevel iso)
+   at System.Data.SqlClient.SqlConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+   at System.Data.Common.DbConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at System.Data.EntityClient.EntityConnection.BeginDbTransaction(IsolationLevel isolationLevel)
+ClientConnectionId:69fcaa64-3740-4487-a93b-632d45a6351d
+2013-08-12 10:34:07.6393 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:53.0043 (13) INFO
+<no type>.lambda_method => OrderController.ManageOrders => OrderController.ChangeOrderStatus
+Order id = 6 status has been changed
+
+2013-08-12 10:34:42.1213 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:27.0525 (11) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.EditOrder
+Order id = 7 has been modified
+
+2013-08-12 10:35:24.1417 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:03:09.0545 (13) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.EditOrder
+Order id = 7 has been modified
+
+2013-08-12 10:35:24.6517 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:03:10.0055 (13) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.EditOrder
+Image id = 11 has been added
+
+2013-08-12 10:35:24.7407 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:03:10.0144 (13) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.EditOrder
+OrderContent id = 10 has been added
+
+2013-08-12 10:38:25.6341 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:06:11.0038 (18) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+Image id = 12 has been added
+
+2013-08-12 10:38:25.6801 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:06:11.0084 (18) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+Order id = 9 has been added
+
+2013-08-12 10:38:25.7471 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:06:11.0151 (18) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+For order id = 9 has been added themes list
+
+2013-08-12 10:38:25.7801 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:06:11.0184 (18) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => OrderController.AddNewOrder
+OrderContent id = 11 has been added
+
+2013-08-12 11:17:58.3798 WIN-4RBAACNQBGT\Администратор:notauth:: 00:45:43.0783 (48) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => AccountController.Login
+User tu_1_adv@adv.adv has been logged in with ip 
+
+2013-08-12 11:21:34.1791 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:49:19.0583 (47) INFO
+<no type>.lambda_method => MessageController.ChatWithUser => MessageController.AddMessage
+Message 5 has been added
+
+2013-08-12 11:21:34.2371 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:49:19.0641 (46) INFO
+<no type>.lambda_method => MessageController.ChatWithUser => MessageController.GetUserMessages
+Message 5 status has been changed to IsRead
+
+2013-08-12 11:21:34.2371 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:49:19.0641 (46) INFO
+<no type>.lambda_method => MessageController.MessageSummary => MessageController.GetUserMessages
+Message 5 status has been changed to IsRead
+
+2013-08-12 11:21:44.4007 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:49:29.0804 (46) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => BlackAndWhiteListsController.AddUserToWhiteList
+13 added 11 to white list
+
+2013-08-12 11:22:09.8622 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:49:55.0266 (46) INFO
+<no type>.lambda_method => BlackAndWhiteListsController.AddUserToBlackList => BlackAndWhiteListsController.RemoveUserFromWhiteList
+13 removed 11 from white list
+
+2013-08-12 11:22:09.8652 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:49:55.0269 (46) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => BlackAndWhiteListsController.AddUserToBlackList
+13 added 11 to black list
+
+2013-08-12 11:31:18.3346 WIN-4RBAACNQBGT\Администратор:notauth:: 00:59:03.0738 (13) INFO
+AccountMembershipService.CreateUser => VodadMembershipProvider.CreateUser => UserRepository.CreateUser
+tu_1_perf@perf.perf has been registered
+
+2013-08-12 11:31:49.7163 WIN-4RBAACNQBGT\Администратор:notauth:: 00:59:35.0120 (43) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => AccountController.Login
+User tu_1_perf@perf.perf has been logged in with ip 
+
+2013-08-12 11:32:57.3332 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_perf@perf.perf 01:00:42.0737 (43) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => PerformerPlatformController.AddPlatform
+PerformerPlatform id = 7 has been added
+
+2013-08-12 11:33:29.5651 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_perf@perf.perf 01:01:14.0969 (43) INFO
+<no type>.lambda_method => PerformerPlatformController.ChangePerformerPlatformStatus => PerformerPlatformController.DeletePerformerPlatform
+PerformerPlatform id = 7 has been deleted
+
+2013-08-12 11:33:29.5651 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_perf@perf.perf 01:01:14.0969 (43) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => PerformerPlatformController.ChangePerformerPlatformStatus
+PerformerPlatform id = 7 has been deleted
+
+2013-08-12 11:33:41.4637 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_perf@perf.perf 01:01:26.0867 (13) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => PerformerPlatformController.AddPlatform
+PerformerPlatform id = 8 has been added
+
+2013-08-12 11:33:55.3515 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_perf@perf.perf 01:01:40.0755 (43) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => PerformerPlatformController.EditPerformerPlatform
+PerformerPlatform id = 8 has been modified
+
+2013-08-12 11:35:23.8546 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_perf@perf.perf 01:03:09.0258 (43) INFO
+<no type>.lambda_method => MessageController.ChatWithUser => MessageController.AddMessage
+Message 6 has been added
+
+2013-08-12 11:35:23.8816 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_perf@perf.perf 01:03:09.0285 (39) INFO
+<no type>.lambda_method => MessageController.ChatWithUser => MessageController.GetUserMessages
+Message 6 status has been changed to IsRead
+
+2013-08-12 11:35:23.8936 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_perf@perf.perf 01:03:09.0297 (39) INFO
+<no type>.lambda_method => MessageController.MessageSummary => MessageController.GetUserMessages
+Message 6 status has been changed to IsRead
+
+2013-08-12 11:35:28.5649 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_perf@perf.perf 01:03:13.0969 (43) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => BlackAndWhiteListsController.AddUserToBlackList
+14 added 13 to black list
+
+2013-08-12 11:35:44.6798 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_perf@perf.perf 01:03:30.0083 (13) INFO
+<no type>.lambda_method => BlackAndWhiteListsController.AddUserToWhiteList => BlackAndWhiteListsController.RemoveUserFromBlackList
+14 removed 13 from black list
+
+2013-08-12 11:35:44.6798 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_perf@perf.perf 01:03:30.0083 (13) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => BlackAndWhiteListsController.AddUserToWhiteList
+14 added 13 to white list
+
+2013-08-12 11:36:10.5933 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_perf@perf.perf 01:03:55.0997 (39) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => TicketController.AddNewTicket
+Ticket id = 3 has been added
+
+2013-08-12 11:36:15.6646 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_perf@perf.perf 01:04:01.0068 (39) INFO
+<no type>.lambda_method => TicketController.ViewTicket => TicketController.AddNewTicket
+Ticket id = 4 has been added
+
+2013-08-12 11:36:45.6733 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_perf@perf.perf 01:04:31.0077 (13) INFO
+<no type>.lambda_method => TicketController.ViewTicket => TicketController.AddNewTicket
+Image id = 13 has been added
+
+2013-08-12 11:36:45.7543 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_perf@perf.perf 01:04:31.0158 (13) INFO
+<no type>.lambda_method => TicketController.ViewTicket => TicketController.AddNewTicket
+Ticket id = 5 has been added
+
+2013-08-12 11:37:24.3065 WIN-4RBAACNQBGT\Администратор:notauth:: 01:05:09.0710 (43) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => AccountController.Login
+User tu_1_adv@adv.adv has been logged in with ip 
+
+2013-08-12 11:37:50.1990 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 01:05:35.0603 (13) INFO
+<no type>.lambda_method => MessageController.ChatWithUser => MessageController.GetUserMessages
+Message 6 status has been changed to IsRead
+
+2013-08-12 11:37:50.2250 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 01:05:35.0629 (13) INFO
+<no type>.lambda_method => MessageController.MessageSummary => MessageController.GetUserMessages
+Message 6 status has been changed to IsRead
+
+2013-08-12 15:06:17.4153 WIN-4RBAACNQBGT\Администратор:notauth:: 04:34:02.0819 (70) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => AccountController.Login
+User tu_1_klamar@gmail.com has been logged in with ip 
+
+2013-08-12 15:06:26.2788 WIN-4RBAACNQBGT\Администратор:notauth:: 04:34:11.0682 (71) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => AccountController.Login
+User tu_1_klamar1@gmail.com has been logged in with ip 
+
+2013-08-12 15:41:12.0861 WIN-4RBAACNQBGT\Администратор:notauth:: 00:00:26.0528 (11) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => AccountController.Login
+User tu_1_klamar@gmail.com has been logged in with ip 
+
+2013-08-12 15:44:28.7164 WIN-4RBAACNQBGT\Администратор:notauth:: 00:03:43.0158 (11) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => AccountController.Login
+User tu_1_klamar@gmail.com has been logged in with ip 
+
+2013-08-12 15:46:19.2317 WIN-4RBAACNQBGT\Администратор:notauth:: 00:05:33.0674 (16) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => AccountController.Login
+User tu_1_klamar@gmail.com has been logged in with ip 
+
+2013-08-12 15:46:23.2069 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_klamar@gmail.com 00:05:37.0649 (16) INFO
+HomeController.Wallet => WalletHelper.GetUsersWallet => WalletHelper.CreateNewWallet
+Wallet id = 1 has been added
+
+2013-08-12 15:47:10.9887 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:00:24.0688 (10) INFO
+HomeController.Wallet => WalletHelper.GetUsersWallet => WalletHelper.CreateNewWallet
+Wallet id = 2 has been added
+
+2013-08-12 15:47:48.2298 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:01.0929 (13) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => WalletController.AddMerchantAccount
+User PayPal has added new PayPal wallet nia@nia.nia
+
+2013-08-12 15:48:04.5337 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:18.0233 (13) INFO
+<no type>.lambda_method => WalletController.ChangeMerchantAccount => WalletController.ChangeMerchantAccountStatus
+User tu_1_adv@adv.adv userMerchant account 1 has been changed to status waiting before changing account
+
+2013-08-12 15:48:04.6117 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:18.0311 (13) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => WalletController.ChangeMerchantAccount
+User tu_1_adv@adv.adv userMerchant account 1 has been changed next account to nia1@nia.nia
+
+2013-08-12 15:48:04.6847 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:18.0384 (11) INFO
+<no type>.lambda_method => AccountController.ChangeProfile => WalletController.ActivateNewUsersMerchantAccount
+UserMerchant {1} has been activated
+
+2013-08-12 15:48:09.6940 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:23.0393 (13) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => WalletController.CancelUserMerchantAccountChanges
+User 13 UserMerchantAccount 1 has been canceled
+
+2013-08-12 15:48:09.7710 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:01:23.0470 (12) INFO
+<no type>.lambda_method => AccountController.ChangeProfile => WalletController.ActivateNewUsersMerchantAccount
+UserMerchant {1} has been activated
+
+2013-08-12 15:48:53.3365 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:07.0036 (13) INFO
+<no type>.lambda_method => WalletController.ChangeMerchantAccount => WalletController.ChangeMerchantAccountStatus
+User tu_1_adv@adv.adv userMerchant account 1 has been changed to status waiting before changing account
+
+2013-08-12 15:48:53.3365 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:07.0036 (13) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => WalletController.ChangeMerchantAccount
+User tu_1_adv@adv.adv userMerchant account 1 has been changed next account to santyaga.private@gmail.com
+
+2013-08-12 15:48:53.4305 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:07.0130 (5) INFO
+<no type>.lambda_method => AccountController.ChangeProfile => WalletController.ActivateNewUsersMerchantAccount
+UserMerchant {1} has been activated
+
+2013-08-12 15:48:59.8529 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:02:13.0552 (10) INFO
+<no type>.lambda_method => AccountController.ChangeProfile => WalletController.ActivateNewUsersMerchantAccount
+UserMerchant {1} has been activated
+
+2013-08-12 15:50:03.6135 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:03:17.0313 (13) INFO
+<no type>.lambda_method => AccountController.ChangeProfile => WalletController.ActivateNewUsersMerchantAccount
+UserMerchant {1} has been activated
+
+2013-08-12 15:50:06.2847 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:03:19.0984 (10) INFO
+<no type>.lambda_method => WalletController.WalletManager => WalletController.ActivateNewUsersMerchantAccount
+UserMerchant {1} has been activated
+
+2013-08-12 15:50:18.5324 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:03:32.0232 (12) INFO
+<no type>.lambda_method => WalletController.WalletManager => WalletController.ActivateNewUsersMerchantAccount
+UserMerchant {1} has been activated
+
+2013-08-12 15:50:22.4776 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:03:36.0177 (11) INFO
+<no type>.lambda_method => AccountController.ChangeProfile => WalletController.ActivateNewUsersMerchantAccount
+UserMerchant {1} has been activated
+
+2013-08-12 16:36:56.3224 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:50:10.0022 (16) INFO
+<no type>.lambda_method => AccountController.ChangeProfile => WalletController.ActivateNewUsersMerchantAccount
+UserMerchant {1} has been activated
+
+2013-08-12 16:58:19.1488 WIN-4RBAACNQBGT\Администратор:notauth:: 00:07:20.0085 (20) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => AccountController.Login
+User tu_1_adv@adv.adv has been logged in with ip 
+
+2013-08-12 17:13:14.8040 WIN-4RBAACNQBGT\Администратор:notauth:: 00:22:15.0740 (31) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => PayPalController.PayPal_Listener
+User 13 tu_1_adv@adv.adv has charged his wallet with 96.80 USD with PayPal account santyagaprivate@sng.com
+
+2013-08-12 17:13:14.8040 WIN-4RBAACNQBGT\Администратор:notauth:: 00:22:15.0740 (31) WARN
+ActionMethodDispatcher.Execute => <no type>.lambda_method => PayPalController.PayPal_Listener
+Can't charge user's wallet, because transaction is not unique 294745588S273220V
+
+2013-08-12 17:16:23.1408 WIN-4RBAACNQBGT\Администратор:notauth:: 00:25:24.0077 (21) WARN
+ActionMethodDispatcher.Execute => <no type>.lambda_method => PayPalController.PayPal_Listener
+Can't charge user's wallet, because transaction is not unique 294745588S273220V
+
+2013-08-12 17:19:16.7267 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:00:31.0621 (12) INFO
+ActionMethodDispatcher.Execute => <no type>.lambda_method => TicketController.AddNewTicket
+Ticket id = 6 has been added
+
+2013-08-12 17:23:11.6162 WIN-4RBAACNQBGT\Администратор:notauth:: 00:03:14.0224 (15) WARN
+ActionMethodDispatcher.Execute => <no type>.lambda_method => PayPalController.PayPal_Listener
+Can't charge user's wallet, because transaction is not unique 294745588S273220V
+
+2013-08-12 17:24:29.4396 WIN-4RBAACNQBGT\Администратор:auth:Forms:tu_1_adv@adv.adv 00:00:17.0710 (13) INFO
+<no type>.lambda_method => TicketController.ViewTicket => TicketController.AddNewTicket
+Ticket id = 7 has been added
+

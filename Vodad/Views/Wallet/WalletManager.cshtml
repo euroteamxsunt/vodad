@@ -1,0 +1,129 @@
+﻿@model Vodad.Models.WalletManagerModel
+
+@{
+    ViewBag.Title = "Wallet manager";
+}
+
+@{
+    var actions = new List<SelectListItem>
+                      {
+                          new SelectListItem
+                              {
+                                  Value = "0",
+                                  Text = "Charge"
+                              }, new SelectListItem
+                                     {
+                                         Value = "1",
+                                         Text = "Withdraw"
+                                     }
+                      };
+}
+
+<h2>Wallet manager</h2>
+
+<strong>Cash:</strong> @ViewBag.Cash.ToString("F4")<br />
+<strong>Blocked:</strong> @ViewBag.Transfers.ToString("F4")<br />
+<strong>Referrals income:</strong> @ViewBag.ReferralsIncome.ToString("F4")<br />
+
+@using (Html.BeginForm("WalletManager", "Wallet", FormMethod.Post, new { ViewBag.ReturnUrl }))
+{
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Manage wallet form</legend>
+
+        <ol>
+            <li>
+                @{
+    var radioButtonList = new SelectList(ViewBag.Merchants, "Id", "MerchantName");
+                }
+                @Html.LabelFor(m => m.Merchant):<br />
+
+                @foreach (var r in radioButtonList)
+                {
+                    if (r.Value.Equals("1"))
+                    {
+                    @Html.RadioButtonFor(m => m.Merchant, @r.Text, new { Checked = "checked" }) @r.Text @Html.Raw("™")<br />
+                    }
+                    else
+                    {
+                    @Html.RadioButtonFor(m => m.Merchant, @r.Text, r.Selected) @r.Text<br />
+                    }
+                }
+            </li>
+            <li>
+                @Html.LabelFor(m => m.ChargeSum)<br />
+                @Html.TextBoxFor(m => m.ChargeSum, new { title = "Enter sum to charge Your account wallet" })
+            </li>
+            <li>
+                @if (User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Advertiser))
+                {
+                    @Html.LabelFor(m => m.Action)<br />
+                    foreach (var a in actions)
+                    {
+                        if (a.Value.Equals("0"))
+                        {
+                    @Html.RadioButtonFor(m => m.Action, @a.Text, new { Checked = "checked" })@a.Text
+                        }
+                        else
+                        {
+                    @Html.RadioButtonFor(m => m.Action, @a.Text, a.Selected)@a.Text
+                        }
+                    }
+                }
+                else
+                {
+                    @Html.LabelFor(m => m.Action)<br />
+                    @Html.RadioButtonFor(m => m.Action, "Withdraw", new { Checked = "checked" }) @Html.Raw("Withdraw")
+                }
+            </li>
+        </ol>
+        <input type="submit" value="Choose action" class="button" />
+    </fieldset>
+}
+
+@if (ViewBag.MoneyTransferTableList != null)
+{
+    <table id="moneytransfer-table">
+        <thead>
+            <tr class="manage-moneytransfer-webgrid-header">
+                <th id="moneytransfer-amount">Amount</th>
+                <th id="moneytransfer-action">Action</th>
+                <th id="moneytransfer-accountmerchantsystem">Account</th>
+                <th id="moneytransfer-merchant">Merchant</th>
+                <th id="moneytransfer-datetime">Date</th>
+                <th id="moneytransfer-status">Status</th>
+                <th id="moneytransfer-actions"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var m in ViewBag.MoneyTransferTableList)
+            {
+                <tr>
+                    <td>@m.Amount.ToString("F2")$</td>
+                    <td>@m.Action</td>
+                    <td>@m.AccountMerchantSystem</td>
+                    <td>@m.MerchantName</td>
+                    <td>@m.DateTime</td>
+                    <td>
+                        @if (@m.Action.Equals("outcome"))
+                        {
+                            @m.Status
+                        }
+                    </td>
+                    <td>
+                        @if (@m.Action.Equals("outcome") && @m.Status.Equals("waiting"))
+                        {
+                            <a href="@Url.Action("CancelWithdraw", "Wallet", new { mtid = @m.MoneyTransferId })" >
+                                <img src='../Images/delete.png' alt='Cancel withdrawal' title='Cancel withdrawal' width="20px"></a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<hr />
+
+@Html.Partial("_ActivateCertificatePartial")

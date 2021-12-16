@@ -1,0 +1,60 @@
+﻿@model Vodad.Models.OrderModel
+
+@{
+    ViewBag.Title = "AddNewOrder";
+}
+
+<h2>Add New Order for @ViewBag.CampaignName </h2>
+
+@using (Html.BeginForm("AddNewOrder", "Order", FormMethod.Post, new { enctype = "multipart/form-data", id = "addneworder-form" }))
+{
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Create new order</legend>
+
+        <ol>
+            <li>
+                @Html.CheckBoxFor(m => m.SelectAllThemes, new { @checked = "checked" }) <b>Any subjects</b>
+                <br />
+
+                <!-- Добавление списка возможных тематик -->
+                @{ var i = 0; }
+                @foreach (var t in Model.OrderThemesList)
+                {
+                    List<Vodad.Models.ThemesListForOrderModel> themesList = Model.OrderThemesList;
+                    var theme = themesList.Single(w => w.Id == t.Id);
+                        
+                    @Html.CheckBoxFor(m => m.OrderThemesList[i].IsChecked, new { @checked = t.IsChecked })
+                    @Html.HiddenFor(m => m.OrderThemesList[i].Id, new { @Value = theme.Id })
+                    @Html.HiddenFor(m => m.OrderThemesList[i].ThemeName, new { @Value = theme.ThemeName })
+                    <strong>@theme.ThemeName</strong>
+                    <br />
+                        
+                    i++;
+                }</li>
+            <li>
+                @Html.LabelFor(m => m.OrderExpireDate)<br />
+                @Html.TextBoxFor(m => m.OrderExpireDate, new { @class = "expire-date" })
+            </li>
+            <li>
+                @{
+                var regions = new SelectList(ViewBag.RegionsList, "Id", "RegionName");
+                }
+                @Html.LabelFor(m => m.RegionId)<br />
+                @Html.DropDownListFor(m => m.RegionId, @regions, new { @class = "regions-dropdownlist" })
+            </li>
+            <li>
+                @Html.LabelFor(m => m.OrderComment)<br />
+                @Html.TextAreaFor(m => m.OrderComment)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.ContentData)<br />
+                <input type="file" name="ContentData" accept="image/x-png, image/gif, image/jpeg, video/mp4, video/mpeg, video/quicktime, video/x-ms-wmv, wmv" onchange="readURL(this);" />
+                <img src="#" alt="order content" width="100px" />
+                <label generated="true" class="error">File is too big. File size must not be bigger than 4MB.</label>
+            </li>
+        </ol>
+        <input type="submit" value="Add order" />
+    </fieldset>
+}

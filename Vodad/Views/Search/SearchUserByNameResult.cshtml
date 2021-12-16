@@ -1,0 +1,25 @@
+﻿@model List<Vodad.Models.SearchUserByNameResultModel>
+
+@{
+    ViewBag.Title = "Search user result";
+}
+
+<h2>Search user result</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>User name</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var u in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(@u.UserName, "Profile", "User", new { id = @u.UserId }, htmlAttributes: null)</td>
+                <td>@u.UserRole</td>
+            </tr>
+        }
+    </tbody>
+</table>

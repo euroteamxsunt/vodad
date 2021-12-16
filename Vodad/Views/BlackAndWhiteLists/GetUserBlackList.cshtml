@@ -1,0 +1,64 @@
+﻿@using VodadModel
+@model Vodad.Models.BlackAndWhiteListsModel
+
+@{
+    ViewBag.Title = "Black List";
+}
+
+
+<h2>Black List</h2>
+
+@{
+    var actions = new List<SelectListItem>
+                      {
+                          new SelectListItem
+                              {
+                                  Value = "0",
+                                  Text = "Choose action",
+                                  Selected = true
+                              }, new SelectListItem
+                                     {
+                                         Value = "1",
+                                         Text = "Execute Remove"
+                                     }, new SelectListItem
+                                            {
+                                                Value = "2",
+                                                Text = "Add to white list"
+                                            }
+                      };
+}
+
+@using (Html.BeginForm("GetUserBlackList", "BlackAndWhiteLists", FormMethod.Post))
+{
+    
+    if (ViewBag.BlackList.Count > 0)
+    {
+
+            @Html.DropDownList("action", actions, new { @class = "action-dropdownlist", @id = "blackandwhitelists-action-dropdownlist" })
+
+        <input type="submit" name="submit" value="Choose action" disabled />
+
+
+    <table>
+	    <thead>
+            <tr>
+			    <th>Name</th>
+                <th>@Html.CheckBox("action", false, new { @class = "all-actions-checkbox" })</th>
+		    </tr>
+	    </thead>
+	    <tbody>
+		@foreach (var u in ViewBag.BlackList)
+        {
+			        <tr>
+                        <td>@Html.ActionLink((string)u.UserEmail, "Profile", "User", new { id = u.UserId }, htmlAttributes: null)</td>
+                        <td>@Html.CheckBox("checkme", false, new { @class = "action-checkbox", @value = @u.UserId})</td>
+			        </tr>
+        }
+	    </tbody>
+    </table>
+    }
+    else
+    {
+        @Html.Raw("There are no users in black list yet.")
+    }
+}

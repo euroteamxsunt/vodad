@@ -1,0 +1,64 @@
+﻿<RecentFiles>
+  <RecentFiles>
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:ChangeUsersRole.cshtml" caret="763" fromTop="24" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:ChangePassword.cshtml" caret="0" fromTop="0" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:AttachAccountByIP.cshtml" caret="1318" fromTop="29" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:BanUser.cshtml" caret="719" fromTop="24" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:ChangePasswordSuccess.cshtml" caret="56" fromTop="4" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:ChangeProfile.cshtml" caret="2941" fromTop="20" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:ChangeProfileSuccess.cshtml" caret="164" fromTop="7" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:UnbanUser.cshtml" caret="582" fromTop="20" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:BlackAndWhiteLists/f:GetUserWhiteList.cshtml" caret="1200" fromTop="29" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Controllers/f:BlackAndWhiteListsController.cs" caret="4938" fromTop="27" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:User/f:Profile.cshtml" caret="392" fromTop="15" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Shared/f:_Layout.cshtml" caret="699" fromTop="17" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Home/f:Wallet.cshtml" caret="0" fromTop="0" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Controllers/f:HomeController.cs" caret="7868" fromTop="21" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Controllers/f:AccountController.cs" caret="34319" fromTop="12" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:PayPal/f:PayPal_Listener.cshtml" caret="0" fromTop="0" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Wallet/f:ChargeMoneyForAdvertiserWithPaypal.cshtml" caret="797" fromTop="19" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Shared/f:_LoginPartial.cshtml" caret="712" fromTop="13" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Controllers/f:WalletController.cs" caret="18417" fromTop="12" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Controllers/f:PayPalController.cs" caret="1358" fromTop="13" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Controllers/f:TicketController.cs" caret="2746" fromTop="34" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:PerformerPlatform/f:VerifyPlatform.cshtml" caret="39" fromTop="1" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/f:_ViewStart.cshtml" caret="8" fromTop="1" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:PerformerPlatform/f:AddPlatform.cshtml" caret="0" fromTop="0" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:PerformerPlatform/f:ManagePlatforms.cshtml" caret="475" fromTop="10" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Controllers/f:PerformerPlatformController.cs" caret="21107" fromTop="29" />
+    <File id="CA77D144-C8BF-4059-9C2B-60622C4C08EA/d:Utilities/f:Constants.cs" caret="4713" fromTop="13" />
+    <File id="CA77D144-C8BF-4059-9C2B-60622C4C08EA/d:Helpers/f:YouTubeHelper.cs" caret="0" fromTop="0" />
+  </RecentFiles>
+  <RecentEdits>
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Search/f:PerformerSearchResult.cshtml" caret="2379" fromTop="7" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:StatsForAdmin/f:AllAboutMoney.cshtml" caret="132" fromTop="8" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:OrderPerformed/f:SendOrderToPerformer.cshtml" caret="1402" fromTop="30" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Controllers/f:OrderPerformedController.cs" caret="30659" fromTop="10" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Shared/f:_SidebarMenuPartial.cshtml" caret="2737" fromTop="14" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Controllers/f:OrderController.cs" caret="9721" fromTop="37" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:ForgotPassword.cshtml" caret="583" fromTop="24" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:ResendActivationCode.cshtml" caret="12" fromTop="0" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:ChangePassword.cshtml" caret="736" fromTop="26" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:BanUser.cshtml" caret="719" fromTop="24" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:AttachAccountByIP.cshtml" caret="1318" fromTop="29" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:ChangeUsersRole.cshtml" caret="763" fromTop="24" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:ChangePasswordSuccess.cshtml" caret="56" fromTop="4" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Controllers/f:AccountController.cs" caret="30581" fromTop="20" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:ChangeProfile.cshtml" caret="2941" fromTop="20" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:ChangeProfileSuccess.cshtml" caret="41" fromTop="1" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Account/f:UnbanUser.cshtml" caret="582" fromTop="20" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:BlackAndWhiteLists/f:GetUserWhiteList.cshtml" caret="1200" fromTop="20" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Shared/f:_Layout.cshtml" caret="761" fromTop="19" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Home/f:Wallet.cshtml" caret="1266" fromTop="25" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Controllers/f:HomeController.cs" caret="7868" fromTop="21" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Controllers/f:WalletController.cs" caret="18772" fromTop="22" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Shared/f:_LoginPartial.cshtml" caret="712" fromTop="13" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:Wallet/f:ChargeMoneyForAdvertiserWithPaypal.cshtml" caret="797" fromTop="19" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Controllers/f:TicketController.cs" caret="2746" fromTop="34" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:PerformerPlatform/f:VerifyPlatform.cshtml" caret="39" fromTop="1" />
+    <File id="CA77D144-C8BF-4059-9C2B-60622C4C08EA/d:Helpers/f:YouTubeHelper.cs" caret="0" fromTop="0" />
+    <File id="CA77D144-C8BF-4059-9C2B-60622C4C08EA/d:Utilities/f:Constants.cs" caret="4713" fromTop="13" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Views/d:PerformerPlatform/f:ManagePlatforms.cshtml" caret="475" fromTop="10" />
+    <File id="A172CEA1-C365-4459-8649-67332C92F323/d:Controllers/f:PerformerPlatformController.cs" caret="20592" fromTop="17" />
+  </RecentEdits>
+</RecentFiles>

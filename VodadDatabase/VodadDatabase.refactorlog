@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="ff8a7d17-93a2-49a0-9bd6-cfd9f7cf045f" ChangeDateTime="08/01/2013 09:30:31">
+    <Property Name="ElementName" Value="[dbo].[OrderContent].[Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[OrderContent]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ContentType" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="456bdb5a-edfa-4c2e-956e-ede17893f4ee" ChangeDateTime="08/01/2013 10:06:47">
+    <Property Name="ElementName" Value="[dbo].[PerformerStatistics].[PerformerPlatformId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PerformerStatistics]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PerformerPlatformId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="10b92c22-0ac9-4500-962f-8b535d3c3adb" ChangeDateTime="08/01/2013 10:22:46">
+    <Property Name="ElementName" Value="[dbo].[Image].[IdUser]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Image]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UseRId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="714e5659-e39a-4e40-a141-6a7286bec7e6" ChangeDateTime="08/01/2013 10:22:49">
+    <Property Name="ElementName" Value="[dbo].[Image].[UseRId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Image]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ec1e155e-4e6e-423b-b6f3-4bdfcb0e4336" ChangeDateTime="08/01/2013 10:23:01">
+    <Property Name="ElementName" Value="[dbo].[Video].[IdUser]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Video]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0d588fb6-ab39-4ec9-8c5a-0fafb9218b34" ChangeDateTime="08/02/2013 08:20:53">
+    <Property Name="ElementName" Value="[dbo].[Order].[CampaignId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Order]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f11bf446-3134-4214-b5eb-8fdad58e8a0d" ChangeDateTime="08/02/2013 08:25:29">
+    <Property Name="ElementName" Value="[dbo].[CampaignThemes].[CampaignId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[CampaignThemes]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="OrderId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="565d49f5-a2b0-4305-837d-43d8b905f502" ChangeDateTime="08/05/2013 11:50:39">
+    <Property Name="ElementName" Value="[dbo].[GeolocationPlatformPercentage].[PerformerPlatformId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[GeolocationPlatformPercentage]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PerformerPlatformId" />
+  </Operation>
+</Operations>

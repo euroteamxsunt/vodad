@@ -1,0 +1,42 @@
+﻿@model Vodad.Models.PerformerPlatformModel
+
+<h2>Add Platform</h2>
+
+@using (Html.BeginForm("AddPlatform", "PerformerPlatform", FormMethod.Post))
+{
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Add Platform Form</legend>
+
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.ChannelName)<br />
+                @Html.TextBoxFor(m => m.ChannelName)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.PerformerPlatformLogin)<br />
+                @Html.TextBoxFor(m => m.PerformerPlatformLogin)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.PerformerPlatformPassword)<br />
+                @Html.PasswordFor(m => m.PerformerPlatformPassword)
+            </li>
+            <li>
+                @{
+                    var themes = new SelectList(ViewBag.ThemesList, "Id", "Name");
+                }
+                @Html.DropDownListFor(m => m.PerformerPlatformThemeId, @themes)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.LogoPrice)<br />
+                @Html.TextBoxFor(m => m.LogoPrice)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.VideoPrice)<br />
+                @Html.TextBoxFor(m => m.VideoPrice)
+            </li>
+        </ol>
+        <input type="submit" value="Add platform" />
+    </fieldset>
+}

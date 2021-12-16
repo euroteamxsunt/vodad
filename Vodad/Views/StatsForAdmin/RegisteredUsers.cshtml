@@ -1,0 +1,33 @@
+﻿<h2>Registered users</h2>
+
+<b>@ViewBag.RegisteredUsersCount
+    &nbsp; users registered</b>
+<br />
+<br />
+
+<input type="text" value="@DateTime.Today" class="start-date" />
+<input type="text" value="@DateTime.Today" class="end-date" />
+<input type="button" id="update-button" value="Update" class="button" />
+
+
+<table id="registered-users-table">
+    <thead>
+        <tr>
+            <th>Register date</th>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Activated</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in ViewBag.RegisteredUsers)
+        {
+            <tr>
+                <td>@c.RegisterDate</td>
+                <td>@c.Name</td>
+                <td>@c.Role</td>
+                <td>@c.IsActivated</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,81 @@
+﻿@model Vodad.Models.OrderEditModel
+
+@{
+    ViewBag.Title = "EditOrder";
+}
+
+<h2>Edit Order</h2>
+
+@using (Html.BeginForm("EditOrder", "Order", FormMethod.Post, new { enctype = "multipart/form-data", id = "editorder-form" }))
+{
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Create new campaign</legend>
+
+        <ol>
+            <li>
+                @Html.HiddenFor(m => m.OrderId, new { @Value = Model.OrderId })
+            </li>
+            <li>
+                @Html.LabelFor(m => m.OrderExpireDate)<br />
+                @Html.TextBoxFor(m => m.OrderExpireDate, new { @class = "expire-date" })
+            </li>
+            <li>
+                @{
+    var regions = new SelectList(ViewBag.RegionsList, "Id", "RegionName");
+                }
+                @Html.LabelFor(m => m.RegionId)<br />
+                @Html.DropDownListFor(m => m.RegionId, @regions, new { @class = "regions-dropdownlist", @value = ViewBag.RegionId })
+            </li>
+            <li>
+                @Html.LabelFor(m => m.OrderComment)<br />
+                @Html.TextAreaFor(m => m.OrderComment, new { @Value = Model.OrderComment })
+            </li>
+            <li>
+                @Html.LabelFor(m => m.ContentData)<br />
+                <input type="file" name="ContentData" accept="image/x-png, image/gif, image/jpeg, video/mp4, video/mpeg, video/quicktime, video/x-ms-wmv, wmv" onchange="readURL(this);" />
+                <img src="#" alt="order content" width="100px" />
+                <label generated="true">File is too big. File size must not be bigger than 4MB.</label>
+            </li>
+        </ol>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Size(byte)</th>
+                    <th>Size(px)/Length</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.ImagesList.Any())
+                {
+                    foreach (var i in Model.ImagesList)
+                    {
+                    <tr>
+                        <td><a href="@Url.Action("Image", new { iid = i.Id })">
+                            <img width="50px" src="@Url.Action("Image", new { iid = i.Id })" alt="image" /></a></td>
+                        <td>@i.ImageSize byte</td>
+                        <td>@i.ImageWidth&#120;@i.ImageHeight&#112;&#120;</td>
+                    </tr>
+                    }
+                }
+
+                @if (Model.VideosList.Any())
+                {
+                    foreach (var i in Model.VideosList)
+                    {
+                    <tr>
+                        <td><a href="@i.VideoLink">@i.VideoLink</a></td>
+                        <td>@i.VideoSize byte</td>
+                        <td>@i.VideoLength</td>
+                    </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+        <input type="submit" value="Save changes" />
+    </fieldset>
+}

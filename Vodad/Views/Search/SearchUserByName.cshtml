@@ -1,0 +1,25 @@
+﻿@model Vodad.Models.SearchUserByNameModel
+
+@{
+    ViewBag.Title = "Search user by name";
+}
+
+<h2>Search user by name</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Send message form</legend>
+
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.UserName) <br />
+                @Html.TextBoxFor(m => m.UserName)
+            </li>
+        </ol>
+        
+        <input type="submit" value="Search" class="button" />
+    </fieldset>
+}

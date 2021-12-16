@@ -1,0 +1,15 @@
+﻿@model Vodad.Models.MessengersModel
+
+<tr>
+    <td>
+		@Html.ActionLink(Model.FromUserEmail,
+		"Profile",
+		"User", new { id = Model.UserId }, new { @class = "messenger"})
+		<br />
+	    @Model.LastMessageDateTime
+	</td>
+    <td>@Model.MessagesCount</td>
+    <td>@Model.MessagesUnreadCount</td>
+    <td>@Html.CheckBox("checkme", false, new { @class = "action-checkbox", @value = @Model.CompanionId})</td>
+    <td>@Model.UserId</td>
+</tr>

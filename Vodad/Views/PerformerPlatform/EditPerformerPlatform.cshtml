@@ -1,0 +1,44 @@
+﻿@model Vodad.Models.PerformerPlatformModel
+
+@{
+    ViewBag.Title = "Edit performer platform";
+}
+
+<h2>Edit performer platform</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Add Platform Form</legend>
+
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.ChannelName)<br />
+                @Html.TextBoxFor(m => m.ChannelName, new { @Value = ViewBag.PerformerPlatform.ChannelName })
+            </li>
+            <li>
+                @Html.LabelFor(m => m.PerformerPlatformPassword)<br />
+                @Html.PasswordFor(m => m.PerformerPlatformPassword)
+                @Html.HiddenFor(m => m.PerformerPlatformLogin, new { @Value = ViewBag.PerformerPlatform.Login })
+            </li>
+            <li>
+                @{
+                    var themes = new SelectList(ViewBag.ThemesList, "Id", "Name", ViewBag.PerformerPlatform.ThemeId);
+                }
+                @Html.DropDownListFor(m => m.PerformerPlatformThemeId, @themes)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.LogoPrice)<br />
+                @Html.TextBoxFor(m => m.LogoPrice, new { @Value = ViewBag.PerformerPlatform.LogoPrice })
+            </li>
+            <li>
+                @Html.LabelFor(m => m.VideoPrice)<br />
+                @Html.TextBoxFor(m => m.VideoPrice, new { @Value = ViewBag.PerformerPlatform.VideoPrice })
+            </li>
+        </ol>
+        <input type="submit" value="Save changes" />
+
+    </fieldset>
+}

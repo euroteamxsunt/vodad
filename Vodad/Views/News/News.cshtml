@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = @ViewBag.NewsForView.NewsTitle;
+}
+
+<h2>@ViewBag.NewsForView.NewsTitle</h2>
+
+    @Html.Raw(ViewBag.NewsForView.AuthorName)
+
+    <u>@Html.Raw(ViewBag.NewsForView.CreationDate)</u><br />
+
+    @Html.Raw(ViewBag.NewsForView.NewsText)<br /><br />
+
+                
+@{
+    if (HttpContext.Current.User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Administrator))
+    {
+        @Html.ActionLink("Edit", "EditNews", "News", new { nid = ViewBag.NewsForView.NewsId }, null)
+        @Html.ActionLink("Remove", "RemoveNews", "News", new { nid = ViewBag.NewsForView.NewsId }, null)<br /><br />
+    }
+    <hr />
+}

@@ -1,0 +1,45 @@
+﻿<h2>Added platforms</h2>
+
+<b>Total platforms:&nbsp;
+    @ViewBag.AllPlatformsCount
+    <br />
+
+    Verified platforms:&nbsp; 
+    @ViewBag.VerifiedPlatformsCount
+    <br />
+
+    Ustream platforms:&nbsp;
+    @ViewBag.UstreamPlatformsCount
+    <br />
+
+    Twitch platforms:&nbsp;
+    @ViewBag.TwitchPlatformsCount
+    <br />
+
+    JustIn platforms:&nbsp;
+    @ViewBag.JustinPlatformsCount
+    <br />
+</b>
+
+<table id="added-platforms-table">
+    <thead>
+        <tr>
+            <th>Platform name</th>
+            <th>User name</th>
+            <th>Hyperlink</th>
+            <th>Verified</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in ViewBag.AddedPlatforms)
+        {
+            <tr>
+                <td>@c.PlatformName</td>
+                <td>@c.UserName</td>
+                <td>@c.HyperLink</td>
+                <td>@c.Verified</td>
+            </tr>
+
+        }
+    </tbody>
+</table>

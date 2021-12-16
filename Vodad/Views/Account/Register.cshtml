@@ -1,0 +1,43 @@
+﻿@model Vodad.Models.RegisterModel
+
+@{
+    ViewBag.Title = "Register";
+}
+
+
+        <h1>@ViewBag.Title.</h1>
+        <h2>Create new account.</h2>
+
+
+
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { id = "registration-form" }))
+    {
+
+        <fieldset>
+            <legend>Registration Form</legend>
+            <ol>
+                <li>
+                    @Html.LabelFor(m => m.UserName)<br />
+                    @Html.TextBoxFor(m => m.UserName)
+                    @Html.HiddenFor(m => m.Referal, new { @Value = ViewBag.Referal })
+                    @Html.HiddenFor(m => m.UserIp, new { @Value = "", id = "register-user-ip-form"})
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Email)<br />
+                    @Html.TextBoxFor(m => m.Email)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Password)<br />
+                    @Html.PasswordFor(m => m.Password)
+                </li>
+                <li id="Roles">
+                    @Html.RadioButtonFor(m => m.Role, VodadModel.Utilities.Constants.UserRoles.Performer, new { Checked = "checked" }) Performer <br />
+                    @Html.RadioButtonFor(m => m.Role, VodadModel.Utilities.Constants.UserRoles.Advertiser) Advertiser
+                </li>
+                <li>
+                    @Html.CheckBox("License agreement", new { id = "license-checkbox"} ) I have read and accept <a href="~/Home/Policy">Privacy Policy</a> and <a href="~/Home/License">Terms of Service</a>.
+                </li>
+            </ol>
+            <input type="submit" value="Register" />
+        </fieldset>
+    }

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>VodadDatabase</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{0dfca78e-ea29-4707-840d-9d314af0d2a8}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>VodadDatabase</RootNamespace>
+    <AssemblyName>VodadDatabase</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <GenerateCreateScript>True</GenerateCreateScript>
+    <CompatibilityMode>100</CompatibilityMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- Default to the v10.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\StoredProcedures" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\User.sql" />
+    <Build Include="dbo\Tables\AlertMessage.sql" />
+    <Build Include="dbo\Tables\Ban.sql" />
+    <Build Include="dbo\Tables\BlackList.sql" />
+    <Build Include="dbo\Tables\OrderThemes.sql" />
+    <Build Include="dbo\Tables\Certificates.sql" />
+    <Build Include="dbo\Tables\Cheaters.sql" />
+    <Build Include="dbo\Tables\Geolocation.sql" />
+    <Build Include="dbo\Tables\GeolocationPlatformPercentage.sql" />
+    <Build Include="dbo\Tables\Image.sql" />
+    <Build Include="dbo\Tables\Video.sql" />
+    <Build Include="dbo\Tables\Merchants.sql" />
+    <Build Include="dbo\Tables\Messages.sql" />
+    <Build Include="dbo\Tables\MoneyTransfers.sql" />
+    <Build Include="dbo\Tables\News.sql" />
+    <Build Include="dbo\Tables\Order.sql" />
+    <Build Include="dbo\Tables\OrderContent.sql" />
+    <Build Include="dbo\Tables\OrderPerformed.sql" />
+    <Build Include="dbo\Tables\Regions.sql" />
+    <Build Include="dbo\Tables\Roles.sql" />
+    <Build Include="dbo\Tables\PerformerPlatform.sql" />
+    <Build Include="dbo\Tables\PerformerStatistics.sql" />
+    <Build Include="dbo\Tables\Themes.sql" />
+    <Build Include="dbo\Tables\Tickets.sql" />
+    <Build Include="dbo\Tables\TicketThemes.sql" />
+    <Build Include="dbo\Tables\Timezone.sql" />
+    <Build Include="dbo\Tables\Transactions.sql" />
+    <Build Include="dbo\Tables\UserMerchants.sql" />
+    <Build Include="dbo\Tables\Wallet.sql" />
+    <Build Include="dbo\Tables\WhiteList.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="VodadDatabase.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VodadDatabase.publish.xml" />
+    <None Include="Kostya.publish.xml" />
+    <Build Include="dbo\StoredProcedures\pr_PopulateStaticData.sql" />
+    <PostDeploy Include="Script.PostDeployment.sql" />
+    <PreDeploy Include="Script.PreDeployment.sql" />
+    <Build Include="dbo\StoredProcedures\pr_FkTreeDelete.sql" />
+    <Build Include="dbo\StoredProcedures\pr_CreateFkTreeDeleteTrigger.sql" />
+    <Build Include="dbo\StoredProcedures\fn_quotname_brackets.sql" />
+    <Build Include="dbo\StoredProcedures\fn_getFullQualifiedTableName.sql" />
+    <None Include="Kate.publish.xml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

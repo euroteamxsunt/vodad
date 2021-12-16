@@ -1,0 +1,15 @@
+﻿@model Vodad.Models.OrderPerformedStatisticsModel
+
+@{
+    ViewBag.Title = "Order performed statistics";
+}
+
+<h2>Order performed statistics</h2>
+
+<strong>Orders:</strong>
+@Html.ActionLink(Model.CompleteOrderPerformedCount, "ManageOrderPerformedForAdvertiser", "OrderPerformed", new { status = "complete" }, new { title = "Completed orders" })|
+@Html.ActionLink(Model.InactionOrderPerformedCount, "ManageOrderPerformedForAdvertiser", "OrderPerformed", new { status = "inaction" }, new { title = "Orders in action" })|
+@Html.ActionLink(Model.UsersRequestOrderPerformedCount, "ManageOrderPerformedForAdvertiser", "OrderPerformed", new { status = "request", author = User.Identity.Name }, new { title = "Your requested orders" })|
+@Html.ActionLink(Model.ToUserRequestOrderPerformedCount, "ManageOrderPerformedForAdvertiser", "OrderPerformed", new { status = "request" }, new { title = "Waiting for your answer orders" })
+
+<strong>Spent:</strong> @Model.Spent.Value.ToString("F2")

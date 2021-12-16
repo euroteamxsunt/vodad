@@ -1,0 +1,61 @@
+﻿@model Vodad.Models.PerformerSearchModel
+
+@{
+    ViewBag.Title = "Search for performer";
+}
+
+<h2>Search for performer</h2>
+
+@using (Html.BeginForm("SearchForPerformer", "Search", FormMethod.Post))
+{
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Search for performer</legend>
+
+        @Html.HiddenFor(m => m.OrderId, new { @Value = ViewBag.OrderId })
+        <br />
+
+
+        @Html.CheckBoxFor(m => m.SelectAllThemes, new { @checked = Model.SelectAllThemes }) <b>Any subjects</b>
+        <br />
+
+        <!-- Добавление списка возможных тематик -->
+        
+                @{ var i = 0; }
+                @foreach (var t in Model.OrderThemesList)
+                {
+                    List<Vodad.Models.ThemesListForOrderModel> themesList = Model.OrderThemesList;
+                    var theme = themesList.Single(w => w.Id == t.Id);
+                        
+                    @Html.CheckBoxFor(m => m.OrderThemesList[i].IsChecked, new { @checked = t.IsChecked })
+                    @Html.HiddenFor(m => m.OrderThemesList[i].Id, new { @Value = theme.Id })
+                    @Html.HiddenFor(m => m.OrderThemesList[i].ThemeName, new { @Value = theme.ThemeName })
+                    <b>@theme.ThemeName</b>
+                    <br />
+                        
+                    i++;
+                }
+
+        <hr />
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.MinAverageViewersPerHour)<br />
+                @Html.TextBoxFor(m => m.MinAverageViewersPerHour)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.TotalUniqueViews)<br />
+                @Html.TextBoxFor(m => m.TotalUniqueViews)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.TotalFollowers)<br />
+                @Html.TextBoxFor(m => m.TotalFollowers)
+            </li>
+            <li>
+                @Html.CheckBoxFor(m => m.SaveSearchSettings, new { @checked = Model.SaveSearchSettings })
+                @Html.LabelFor(m => m.SaveSearchSettings)<br />
+            </li>
+        </ol>
+        <input type="submit" value="Search" />
+    </fieldset>
+}

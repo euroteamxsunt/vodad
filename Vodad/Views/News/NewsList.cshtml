@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "News";
+}
+
+    <h2>News</h2>
+
+    @if (User.IsInRole("Administrator"))
+    {
+        <a href="AddNews">
+            <input type="button" value="Add news" /></a>
+    }
+
+    @foreach (var item in ViewBag.AllNews)
+    {
+
+                <h1>@Html.ActionLink((string)item.NewsTitle, "News", "News", new { nid = item.NewsId }, null)</h1>
+
+                <u>@Html.Raw(item.CreationDate)</u><hr />
+
+
+                @Html.Raw(item.NewsAnons)...
+                                              <br />
+                <br />
+
+
+            @Html.ActionLink("Read more...", "News", "News", new { nid = item.NewsId }, null)
+
+            @if (User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Administrator))
+            {
+                @Html.ActionLink("Edit", "EditNews", "News", new { nid = item.NewsId }, null)
+                @Html.ActionLink("Remove", "RemoveNews", "News", new { nid = item.NewsId }, null)<br />
+                <br />
+            }
+
+    }
+
+
+
+
+            @if (ViewBag.Page > 1)
+            {
+                int previousPage = ViewBag.Page - 1;
+                <a href="NewsList?page=@previousPage" >
+                    <input type="button" value="< Previous page" /></a>
+            }
+
+
+
+            @if (User.IsInRole(VodadModel.Utilities.Constants.UserRoles.Administrator))
+            {
+                <a href="AddNews">
+                    <input type="button" value="Add news" class="button" /></a>
+            }
+
+
+            @if (ViewBag.NewsPagesCount > ViewBag.Page)
+            {
+                int nextPage = ViewBag.Page + 1;
+                <a href="NewsList?page=@nextPage" >
+                    <input type="button" value="Next page >" class="button" /></a>
+            }

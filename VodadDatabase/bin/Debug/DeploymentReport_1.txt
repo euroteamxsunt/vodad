@@ -1,0 +1,297 @@
+﻿** Предупреждения
+     В Функция: [dbo].[fn_getFullQualifiedTableName] есть неразрешенная ссылка на Объект [sys].[tables].
+     В Функция: [dbo].[fn_getFullQualifiedTableName] есть неразрешенная ссылка на Объект [sys].[tables].[schema_id].
+     В Функция: [dbo].[fn_getFullQualifiedTableName] есть неразрешенная ссылка на Объект [sys].[tables].[object_id].
+     В Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] есть неразрешенная ссылка на Объект [sys].[tables].
+     В Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] есть неразрешенная ссылка на Объект [sys].[foreign_key_columns].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов:
+       [sys].[foreign_key_columns].[fk]::[referenced_object_id] или [sys].[foreign_key_columns].[referenced_object_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[tables].[object_id] или
+       [sys].[tables].[t]::[object_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов:
+       [sys].[foreign_key_columns].[fk]::[referenced_object_id], [sys].[foreign_key_columns].[referenced_object_id] или
+       [sys].[tables].[ref]::[referenced_object_id].
+     В Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] есть неразрешенная ссылка на Объект [sys].[key_constraints].
+     В Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] есть неразрешенная ссылка на Объект [sys].[key_constraints].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов:
+       [sys].[key_constraints].[kc]::[parent_object_id], [sys].[key_constraints].[parent_object_id] или
+       [sys].[tables].[kc]::[parent_object_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[key_constraints].[t]::[object_id],
+       [sys].[tables].[object_id] или [sys].[tables].[t]::[object_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[key_constraints].[kc]::[type],
+       [sys].[key_constraints].[type] или [sys].[tables].[kc]::[type].
+     В Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] есть неразрешенная ссылка на Объект [sys].[triggers].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[key_constraints].[tr]::[parent_id],
+       [sys].[tables].[tr]::[parent_id], [sys].[triggers].[parent_id] или [sys].[triggers].[tr]::[parent_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[key_constraints].[t]::[object_id],
+       [sys].[tables].[object_id], [sys].[tables].[t]::[object_id] или [sys].[triggers].[t]::[object_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов:
+       [sys].[key_constraints].[tr]::[is_instead_of_trigger], [sys].[tables].[tr]::[is_instead_of_trigger],
+       [sys].[triggers].[is_instead_of_trigger] или [sys].[triggers].[tr]::[is_instead_of_trigger].
+     В Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] есть неразрешенная ссылка на Объект [sys].[trigger_events].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[key_constraints].[te]::[object_id],
+       [sys].[tables].[te]::[object_id], [sys].[trigger_events].[object_id], [sys].[trigger_events].[te]::[object_id] или
+       [sys].[triggers].[te]::[object_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[key_constraints].[te]::[object_id],
+       [sys].[tables].[te]::[object_id], [sys].[trigger_events].[object_id], [sys].[trigger_events].[te]::[object_id] или
+       [sys].[triggers].[te]::[object_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[key_constraints].[tr]::[object_id],
+       [sys].[tables].[tr]::[object_id], [sys].[trigger_events].[tr]::[object_id], [sys].[triggers].[object_id] или
+       [sys].[triggers].[tr]::[object_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[key_constraints].[te]::[type],
+       [sys].[tables].[te]::[type], [sys].[trigger_events].[te]::[type], [sys].[trigger_events].[type] или
+       [sys].[triggers].[te]::[type].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[key_constraints].[t]::[object_id],
+       [sys].[tables].[object_id], [sys].[tables].[t]::[object_id], [sys].[trigger_events].[t]::[object_id] или
+       [sys].[triggers].[t]::[object_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[key_constraints].[t]::[schema_id],
+       [sys].[tables].[schema_id], [sys].[tables].[t]::[schema_id], [sys].[trigger_events].[t]::[schema_id] или
+       [sys].[triggers].[t]::[schema_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[key_constraints].[t]::[schema_id],
+       [sys].[tables].[schema_id], [sys].[tables].[t]::[schema_id], [sys].[trigger_events].[t]::[schema_id] или
+       [sys].[triggers].[t]::[schema_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[key_constraints].[t]::[name],
+       [sys].[tables].[name], [sys].[tables].[t]::[name], [sys].[trigger_events].[t]::[name] или [sys].[triggers].[t]::[name].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[key_constraints].[t]::[name],
+       [sys].[tables].[name], [sys].[tables].[t]::[name], [sys].[trigger_events].[t]::[name] или [sys].[triggers].[t]::[name].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[key_constraints].[t]::[type],
+       [sys].[tables].[t]::[type], [sys].[tables].[type], [sys].[trigger_events].[t]::[type] или [sys].[triggers].[t]::[type].
+     В Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] есть неразрешенная ссылка на Объект [sys].[indexes].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[indexes].[kc]::[unique_index_id],
+       [sys].[key_constraints].[kc]::[unique_index_id] или [sys].[key_constraints].[unique_index_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[indexes].[idx]::[index_id],
+       [sys].[indexes].[index_id] или [sys].[key_constraints].[idx]::[index_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[indexes].[kc]::[parent_object_id],
+       [sys].[key_constraints].[kc]::[parent_object_id] или [sys].[key_constraints].[parent_object_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[indexes].[idx]::[object_id],
+       [sys].[indexes].[object_id] или [sys].[key_constraints].[idx]::[object_id].
+     В Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] есть неразрешенная ссылка на Объект [sys].[index_columns].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[index_columns].[idx]::[object_id],
+       [sys].[indexes].[idx]::[object_id], [sys].[indexes].[object_id] или [sys].[key_constraints].[idx]::[object_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[index_columns].[idx_col]::[object_id],
+       [sys].[index_columns].[object_id], [sys].[indexes].[idx_col]::[object_id] или
+       [sys].[key_constraints].[idx_col]::[object_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[index_columns].[idx]::[index_id],
+       [sys].[indexes].[idx]::[index_id], [sys].[indexes].[index_id] или [sys].[key_constraints].[idx]::[index_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[index_columns].[idx_col]::[index_id],
+       [sys].[index_columns].[index_id], [sys].[indexes].[idx_col]::[index_id] или
+       [sys].[key_constraints].[idx_col]::[index_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[index_columns].[column_id],
+       [sys].[index_columns].[idx_col]::[column_id], [sys].[indexes].[idx_col]::[column_id] или
+       [sys].[key_constraints].[idx_col]::[column_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[index_columns].[idx_col]::[key_ordinal],
+       [sys].[index_columns].[key_ordinal], [sys].[indexes].[idx_col]::[key_ordinal] или
+       [sys].[key_constraints].[idx_col]::[key_ordinal].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[index_columns].[idx_col]::[key_ordinal],
+       [sys].[index_columns].[key_ordinal], [sys].[indexes].[idx_col]::[key_ordinal] или
+       [sys].[key_constraints].[idx_col]::[key_ordinal].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов:
+       [sys].[index_columns].[idx_col]::[is_included_column], [sys].[index_columns].[is_included_column],
+       [sys].[indexes].[idx_col]::[is_included_column] или [sys].[key_constraints].[idx_col]::[is_included_column].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[index_columns].[kc]::[parent_object_id],
+       [sys].[indexes].[kc]::[parent_object_id], [sys].[key_constraints].[kc]::[parent_object_id] или
+       [sys].[key_constraints].[parent_object_id].
+     Процедура: [dbo].[pr_CreateFkTreeDeleteTrigger] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[index_columns].[kc]::[type],
+       [sys].[indexes].[kc]::[type], [sys].[key_constraints].[kc]::[type] или [sys].[key_constraints].[type].
+     В Процедура: [dbo].[pr_FkTreeDelete] есть неразрешенная ссылка на Объект [sys].[foreign_keys].
+     Процедура: [dbo].[pr_FkTreeDelete] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[foreign_keys].[fk]::[object_id] или
+       [sys].[foreign_keys].[object_id].
+     Процедура: [dbo].[pr_FkTreeDelete] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[foreign_keys].[fk]::[parent_object_id]
+       или [sys].[foreign_keys].[parent_object_id].
+     Процедура: [dbo].[pr_FkTreeDelete] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов:
+       [sys].[foreign_keys].[fk]::[referenced_object_id] или [sys].[foreign_keys].[referenced_object_id].
+     Процедура: [dbo].[pr_FkTreeDelete] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов:
+       [sys].[foreign_keys].[fk]::[referenced_object_id] или [sys].[foreign_keys].[referenced_object_id].
+     Процедура: [dbo].[pr_FkTreeDelete] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[foreign_keys].[fk]::[parent_object_id]
+       или [sys].[foreign_keys].[parent_object_id].
+     Процедура: [dbo].[pr_FkTreeDelete] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [sys].[foreign_keys].[delete_referential_action]
+       или [sys].[foreign_keys].[fk]::[delete_referential_action].
+     В Процедура: [dbo].[pr_FkTreeDelete] есть неразрешенная ссылка на Объект [dbo].[sysforeignkeys].
+     В Процедура: [dbo].[pr_FkTreeDelete] есть неразрешенная ссылка на Объект [dbo].[sysforeignkeys].[rkeyid].
+     В Процедура: [dbo].[pr_FkTreeDelete] есть неразрешенная ссылка на Объект [dbo].[sysforeignkeys].[rkeyid].
+     В Процедура: [dbo].[pr_FkTreeDelete] есть неразрешенная ссылка на Объект [dbo].[sysforeignkeys].[rkey].
+     В Процедура: [dbo].[pr_FkTreeDelete] есть неразрешенная ссылка на Объект [dbo].[sysforeignkeys].[fkeyid].
+     В Процедура: [dbo].[pr_FkTreeDelete] есть неразрешенная ссылка на Объект [dbo].[sysforeignkeys].[fkeyid].
+     В Процедура: [dbo].[pr_FkTreeDelete] есть неразрешенная ссылка на Объект [dbo].[sysforeignkeys].[fkey].
+     Процедура: [dbo].[pr_FkTreeDelete] содержит неразрешенную ссылку на объект. Объект не существует или ссылка
+       неоднозначна, поскольку она может ссылаться на любой из таких объектов: [dbo].[sysforeignkeys].[constid] или
+       [dbo].[sysforeignkeys].[fk]::[constid].
+
+** Выделение
+     Таблицы, которые будут перестроены
+       Нет
+     Кластеризованные индексы, которые будут удалены
+       Нет
+     Кластеризованные индексы, которые будут созданы
+       Нет
+     Возможные проблемы, связанные с данными
+       Нет
+
+** Действия пользователя
+     Создать
+       [dbo].[AlertMessage] (Таблица)
+       [dbo].[AlertMessage].[IX_FK_AlertMessage_User] (Индекс)
+       [dbo].[Ban] (Таблица)
+       [dbo].[Ban].[IX_FK_Ban_User] (Индекс)
+       [dbo].[Ban].[IX_FK_Ban_Roles] (Индекс)
+       [dbo].[Ban].[IX_FK_Ban_User1] (Индекс)
+       [dbo].[Ban].[IX_FK_Ban_User2] (Индекс)
+       [dbo].[BlackList] (Таблица)
+       [dbo].[BlackList].[IX_FK_BlackList_User] (Индекс)
+       [dbo].[BlackList].[IX_FK_BlackList_User1] (Индекс)
+       [dbo].[Certificates] (Таблица)
+       [dbo].[Certificates].[IX_FK_Certificates_User] (Индекс)
+       [dbo].[Cheaters] (Таблица)
+       [dbo].[Cheaters].[IX_FK_Cheaters_User] (Индекс)
+       [dbo].[Geolocation] (Таблица)
+       [dbo].[GeolocationPlatformPercentage] (Таблица)
+       [dbo].[GeolocationPlatformPercentage].[IX_FK_GeolocationPlatformPercentage_Geolocation] (Индекс)
+       [dbo].[GeolocationPlatformPercentage].[IX_FK_GeolocationPlatformPercentagePerformerPlatform] (Индекс)
+       [dbo].[Image] (Таблица)
+       [dbo].[Image].[IX_FK_Image_User] (Индекс)
+       [dbo].[Merchants] (Таблица)
+       [dbo].[Messages] (Таблица)
+       [dbo].[Messages].[IX_FK_Messages_User] (Индекс)
+       [dbo].[Messages].[IX_FK_Messages_User1] (Индекс)
+       [dbo].[MoneyTransfers] (Таблица)
+       [dbo].[MoneyTransfers].[IX_FK_MoneyTransfers_User] (Индекс)
+       [dbo].[MoneyTransfers].[IX_FK_MoneyTransfers_Merchants] (Индекс)
+       [dbo].[News] (Таблица)
+       [dbo].[News].[IX_FK_News_User] (Индекс)
+       [dbo].[Order] (Таблица)
+       [dbo].[Order].[IX_FK_Order_User] (Индекс)
+       [dbo].[Order].[IX_FK_Order_Regions] (Индекс)
+       [dbo].[OrderContent] (Таблица)
+       [dbo].[OrderContent].[IX_FK_OrderContent_Order] (Индекс)
+       [dbo].[OrderPerformed] (Таблица)
+       [dbo].[OrderPerformed].[IX_FK_OrderPerformed_OrderContent] (Индекс)
+       [dbo].[OrderPerformed].[IX_FK_OrderPerformed_User] (Индекс)
+       [dbo].[OrderPerformed].[IX_FK_OrderPerformed_PerformerPlatform] (Индекс)
+       [dbo].[OrderThemes] (Таблица)
+       [dbo].[OrderThemes].[IX_FK_OrderThemes_Order] (Индекс)
+       [dbo].[OrderThemes].[IX_FK_OrderThemes_Theme] (Индекс)
+       [dbo].[PerformerPlatform] (Таблица)
+       [dbo].[PerformerPlatform].[IX_FK_PerformerPlatform_Themes] (Индекс)
+       [dbo].[PerformerPlatform].[IX_FK_PerformerPlatform_User] (Индекс)
+       [dbo].[PerformerStatistics] (Таблица)
+       [dbo].[PerformerStatistics].[IX_FK_PerformerStatistics_GeolocationPlatformPercentage] (Индекс)
+       [dbo].[Regions] (Таблица)
+       [dbo].[Roles] (Таблица)
+       [dbo].[Themes] (Таблица)
+       [dbo].[Tickets] (Таблица)
+       [dbo].[Tickets].[IX_FK_Ticket_Image] (Индекс)
+       [dbo].[Tickets].[IX_FK_Ticket_Ticket] (Индекс)
+       [dbo].[Tickets].[IX_FK_Ticket_TicketThemes] (Индекс)
+       [dbo].[Tickets].[IX_FK_Ticket_User] (Индекс)
+       [dbo].[Tickets].[IX_FK_Ticket_User1] (Индекс)
+       [dbo].[Tickets].[IX_FK_Ticket_User2] (Индекс)
+       [dbo].[TicketThemes] (Таблица)
+       [dbo].[Timezone] (Таблица)
+       [dbo].[Transactions] (Таблица)
+       [dbo].[Transactions].[IX_FK_Transactions_User] (Индекс)
+       [dbo].[Transactions].[IX_FK_Transactions_User1] (Индекс)
+       [dbo].[User] (Таблица)
+       [dbo].[User].[IX_FK_User_Roles] (Индекс)
+       [dbo].[User].[IX_FK_User_Timezone] (Индекс)
+       [dbo].[User].[IX_FK_User_User] (Индекс)
+       [dbo].[UserMerchants] (Таблица)
+       [dbo].[UserMerchants].[IX_FK_UserMerchants_Merchants] (Индекс)
+       [dbo].[UserMerchants].[IX_FK_UserMerchants_User] (Индекс)
+       [dbo].[Video] (Таблица)
+       [dbo].[Video].[IX_FK_Video_User] (Индекс)
+       [dbo].[Wallet] (Таблица)
+       [dbo].[Wallet].[IX_FK_Wallet_User] (Индекс)
+       [dbo].[WhiteList] (Таблица)
+       [dbo].[WhiteList].[IX_FK_WhiteList_User] (Индекс)
+       [dbo].[WhiteList].[IX_FK_WhiteList_User1] (Индекс)
+       [dbo].[FK_AlertMessage_User] (Внешний ключ)
+       [dbo].[FK_Ban_User] (Внешний ключ)
+       [dbo].[FK_Ban_Roles] (Внешний ключ)
+       [dbo].[FK_Ban_User1] (Внешний ключ)
+       [dbo].[FK_Ban_User2] (Внешний ключ)
+       [dbo].[FK_BlackList_User] (Внешний ключ)
+       [dbo].[FK_BlackList_User1] (Внешний ключ)
+       [dbo].[FK_Certificates_User] (Внешний ключ)
+       [dbo].[FK_Cheaters_User] (Внешний ключ)
+       [dbo].[FK_GeolocationPlatformPercentage_Geolocation] (Внешний ключ)
+       [dbo].[FK_GeolocationPlatformPercentagePerformerPlatform] (Внешний ключ)
+       [dbo].[FK_Image_User] (Внешний ключ)
+       [dbo].[FK_Messages_User] (Внешний ключ)
+       [dbo].[FK_Messages_User1] (Внешний ключ)
+       [dbo].[FK_MoneyTransfers_User] (Внешний ключ)
+       [dbo].[FK_MoneyTransfers_Merchants] (Внешний ключ)
+       [dbo].[FK_News_User] (Внешний ключ)
+       [dbo].[FK_Order_User] (Внешний ключ)
+       [dbo].[FK_Order_Regions] (Внешний ключ)
+       [dbo].[FK_OrderContent_Order] (Внешний ключ)
+       [dbo].[FK_OrderPerformed_OrderImages] (Внешний ключ)
+       [dbo].[FK_OrderPerformed_User] (Внешний ключ)
+       [dbo].[FK_OrderPerformed_PerformerPlatform] (Внешний ключ)
+       [dbo].[FK_OrderThemes_Order] (Внешний ключ)
+       [dbo].[FK_OrderThemes_Theme] (Внешний ключ)
+       [dbo].[FK_PerformerPlatform_Themes] (Внешний ключ)
+       [dbo].[FK_PerformerPlatform_User] (Внешний ключ)
+       [dbo].[FK_PerformerStatistics_GeolocationPlatformPercentage] (Внешний ключ)
+       [dbo].[FK_Ticket_Image] (Внешний ключ)
+       [dbo].[FK_Ticket_Ticket] (Внешний ключ)
+       [dbo].[FK_Ticket_TicketThemes] (Внешний ключ)
+       [dbo].[FK_Ticket_User] (Внешний ключ)
+       [dbo].[FK_Ticket_User1] (Внешний ключ)
+       [dbo].[FK_Ticket_User2] (Внешний ключ)
+       [dbo].[FK_Transactions_User] (Внешний ключ)
+       [dbo].[FK_Transactions_User1] (Внешний ключ)
+       [dbo].[FK_User_Roles] (Внешний ключ)
+       [dbo].[FK_User_Timezone] (Внешний ключ)
+       [dbo].[FK_User_User] (Внешний ключ)
+       [dbo].[FK_UserMerchants_Merchants] (Внешний ключ)
+       [dbo].[FK_UserMerchants_User] (Внешний ключ)
+       [dbo].[FK_Video_User] (Внешний ключ)
+       [dbo].[FK_Wallet_User] (Внешний ключ)
+       [dbo].[FK_WhiteList_User] (Внешний ключ)
+       [dbo].[FK_WhiteList_User1] (Внешний ключ)
+       [dbo].[fn_getFullQualifiedTableName] (Функция)
+       [dbo].[fn_quotename_brackets] (Функция)
+       [dbo].[pr_CreateFkTreeDeleteTrigger] (Процедура)
+       [dbo].[pr_FkTreeDelete] (Процедура)
+       [dbo].[pr_PopulateStaticData] (Процедура)
+
+** Корректирующие действия

@@ -1,0 +1,67 @@
+﻿@model Vodad.Models.TicketDetailsModel
+
+@{
+    ViewBag.Title = "ViewTicket";
+}
+
+<h2>@Model.TicketTitle ticket details</h2>
+
+<strong>Theme:</strong> @Model.TicketTheme
+
+<table>
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Title</th>
+            <th>Created</th>
+
+            <th>Text</th>
+            <th>Image</th>
+            <th>Answered</th>
+            <th>Answerer</th>
+            <th>Answer</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ticket in ViewBag.TicketHistory)
+        {
+            @Html.Partial("TicketHistoryPartial", (Vodad.Models.TicketHistoryModel)ticket)
+        }
+    </tbody>
+</table>
+
+@if (@Model.TicketCloseAdminId == null)
+{
+    using (Html.BeginForm("ViewTicket", "Ticket", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        
+    @Html.ValidationSummary()
+        
+    @Html.HiddenFor(m => m.TicketTitle, new { @Value = Model.TicketTitle })
+    @Html.HiddenFor(m => m.TicketTheme, new { @Value = Model.TicketTheme })
+    @Html.HiddenFor(m => m.TicketId, new { @Value = Model.TicketId })
+    
+    @Html.TextAreaFor(m => m.TicketAnswer, new { @class = "new-message-textarea" })
+    <br />
+    <br />
+    <strong>@Html.LabelFor(m => m.ImageData)</strong><br />
+    <input type="file" name="ImageData" accept="image/x-png, image/gif, image/jpeg" />
+    <br />
+    <br />
+        
+    <input type="submit" name="submit" value="Send message" />
+    @Html.Raw("(Ctrl+Enter)")
+    }
+}
+
+@if (@Model.TicketCloseAdminId != null)
+{
+    <strong>@Html.ActionLink(@Model.TicketCloseAdminName, "Profile", "User", new { tid = @Model.TicketCloseAdminId }, htmlAttributes: null)</strong>
+    @Html.Raw(" - ")
+    @Model.TicketCloseDate
+
+    <br />
+    <br />
+    
+    @Html.Raw("<strong>Close comment: </strong>") @Model.TicketAdminCloseComment
+}
